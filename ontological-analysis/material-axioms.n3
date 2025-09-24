@@ -1,0 +1,561 @@
+# Material Axioms and Base Truths
+# Ultra-Detailed Foundational Axioms and Universal Principles
+# Document: material-axioms.n3
+# Version: 1.0
+# Purpose: Comprehensive specification of all foundational axioms and base truths
+
+@prefix : <http://example.org/traffic-light-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+
+# Include all previous ontologies
+@include "base-ontology.n3" .
+@include "system-components.n3" .
+@include "temporal-ontology.n3" .
+@include "simulation-ontology.n3" .
+@include "requirements-matrices.n3" .
+
+# === FUNDAMENTAL MATERIAL AXIOMS ===
+
+:MaterialAxiom a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Material Axiom" ;
+    rdfs:comment "Foundational truth about material reality" .
+
+:OntologicalAxiom a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Ontological Axiom" ;
+    rdfs:comment "Foundational truth about being and existence" .
+
+:PhysicalAxiom a owl:Class ;
+    rdfs:subClassOf :MaterialAxiom ;
+    rdfs:label "Physical Axiom" ;
+    rdfs:comment "Foundational truth about physical reality" .
+
+:ComputationalAxiom a owl:Class ;
+    rdfs:subClassOf :MaterialAxiom ;
+    rdfs:label "Computational Axiom" ;
+    rdfs:comment "Foundational truth about computational systems" .
+
+:TemporalAxiom a owl:Class ;
+    rdfs:subClassOf :OntologicalAxiom ;
+    rdfs:label "Temporal Axiom" ;
+    rdfs:comment "Foundational truth about time and temporality" .
+
+:SimulationAxiom a owl:Class ;
+    rdfs:subClassOf :OntologicalAxiom ;
+    rdfs:label "Simulation Axiom" ;
+    rdfs:comment "Foundational truth about simulation and virtual reality" .
+
+# === PHYSICAL REALITY AXIOMS ===
+
+:PHYS_AX001 a :PhysicalAxiom ;
+    rdfs:label "Conservation of Energy Axiom" ;
+    :hasOntologicalStatus "Universal Physical Law" ;
+    :hasSemanticRole "Energy Conservation Principle" ;
+    :hasSocialSignification "Foundation of Engineering Reliability" ;
+    :hasPhomenologicalAspect "Background assumption for all physical calculations" ;
+    :states "Energy cannot be created or destroyed, only transformed" ;
+    :appliesTo :arduino_instance,
+              :red_traffic_led,
+              :amber_traffic_led,
+              :green_traffic_led,
+              :pedestrian_red_led,
+              :pedestrian_green_led ;
+    :manifestsAs :electrical_energy_to_light_conversion,
+                :heat_dissipation_in_resistors .
+
+:PHYS_AX002 a :PhysicalAxiom ;
+    rdfs:label "Ohm's Law Axiom" ;
+    :hasOntologicalStatus "Fundamental Electrical Law" ;
+    :hasSemanticRole "Electrical Relationship Definition" ;
+    :hasSocialSignification "Foundation of Electrical Engineering" ;
+    :hasPhomenologicalAspect "Invisible electrical relationships governing circuit behavior" ;
+    :states "V = IR - Voltage equals Current times Resistance" ;
+    :appliesTo :resistor_220ohm_red,
+              :resistor_220ohm_amber,
+              :resistor_220ohm_green,
+              :resistor_220ohm_ped_red,
+              :resistor_220ohm_ped_green ;
+    :manifestsAs :current_limitation_through_resistance .
+
+:PHYS_AX003 a :PhysicalAxiom ;
+    rdfs:label "Semiconductor Physics Axiom" ;
+    :hasOntologicalStatus "Quantum-Level Physical Law" ;
+    :hasSemanticRole "Light Emission Mechanism" ;
+    :hasSocialSignification "Foundation of LED Technology" ;
+    :hasPhomenologicalAspect "Invisible quantum processes enabling visible light" ;
+    :states "Electron-hole recombination in semiconductor junction produces photons" ;
+    :appliesTo :red_traffic_led,
+              :amber_traffic_led,
+              :green_traffic_led,
+              :pedestrian_red_led,
+              :pedestrian_green_led ;
+    :manifestsAs :wavelength_specific_photon_emission .
+
+:PHYS_AX004 a :PhysicalAxiom ;
+    rdfs:label "Digital Logic Axiom" ;
+    :hasOntologicalStatus "Binary State Foundation" ;
+    :hasSemanticRole "Computational State Definition" ;
+    :hasSocialSignification "Foundation of Digital Technology" ;
+    :hasPhomenologicalAspect "Binary simplification of analog reality" ;
+    :states "Digital signals exist in discrete HIGH (5V) and LOW (0V) states" ;
+    :appliesTo :pin13, :pin12, :pin11, :pin10, :pin9, :pin8 ;
+    :manifestsAs :voltage_threshold_switching .
+
+:PHYS_AX005 a :PhysicalAxiom ;
+    rdfs:label "Clock Crystal Oscillation Axiom" ;
+    :hasOntologicalStatus "Temporal Reference Standard" ;
+    :hasSemanticRole "System Temporal Synchronization" ;
+    :hasSocialSignification "Foundation of Digital Timing" ;
+    :hasPhomenologicalAspect "Invisible temporal regularity infrastructure" ;
+    :states "Quartz crystal oscillates at precise 16MHz frequency" ;
+    :appliesTo :arduino_instance ;
+    :manifestsAs :arduino_clock_cycle .
+
+# === COMPUTATIONAL REALITY AXIOMS ===
+
+:COMP_AX001 a :ComputationalAxiom ;
+    rdfs:label "Church-Turing Thesis Axiom" ;
+    :hasOntologicalStatus "Fundamental Computability Principle" ;
+    :hasSemanticRole "Computational Equivalence Foundation" ;
+    :hasSocialSignification "Theoretical Computer Science Foundation" ;
+    :hasPhomenologicalAspect "Abstract computational universality" ;
+    :states "Any effectively calculable function can be computed by a Turing machine" ;
+    :appliesTo :arduino_instance ;
+    :manifestsAs :traffic_control_algorithm_computability .
+
+:COMP_AX002 a :ComputationalAxiom ;
+    rdfs:label "Von Neumann Architecture Axiom" ;
+    :hasOntologicalStatus "Stored Program Principle" ;
+    :hasSemanticRole "Program-Data Unification" ;
+    :hasSocialSignification "Foundation of Modern Computing" ;
+    :hasPhomenologicalAspect "Flexible programmability assumption" ;
+    :states "Instructions and data are stored in the same memory space" ;
+    :appliesTo :arduino_instance ;
+    :manifestsAs :c_code_compilation_to_machine_instructions .
+
+:COMP_AX003 a :ComputationalAxiom ;
+    rdfs:label "Deterministic State Machine Axiom" ;
+    :hasOntologicalStatus "Computational Predictability Principle" ;
+    :hasSemanticRole "System Behavior Determinism" ;
+    :hasSocialSignification "Foundation of System Reliability" ;
+    :hasPhomenologicalAspect "Predictable system behavior expectation" ;
+    :states "Given identical inputs and state, system produces identical outputs" ;
+    :appliesTo :traffic_light_assemblage ;
+    :manifestsAs :finite_state_automaton_behavior .
+
+:COMP_AX004 a :ComputationalAxiom ;
+    rdfs:label "Non-Blocking Execution Axiom" ;
+    :hasOntologicalStatus "Real-Time System Principle" ;
+    :hasSemanticRole "Responsive System Behavior" ;
+    :hasSocialSignification "User Experience Quality Foundation" ;
+    :hasPhomenologicalAspect "Immediate system responsiveness expectation" ;
+    :states "System main loop must not block on long-duration operations" ;
+    :appliesTo :arduino_main_loop ;
+    :manifestsAs :millis_based_timing_instead_of_delay .
+
+:COMP_AX005 a :ComputationalAxiom ;
+    rdfs:label "Digital Abstraction Axiom" ;
+    :hasOntologicalStatus "Interface Simplification Principle" ;
+    :hasSemanticRole "Complexity Management" ;
+    :hasSocialSignification "Engineering Abstraction Foundation" ;
+    :hasPhomenologicalAspect "Simplified interface hiding underlying complexity" ;
+    :states "Higher-level abstractions hide lower-level implementation details" ;
+    :appliesTo :c_programming_language,
+              :arduino_api ;
+    :manifestsAs :digitalWrite_abstraction_over_register_manipulation .
+
+# === ONTOLOGICAL AXIOMS ===
+
+:ONT_AX001 a :OntologicalAxiom ;
+    rdfs:label "Being-Becoming Dialectic Axiom" ;
+    :hasOntologicalStatus "Fundamental Ontological Principle" ;
+    :hasSemanticRole "Reality Structure Definition" ;
+    :hasSocialSignification "Philosophical Foundation of Process" ;
+    :hasPhomenologicalAspect "Tension between stability and change" ;
+    :states "All being involves both static identity and dynamic becoming" ;
+    :appliesTo :traffic_light_assemblage ;
+    :manifestsAs :system_identity_through_state_transitions .
+
+:ONT_AX002 a :OntologicalAxiom ;
+    rdfs:label "Object Withdrawal Axiom" ;
+    :hasOntologicalStatus "Object-Oriented Ontological Principle" ;
+    :hasSemanticRole "Real Object Independence" ;
+    :hasSocialSignification "Limits of Knowledge and Control" ;
+    :hasPhomenologicalAspect "Inexhaustible depth of things" ;
+    :states "Real objects withdraw from all possible relations and descriptions" ;
+    :appliesTo :arduino_instance,
+              :red_traffic_led,
+              :amber_traffic_led,
+              :green_traffic_led,
+              :pedestrian_red_led,
+              :pedestrian_green_led,
+              :pedestrian_button ;
+    :manifestsAs :component_behavior_exceeding_specifications .
+
+:ONT_AX003 a :OntologicalAxiom ;
+    rdfs:label "Assemblage Formation Axiom" ;
+    :hasOntologicalStatus "Deleuzian Ontological Principle" ;
+    :hasSemanticRole "Emergent System Formation" ;
+    :hasSocialSignification "Non-reductive System Understanding" ;
+    :hasPhomenologicalAspect "Emergent properties from component interaction" ;
+    :states "Assemblages exhibit properties not reducible to individual components" ;
+    :appliesTo :traffic_light_assemblage ;
+    :manifestsAs :traffic_coordination_emerging_from_component_interaction .
+
+:ONT_AX004 a :OntologicalAxiom ;
+    rdfs:label "Temporal Interpenetration Axiom" ;
+    :hasOntologicalStatus "Bergsonian Temporal Principle" ;
+    :hasSemanticRole "Durational Time Structure" ;
+    :hasSocialSignification "Lived Time vs Clock Time Distinction" ;
+    :hasPhomenologicalAspect "Qualitative temporal flow experience" ;
+    :states "All temporal moments interpenetrate rather than exist in external succession" ;
+    :appliesTo :system_duration ;
+    :manifestsAs :past_present_future_unified_in_each_moment .
+
+:ONT_AX005 a :OntologicalAxiom ;
+    rdfs:label "Virtual-Actual Dialectic Axiom" ;
+    :hasOntologicalStatus "Deleuzian Reality Principle" ;
+    :hasSemanticRole "Potential-Actual Relationship" ;
+    :hasSocialSignification "Possibility Space Understanding" ;
+    :hasPhomenologicalAspect "Sense of unrealized possibilities" ;
+    :states "The virtual is real but not actual - possibilities are ontologically present" ;
+    :appliesTo :potential_state_space ;
+    :manifestsAs :infinite_possible_button_press_timings .
+
+# === TEMPORAL AXIOMS ===
+
+:TEMP_AX001 a :TemporalAxiom ;
+    rdfs:label "Temporal Succession Axiom" ;
+    :hasOntologicalStatus "Fundamental Temporal Principle" ;
+    :hasSemanticRole "Sequential Order Definition" ;
+    :hasSocialSignification "Causal Order Foundation" ;
+    :hasPhomenologicalAspect "Before-after temporal experience" ;
+    :states "Events occur in irreversible temporal succession" ;
+    :appliesTo :state_transition_occasions ;
+    :manifestsAs :red_to_amber_to_green_to_amber_to_red_sequence .
+
+:TEMP_AX002 a :TemporalAxiom ;
+    rdfs:label "Present Moment Axiom" ;
+    :hasOntologicalStatus "Existential Temporal Principle" ;
+    :hasSemanticRole "Actual Existence Locus" ;
+    :hasSocialSignification "Decision Point Reality" ;
+    :hasPhomenologicalAspect "Now-moment awareness" ;
+    :states "Only the present moment has actual existence" ;
+    :appliesTo :button_press_occasion ;
+    :manifestsAs :instantaneous_decision_moments .
+
+:TEMP_AX003 a :TemporalAxiom ;
+    rdfs:label "Duration Conservation Axiom" ;
+    :hasOntologicalStatus "Temporal Integrity Principle" ;
+    :hasSemanticRole "Timing Reliability Foundation" ;
+    :hasSocialSignification "Predictable System Behavior" ;
+    :hasPhomenologicalAspect "Temporal expectation fulfillment" ;
+    :states "Specified durations must be maintained within tolerance" ;
+    :appliesTo :red_duration,
+              :red_amber_duration,
+              :green_duration,
+              :amber_duration,
+              :pedestrian_crossing_duration ;
+    :manifestsAs :consistent_state_timing .
+
+:TEMP_AX004 a :TemporalAxiom ;
+    rdfs:label "Temporal Atomicity Axiom" ;
+    :hasOntologicalStatus "Whiteheadian Process Principle" ;
+    :hasSemanticRole "Fundamental Temporal Unit" ;
+    :hasSocialSignification "Discrete Time Foundation" ;
+    :hasPhomenologicalAspect "Minimal temporal experience units" ;
+    :states "Time consists of atomic temporal occasions of experience" ;
+    :appliesTo :arduino_clock_cycle ;
+    :manifestsAs :discrete_computation_cycles .
+
+:TEMP_AX005 a :TemporalAxiom ;
+    rdfs:label "Temporal Multiplicity Axiom" ;
+    :hasOntologicalStatus "Multi-Temporal Reality Principle" ;
+    :hasSemanticRole "Multiple Time Stream Coordination" ;
+    :hasSocialSignification "Complex Temporal Infrastructure" ;
+    :hasPhomenologicalAspect "Multiple simultaneous temporal rhythms" ;
+    :states "Multiple temporal rhythms coexist and interact within systems" ;
+    :appliesTo :traffic_temporal_assemblage ;
+    :manifestsAs :arduino_clock_traffic_flow_pedestrian_rhythm_coordination .
+
+# === SIMULATION AXIOMS ===
+
+:SIM_AX001 a :SimulationAxiom ;
+    rdfs:label "Simulation Fidelity Axiom" ;
+    :hasOntologicalStatus "Educational Simulation Principle" ;
+    :hasSemanticRole "Learning Effectiveness Foundation" ;
+    :hasSocialSignification "Educational Tool Reliability" ;
+    :hasPhomenologicalAspect "Trust in simulation accuracy" ;
+    :states "Simulations must maintain sufficient fidelity for educational purposes" ;
+    :appliesTo :tinkercad_simulation ;
+    :manifestsAs :convincing_circuit_behavior_reproduction .
+
+:SIM_AX002 a :SimulationAxiom ;
+    rdfs:label "Simulation Limitation Axiom" ;
+    :hasOntologicalStatus "Representational Boundary Principle" ;
+    :hasSemanticRole "Simulation Scope Definition" ;
+    :hasSocialSignification "Honest Educational Communication" ;
+    :hasPhomenologicalAspect "Awareness of simulation boundaries" ;
+    :states "All simulations have inherent limitations and cannot perfectly replicate reality" ;
+    :appliesTo :tinkercad_current_bug ;
+    :manifestsAs :physics_calculation_errors_and_simplifications .
+
+:SIM_AX003 a :SimulationAxiom ;
+    rdfs:label "Hyperreality Formation Axiom" ;
+    :hasOntologicalStatus "Baudrillardian Simulation Principle" ;
+    :hasSemanticRole "Simulation Precedence" ;
+    :hasSocialSignification "Digital Native Reality Construction" ;
+    :hasPhomenologicalAspect "Simulation as primary reality experience" ;
+    :states "Simulations can become more real than the reality they simulate" ;
+    :appliesTo :educational_reality ;
+    :manifestsAs :tinkercad_experience_preceding_physical_electronics .
+
+:SIM_AX004 a :SimulationAxiom ;
+    rdfs:label "Virtual Materiality Axiom" ;
+    :hasOntologicalStatus "Digital Ontological Principle" ;
+    :hasSemanticRole "Virtual Object Reality" ;
+    :hasSocialSignification "Digital Environment Legitimacy" ;
+    :hasPhomenologicalAspect "Virtual objects as genuine entities" ;
+    :states "Virtual objects have their own form of material reality" ;
+    :appliesTo :tinkercad_virtual_resistor,
+              :tinkercad_virtual_led ;
+    :manifestsAs :virtual_component_behavioral_properties .
+
+:SIM_AX005 a :SimulationAxiom ;
+    rdfs:label "Simulation Layer Independence Axiom" ;
+    :hasOntologicalStatus "Ontological Stack Principle" ;
+    :hasSemanticRole "Layer Autonomy Definition" ;
+    :hasSocialSignification "Complex System Architecture" ;
+    :hasPhomenologicalAspect "Nested reality experience" ;
+    :states "Each simulation layer has relative autonomy within its ontological constraints" ;
+    :appliesTo :traffic_system_ontological_stack ;
+    :manifestsAs :layer_specific_behaviors_and_properties .
+
+# === SAFETY AND INVARIANT AXIOMS ===
+
+:SAFE_AX001 a :MaterialAxiom ;
+    rdfs:label "Mutual Exclusion Safety Axiom" ;
+    :hasOntologicalStatus "Critical Safety Invariant" ;
+    :hasSemanticRole "Conflict Prevention Principle" ;
+    :hasSocialSignification "Legal Safety Obligation" ;
+    :hasPhomenologicalAspect "Safety confidence foundation" ;
+    :states "Conflicting signals must never be active simultaneously" ;
+    :appliesTo :traffic_light_assemblage ;
+    :manifestsAs :never_both_traffic_and_pedestrian_green .
+
+:SAFE_AX002 a :MaterialAxiom ;
+    rdfs:label "Progressive Warning Axiom" ;
+    :hasOntologicalStatus "Ethical Safety Principle" ;
+    :hasSemanticRole "Fair Warning Provision" ;
+    :hasSocialSignification "Driver Rights Protection" ;
+    :hasPhomenologicalAspect "Predictable transition security" ;
+    :states "State transitions must provide adequate warning to affected parties" ;
+    :appliesTo :amber_traffic_led ;
+    :manifestsAs :amber_warning_before_red .
+
+:SAFE_AX003 a :MaterialAxiom ;
+    rdfs:label "Minimum Time Guarantee Axiom" ;
+    :hasOntologicalStatus "Fairness Safety Principle" ;
+    :hasSemanticRole "Temporal Rights Protection" ;
+    :hasSocialSignification "Equal Treatment Assurance" ;
+    :hasPhomenologicalAspect "Temporal security and trust" ;
+    :states "Minimum time allocations must be guaranteed for all system users" ;
+    :appliesTo :green_minimum_duration,
+              :pedestrian_crossing_duration ;
+    :manifestsAs :guaranteed_minimum_green_and_crossing_times .
+
+# === ELECTRICAL REALITY AXIOMS ===
+
+:ELEC_AX001 a :PhysicalAxiom ;
+    rdfs:label "Current Limitation Axiom" ;
+    :hasOntologicalStatus "Hardware Protection Principle" ;
+    :hasSemanticRole "Component Safety Assurance" ;
+    :hasSocialSignification "Engineering Ethics Implementation" ;
+    :hasPhomenologicalAspect "Invisible hardware protection" ;
+    :states "Maximum current through components must not exceed safe limits" ;
+    :appliesTo :arduino_instance ;
+    :manifestsAs :40mA_per_pin_200mA_total_limits .
+
+:ELEC_AX002 a :PhysicalAxiom ;
+    rdfs:label "Voltage Level Axiom" ;
+    :hasOntologicalStatus "Digital Logic Foundation" ;
+    :hasSemanticRole "Signal Definition Standard" ;
+    :hasSocialSignification "Interoperability Foundation" ;
+    :hasPhomenologicalAspect "Reliable signal interpretation" ;
+    :states "Logic HIGH = 5V ± tolerance, Logic LOW = 0V ± tolerance" ;
+    :appliesTo :pin13, :pin12, :pin11, :pin10, :pin9, :pin8 ;
+    :manifestsAs :consistent_digital_signal_levels .
+
+:ELEC_AX003 a :PhysicalAxiom ;
+    rdfs:label "Power Conservation Axiom" ;
+    :hasOntologicalStatus "Energy Efficiency Principle" ;
+    :hasSemanticRole "Sustainable Operation" ;
+    :hasSocialSignification "Environmental Responsibility" ;
+    :hasPhomenologicalAspect "Invisible energy efficiency" ;
+    :states "System power consumption must remain within supply capabilities" ;
+    :appliesTo :traffic_light_assemblage ;
+    :manifestsAs :total_current_within_usb_power_limits .
+
+# === PHENOMENOLOGICAL AXIOMS ===
+
+:PHEN_AX001 a :OntologicalAxiom ;
+    rdfs:label "Ready-to-Hand Equipment Axiom" ;
+    :hasOntologicalStatus "Heideggerian Equipment Principle" ;
+    :hasSemanticRole "Transparent Tool Operation" ;
+    :hasSocialSignification "Natural Technology Integration" ;
+    :hasPhomenologicalAspect "Invisible tool withdrawal during use" ;
+    :states "Well-functioning equipment withdraws from conscious attention" ;
+    :appliesTo :traffic_light_assemblage ;
+    :manifestsAs :invisible_operation_when_working_correctly .
+
+:PHEN_AX002 a :OntologicalAxiom ;
+    rdfs:label "Breakdown Revelation Axiom" ;
+    :hasOntologicalStatus "Heideggerian Disruption Principle" ;
+    :hasSemanticRole "Infrastructure Visibility Through Failure" ;
+    :hasSocialSignification "Technology Dependence Awareness" ;
+    :hasPhomenologicalAspect "Hidden structure exposure through malfunction" ;
+    :states "Equipment breakdown reveals normally hidden infrastructure dependencies" ;
+    :appliesTo :tinkercad_current_bug ;
+    :manifestsAs :simulation_limitation_exposure_through_malfunction .
+
+:PHEN_AX003 a :OntologicalAxiom ;
+    rdfs:label "Embodied Interaction Axiom" ;
+    :hasOntologicalStatus "Phenomenological Body-Technology Principle" ;
+    :hasSemanticRole "Extended Body Schema" ;
+    :hasSocialSignification "Natural Human-Technology Integration" ;
+    :hasPhomenologicalAspect "Technology as body extension" ;
+    :states "Technology extends human bodily capabilities and spatial awareness" ;
+    :appliesTo :pedestrian_button ;
+    :manifestsAs :button_as_extended_pedestrian_agency .
+
+# === SOCIAL REALITY AXIOMS ===
+
+:SOC_AX001 a :OntologicalAxiom ;
+    rdfs:label "Democratic Infrastructure Axiom" ;
+    :hasOntologicalStatus "Political-Technical Principle" ;
+    :hasSemanticRole "Participatory Technology Design" ;
+    :hasSocialSignification "Citizen Rights in Technical Systems" ;
+    :hasPhomenologicalAspect "Sense of agency in urban infrastructure" ;
+    :states "Technical infrastructure must provide meaningful citizen participation" ;
+    :appliesTo :pedestrian_button ;
+    :manifestsAs :pedestrian_crossing_request_capability .
+
+:SOC_AX002 a :OntologicalAxiom ;
+    rdfs:label "Universal Access Axiom" ;
+    :hasOntologicalStatus "Educational Equity Principle" ;
+    :hasSemanticRole "Learning Opportunity Democratization" ;
+    :hasSocialSignification "Educational Justice Implementation" ;
+    :hasPhomenologicalAspect "Equal learning opportunity confidence" ;
+    :states "Educational technologies must provide universal access to learning opportunities" ;
+    :appliesTo :tinkercad_simulation ;
+    :manifestsAs :web_based_electronics_education_access .
+
+:SOC_AX003 a :OntologicalAxiom ;
+    rdfs:label "Cultural Meaning Axiom" ;
+    :hasOntologicalStatus "Semiotic-Social Principle" ;
+    :hasSemanticRole "Shared Symbol System" ;
+    :hasSocialSignification "Cultural Knowledge Foundation" ;
+    :hasPhomenologicalAspect "Immediate cultural recognition" ;
+    :states "Technical systems embody and reproduce cultural meanings and practices" ;
+    :appliesTo :red_traffic_led,
+              :amber_traffic_led,
+              :green_traffic_led ;
+    :manifestsAs :universal_color_coded_traffic_signal_recognition .
+
+# === AXIOM RELATIONSHIPS ===
+
+:states a owl:DatatypeProperty ;
+    rdfs:label "states" ;
+    rdfs:comment "Textual statement of the axiom" ;
+    rdfs:domain :MaterialAxiom ;
+    rdfs:range xsd:string .
+
+:appliesTo a owl:ObjectProperty ;
+    rdfs:label "applies to" ;
+    rdfs:comment "Axiom applies to specific system components or aspects" ;
+    rdfs:domain :MaterialAxiom ;
+    rdfs:range :Being .
+
+:manifestsAs a owl:ObjectProperty ;
+    rdfs:label "manifests as" ;
+    rdfs:comment "How the axiom manifests in the concrete system" ;
+    rdfs:domain :MaterialAxiom ;
+    rdfs:range :Being .
+
+:foundationFor a owl:ObjectProperty ;
+    rdfs:label "foundation for" ;
+    rdfs:comment "Axiom provides foundation for higher-level properties" ;
+    rdfs:domain :MaterialAxiom ;
+    rdfs:range :Being .
+
+:constrains a owl:ObjectProperty ;
+    rdfs:label "constrains" ;
+    rdfs:comment "Axiom provides constraints on system behavior" ;
+    rdfs:domain :MaterialAxiom ;
+    rdfs:range :Being .
+
+# === AXIOM CONSISTENCY ANALYSIS ===
+
+:AxiomConsistency a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Axiom Consistency" ;
+    rdfs:comment "Analysis of axiom set consistency and completeness" .
+
+:axiom_consistency_analysis a :AxiomConsistency ;
+    rdfs:label "Traffic Light System Axiom Consistency" ;
+    :hasOntologicalStatus "Logical Foundation Analysis" ;
+    :hasSemanticRole "Axiom Set Validation" ;
+    :hasSocialSignification "Intellectual Rigor in System Design" ;
+    :hasPhomenologicalAspect "Confidence in logical foundation" ;
+    :analyzes :physical_axiom_consistency,
+             :computational_axiom_consistency,
+             :ontological_axiom_consistency,
+             :temporal_axiom_consistency,
+             :simulation_axiom_consistency,
+             :safety_axiom_consistency ;
+    :ensures :no_axiom_contradictions,
+            :complete_domain_coverage,
+            :axiom_independence_where_appropriate .
+
+# === AXIOM DERIVATION RULES ===
+
+:AxiomDerivation a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Axiom Derivation" ;
+    rdfs:comment "Rules for deriving consequences from axioms" .
+
+# From Physical Axioms
+:PHYS_AX002 :foundationFor :current_calculation_formulas .
+:PHYS_AX003 :foundationFor :led_wavelength_specifications .
+:PHYS_AX004 :foundationFor :digital_signal_processing .
+:PHYS_AX005 :foundationFor :system_timing_accuracy .
+
+# From Computational Axioms
+:COMP_AX003 :foundationFor :predictable_state_transitions .
+:COMP_AX004 :foundationFor :responsive_user_interface .
+:COMP_AX005 :foundationFor :programming_language_abstraction .
+
+# From Safety Axioms
+:SAFE_AX001 :foundationFor :mutual_exclusion_implementation .
+:SAFE_AX002 :foundationFor :amber_warning_implementation .
+:SAFE_AX003 :foundationFor :minimum_time_enforcement .
+
+# From Ontological Axioms
+:ONT_AX002 :foundationFor :component_independence_respect .
+:ONT_AX003 :foundationFor :emergent_system_properties .
+:ONT_AX005 :foundationFor :possibility_space_recognition .
+
+# From Temporal Axioms
+:TEMP_AX001 :foundationFor :causal_order_maintenance .
+:TEMP_AX003 :foundationFor :timing_reliability .
+:TEMP_AX005 :foundationFor :multi_temporal_coordination .
+
+# From Simulation Axioms
+:SIM_AX001 :foundationFor :educational_effectiveness .
+:SIM_AX002 :foundationFor :limitation_acknowledgment .
+:SIM_AX004 :foundationFor :virtual_object_legitimacy .

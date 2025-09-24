@@ -1,0 +1,443 @@
+# Simulation Ontology Specification
+# Ultra-Detailed Simulation and Virtual Reality Analysis
+# Document: simulation-ontology.n3
+# Version: 1.0
+# Purpose: Comprehensive ontological analysis of simulation layers
+
+@prefix : <http://example.org/traffic-light-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Include previous ontologies
+@include "base-ontology.n3" .
+@include "system-components.n3" .
+@include "temporal-ontology.n3" .
+
+# === SIMULATION ONTOLOGICAL LAYERS ===
+
+:SimulationLayer a owl:Class ;
+    rdfs:subClassOf :VirtualBeing ;
+    rdfs:label "Simulation Layer" ;
+    rdfs:comment "Distinct level of simulation abstraction and implementation" .
+
+:PhysicalRealityLayer a owl:Class ;
+    rdfs:subClassOf :ActualBeing ;
+    rdfs:label "Physical Reality Layer" ;
+    rdfs:comment "Base material reality supporting all simulation layers" .
+
+:physical_reality_layer a :PhysicalRealityLayer ;
+    rdfs:label "User Computer Physical Reality" ;
+    :hasOntologicalStatus "Material Substrate of All Simulation" ;
+    :hasSemanticRole "Foundation of Virtual System Existence" ;
+    :hasSocialSignification "Economic and Material Infrastructure for Education" ;
+    :hasPhomenologicalAspect "Invisible material foundation - withdrawn hardware support" ;
+    :embodies :silicon_computational_substrate,
+             :electrical_energy_infrastructure,
+             :electromagnetic_field_operations .
+
+:BrowserSimulationLayer a owl:Class ;
+    rdfs:subClassOf :SimulationLayer ;
+    rdfs:label "Browser Simulation Layer" ;
+    rdfs:comment "JavaScript-based simulation environment within web browser" .
+
+:browser_simulation_layer a :BrowserSimulationLayer ;
+    rdfs:label "Tinkercad Browser Simulation" ;
+    :hasOntologicalStatus "Hyperreal Simulation Environment" ;
+    :hasSemanticRole "Educational Simulation Platform" ;
+    :hasSocialSignification "Democratized Access to Electronics Education" ;
+    :hasPhomenologicalAspect "Familiar web interface - ready-to-hand educational tool" ;
+    :simulates :arduino_hardware_layer ;
+    :virtualizes :physical_electronics_reality ;
+    :embodies :educational_simulation_philosophy .
+
+:ArduinoHardwareLayer a owl:Class ;
+    rdfs:subClassOf :SimulationLayer ;
+    rdfs:label "Arduino Hardware Layer" ;
+    rdfs:comment "Simulated Arduino hardware within browser environment" .
+
+:arduino_hardware_layer a :ArduinoHardwareLayer ;
+    rdfs:label "Virtual Arduino Uno R3" ;
+    :hasOntologicalStatus "Simulated Material Hardware" ;
+    :hasSemanticRole "Virtual Microcontroller Environment" ;
+    :hasSocialSignification "Accessible Electronics Learning Platform" ;
+    :hasPhomenologicalAspect "Convincing hardware simulation - suspension of disbelief" ;
+    :simulates :actual_arduino_hardware ;
+    :virtualizes :embedded_systems_programming ;
+    :embodies :hardware_abstraction_layer .
+
+:SoftwareAbstractionLayer a owl:Class ;
+    rdfs:subClassOf :SimulationLayer ;
+    rdfs:label "Software Abstraction Layer" ;
+    rdfs:comment "C code and compilation layer within simulated hardware" .
+
+:software_abstraction_layer a :SoftwareAbstractionLayer ;
+    rdfs:label "Arduino C Code Environment" ;
+    :hasOntologicalStatus "Virtual Software Development Environment" ;
+    :hasSemanticRole "Programming Language Interface" ;
+    :hasSocialSignification "Software Engineering Education Platform" ;
+    :hasPhomenologicalAspect "Familiar programming environment - transparent coding experience" ;
+    :simulates :actual_embedded_programming ;
+    :virtualizes :microcontroller_instruction_sets ;
+    :embodies :programming_language_abstraction .
+
+:TrafficLogicLayer a owl:Class ;
+    rdfs:subClassOf :SimulationLayer ;
+    rdfs:label "Traffic Logic Layer" ;
+    rdfs:comment "Abstract traffic control logic implementation" .
+
+:traffic_logic_layer a :TrafficLogicLayer ;
+    rdfs:label "Traffic Light Control Algorithm" ;
+    :hasOntologicalStatus "Pure Logical Abstraction" ;
+    :hasSemanticRole "Traffic Coordination Logic Implementation" ;
+    :hasSocialSignification "Urban Infrastructure Logic Simulation" ;
+    :hasPhomenologicalAspect "Transparent logical operation - invisible when working correctly" ;
+    :simulates :actual_traffic_control_systems ;
+    :virtualizes :urban_traffic_coordination ;
+    :embodies :traffic_safety_algorithms .
+
+# === BAUDRILLARD'S SIMULATION ORDERS ===
+
+:SimulationOrder a owl:Class ;
+    rdfs:subClassOf :VirtualBeing ;
+    rdfs:label "Simulation Order" ;
+    rdfs:comment "Baudrillard's orders of simulacra - relationship to reality" .
+
+:FirstOrderSimulation a owl:Class ;
+    rdfs:subClassOf :SimulationOrder ;
+    rdfs:label "First Order Simulation" ;
+    rdfs:comment "Simulation that masks and denatures reality" .
+
+:SecondOrderSimulation a owl:Class ;
+    rdfs:subClassOf :SimulationOrder ;
+    rdfs:label "Second Order Simulation" ;
+    rdfs:comment "Simulation that masks the absence of reality" .
+
+:ThirdOrderSimulation a owl:Class ;
+    rdfs:subClassOf :SimulationOrder ;
+    rdfs:label "Third Order Simulation" ;
+    rdfs:comment "Simulation with no relation to reality - pure simulacrum" .
+
+:FourthOrderSimulation a owl:Class ;
+    rdfs:subClassOf :SimulationOrder ;
+    rdfs:label "Fourth Order Simulation" ;
+    rdfs:comment "Simulation that becomes its own pure simulacrum" .
+
+# Tinkercad as Third Order Simulation
+:tinkercad_simulation a :ThirdOrderSimulation ;
+    rdfs:label "Tinkercad Third Order Simulation" ;
+    :hasOntologicalStatus "Pure Simulacrum - Copy Without Original" ;
+    :hasSemanticRole "Educational Simulation Preceding Physical Experience" ;
+    :hasSocialSignification "Digital Native Education - Simulation as Primary Reality" ;
+    :hasPhomenologicalAspect "Hyperreal electronics - more real than the real" ;
+    :embodies :educational_hyperreality .
+
+# === VIRTUAL MATERIALITY ANALYSIS ===
+
+:VirtualMaterial a owl:Class ;
+    rdfs:subClassOf :VirtualBeing ;
+    rdfs:label "Virtual Material" ;
+    rdfs:comment "Simulated material properties and behaviors" .
+
+:VirtualResistor a owl:Class ;
+    rdfs:subClassOf :VirtualMaterial ;
+    rdfs:label "Virtual Resistor" ;
+    rdfs:comment "Simulated resistor with virtual electrical properties" .
+
+:tinkercad_virtual_resistor a :VirtualResistor ;
+    rdfs:label "Tinkercad Virtual 220Ω Resistor" ;
+    :hasOntologicalStatus "Simulated Material Component" ;
+    :hasResistance "220"^^xsd:decimal ;
+    :hasSemanticRole "Virtual Current Limitation" ;
+    :hasSocialSignification "Physics Education Through Simulation" ;
+    :hasPhomenologicalAspect "Convincing material behavior simulation" ;
+    :simulates :actual_resistor_physics ;
+    :embodies :virtual_ohms_law .
+
+:VirtualLED a owl:Class ;
+    rdfs:subClassOf :VirtualMaterial ;
+    rdfs:label "Virtual LED" ;
+    rdfs:comment "Simulated LED with virtual light emission" .
+
+:tinkercad_virtual_led a :VirtualLED ;
+    rdfs:label "Tinkercad Virtual Red LED" ;
+    :hasOntologicalStatus "Simulated Light Emitter" ;
+    :hasColorProperty "Virtual Red (RGB approximation)" ;
+    :hasSemanticRole "Visual Output Simulation" ;
+    :hasSocialSignification "Electronics Visualization Tool" ;
+    :hasPhomenologicalAspect "Convincing light emission simulation" ;
+    :simulates :actual_led_physics ;
+    :embodies :virtual_photon_emission .
+
+# === SIMULATION BUGS AS ONTOLOGICAL REVELATION ===
+
+:SimulationBug a owl:Class ;
+    rdfs:subClassOf :VirtualBeing ;
+    rdfs:label "Simulation Bug" ;
+    rdfs:comment "Unintended behavior that reveals simulation limitations" .
+
+:CurrentCalculationBug a owl:Class ;
+    rdfs:subClassOf :SimulationBug ;
+    rdfs:label "Current Calculation Bug" ;
+    rdfs:comment "Bug where current displays incorrectly regardless of resistance" .
+
+:tinkercad_current_bug a :CurrentCalculationBug ;
+    rdfs:label "Tinkercad Current Display Bug" ;
+    :hasOntologicalStatus "Ontological Revelation Through Technical Failure" ;
+    :hasSemanticRole "Exposure of Simulation Limitations" ;
+    :hasSocialSignification "Teaching Moment - Limits of Digital Representation" ;
+    :hasPhomenologicalAspect "Breakdown revealing underlying simulation structure" ;
+    :reveals :simulation_physics_limitations ;
+    :embodies :digital_representation_boundaries .
+
+# === MULTIPLE REALITY LAYERS ===
+
+:RealityLayer a owl:Class ;
+    rdfs:subClassOf :Being ;
+    rdfs:label "Reality Layer" ;
+    rdfs:comment "Distinct level of reality or existence" .
+
+:OntologicalStack a owl:Class ;
+    rdfs:subClassOf :RelationalBeing ;
+    rdfs:label "Ontological Stack" ;
+    rdfs:comment "Hierarchical structure of reality layers" .
+
+:traffic_system_ontological_stack a :OntologicalStack ;
+    rdfs:label "Traffic System Reality Stack" ;
+    :hasOntologicalStatus "Layered Reality Structure" ;
+    :hasSemanticRole "Multiple Reality Coordination" ;
+    :hasSocialSignification "Complex Educational Technology Infrastructure" ;
+    :hasPhomenologicalAspect "Nested reality experience - dreams within dreams" ;
+    :contains :physical_computer_layer,
+             :browser_runtime_layer,
+             :javascript_engine_layer,
+             :tinkercad_simulation_layer,
+             :arduino_emulation_layer,
+             :c_code_layer,
+             :traffic_logic_layer ;
+    :embodies :reality_layer_interpenetration .
+
+# Individual Stack Layers
+:physical_computer_layer a :RealityLayer ;
+    rdfs:label "Physical Computer Layer" ;
+    :hasOntologicalStatus "Material Reality Foundation" ;
+    :hasSemanticRole "Hardware Infrastructure" ;
+    :hasSocialSignification "Economic Investment in Education Technology" ;
+    :hasPhomenologicalAspect "Invisible material support - withdrawn infrastructure" .
+
+:browser_runtime_layer a :RealityLayer ;
+    rdfs:label "Browser Runtime Layer" ;
+    :hasOntologicalStatus "Software Platform Reality" ;
+    :hasSemanticRole "Web Application Environment" ;
+    :hasSocialSignification "Universal Access Through Web Standards" ;
+    :hasPhomenologicalAspect "Familiar web interface - ready-to-hand tool" .
+
+:javascript_engine_layer a :RealityLayer ;
+    rdfs:label "JavaScript Engine Layer" ;
+    :hasOntologicalStatus "Dynamic Language Runtime Reality" ;
+    :hasSemanticRole "Simulation Engine Implementation" ;
+    :hasSocialSignification "Open Source Educational Infrastructure" ;
+    :hasPhomenologicalAspect "Invisible runtime environment - transparent execution" .
+
+:tinkercad_simulation_layer a :RealityLayer ;
+    rdfs:label "Tinkercad Simulation Layer" ;
+    :hasOntologicalStatus "Educational Simulation Reality" ;
+    :hasSemanticRole "Electronics Learning Environment" ;
+    :hasSocialSignification "Democratized STEM Education Platform" ;
+    :hasPhomenologicalAspect "Convincing electronics simulation - suspension of disbelief" .
+
+:arduino_emulation_layer a :RealityLayer ;
+    rdfs:label "Arduino Emulation Layer" ;
+    :hasOntologicalStatus "Hardware Emulation Reality" ;
+    :hasSemanticRole "Microcontroller Behavior Simulation" ;
+    :hasSocialSignification "Accessible Embedded Systems Education" ;
+    :hasPhomenologicalAspect "Faithful hardware behavior reproduction" .
+
+:c_code_layer a :RealityLayer ;
+    rdfs:label "C Code Layer" ;
+    :hasOntologicalStatus "Programming Language Reality" ;
+    :hasSemanticRole "Algorithm Implementation Environment" ;
+    :hasSocialSignification "Professional Software Development Education" ;
+    :hasPhomenologicalAspect "Familiar programming environment - transparent coding" .
+
+:traffic_logic_layer_instance a :RealityLayer ;
+    rdfs:label "Traffic Logic Layer Instance" ;
+    :hasOntologicalStatus "Abstract Logic Reality" ;
+    :hasSemanticRole "Traffic Control Algorithm Implementation" ;
+    :hasSocialSignification "Urban Infrastructure Logic Education" ;
+    :hasPhomenologicalAspect "Pure logical operation - invisible when working" .
+
+# === ONTOLOGICAL STACK RELATIONSHIPS ===
+
+:contains a owl:ObjectProperty ;
+    rdfs:label "contains" ;
+    rdfs:comment "Relationship where one reality layer contains another" ;
+    rdfs:domain :RealityLayer ;
+    rdfs:range :RealityLayer .
+
+:supports a owl:ObjectProperty ;
+    rdfs:label "supports" ;
+    rdfs:comment "Relationship where one layer provides foundation for another" ;
+    rdfs:domain :RealityLayer ;
+    rdfs:range :RealityLayer .
+
+:emulates a owl:ObjectProperty ;
+    rdfs:label "emulates" ;
+    rdfs:comment "Relationship where one layer reproduces behavior of another" ;
+    rdfs:domain :RealityLayer ;
+    rdfs:range :RealityLayer .
+
+# Stack Support Relationships
+:physical_computer_layer :supports :browser_runtime_layer .
+:browser_runtime_layer :supports :javascript_engine_layer .
+:javascript_engine_layer :supports :tinkercad_simulation_layer .
+:tinkercad_simulation_layer :supports :arduino_emulation_layer .
+:arduino_emulation_layer :supports :c_code_layer .
+:c_code_layer :supports :traffic_logic_layer_instance .
+
+# Emulation Relationships
+:arduino_emulation_layer :emulates :actual_arduino_hardware .
+:tinkercad_simulation_layer :emulates :electronics_laboratory .
+:traffic_logic_layer_instance :emulates :real_traffic_control_systems .
+
+# === PHENOMENOLOGY OF SIMULATION ===
+
+:SimulationPhenomenology a owl:Class ;
+    rdfs:subClassOf :VirtualBeing ;
+    rdfs:label "Simulation Phenomenology" ;
+    rdfs:comment "Experiential structure of simulation consciousness" .
+
+:SuspensionOfDisbelief a owl:Class ;
+    rdfs:subClassOf :SimulationPhenomenology ;
+    rdfs:label "Suspension of Disbelief" ;
+    rdfs:comment "Phenomenological bracketing of simulation artificiality" .
+
+:suspension_of_disbelief a :SuspensionOfDisbelief ;
+    rdfs:label "Tinkercad Suspension of Disbelief" ;
+    :hasOntologicalStatus "Phenomenological Attitude Shift" ;
+    :hasSemanticRole "Educational Engagement Facilitation" ;
+    :hasSocialSignification "Cultural Learning Practice" ;
+    :hasPhomenologicalAspect "Willing acceptance of virtual reality as educational reality" ;
+    :enables :educational_simulation_immersion .
+
+:VirtualEmbodiment a owl:Class ;
+    rdfs:subClassOf :SimulationPhenomenology ;
+    rdfs:label "Virtual Embodiment" ;
+    rdfs:comment "Extension of bodily schema into virtual environment" .
+
+:virtual_embodiment a :VirtualEmbodiment ;
+    rdfs:label "Tinkercad Virtual Embodiment" ;
+    :hasOntologicalStatus "Extended Body Schema" ;
+    :hasSemanticRole "Human-Computer Interface Integration" ;
+    :hasSocialSignification "Digital Natives' Natural Interface" ;
+    :hasPhomenologicalAspect "Mouse and keyboard become extensions of hands in virtual space" ;
+    :extends :bodily_schema_into_virtual_electronics .
+
+# === EDUCATIONAL ONTOLOGY ===
+
+:EducationalReality a owl:Class ;
+    rdfs:subClassOf :VirtualBeing ;
+    rdfs:label "Educational Reality" ;
+    rdfs:comment "Reality constructed for learning purposes" .
+
+:educational_reality a :EducationalReality ;
+    rdfs:label "Tinkercad Educational Reality" ;
+    :hasOntologicalStatus "Pedagogically Constructed Reality" ;
+    :hasSemanticRole "Learning Environment Design" ;
+    :hasSocialSignification "Democratic Access to STEM Education" ;
+    :hasPhomenologicalAspect "Simplified complexity - manageable learning environment" ;
+    :embodies :constructivist_learning_philosophy .
+
+:PedagogicalSimplification a owl:Class ;
+    rdfs:subClassOf :EducationalReality ;
+    rdfs:label "Pedagogical Simplification" ;
+    rdfs:comment "Intentional reduction of complexity for learning purposes" .
+
+:pedagogical_simplification a :PedagogicalSimplification ;
+    rdfs:label "Tinkercad Complexity Reduction" ;
+    :hasOntologicalStatus "Intentional Educational Abstraction" ;
+    :hasSemanticRole "Learning Curve Management" ;
+    :hasSocialSignification "Accessible Technical Education Design" ;
+    :hasPhomenologicalAspect "Overwhelming complexity filtered into manageable chunks" ;
+    :abstracts_away :electromagnetic_field_theory,
+                   :quantum_semiconductor_physics,
+                   :thermal_management_complexity,
+                   :manufacturing_tolerances,
+                   :component_aging_effects .
+
+# === SIMULATION ETHICS ===
+
+:SimulationEthics a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Simulation Ethics" ;
+    rdfs:comment "Ethical considerations in simulation design and use" .
+
+:EducationalFidelity a owl:Class ;
+    rdfs:subClassOf :SimulationEthics ;
+    rdfs:label "Educational Fidelity" ;
+    rdfs:comment "Ethical obligation to maintain educational value in simulation" .
+
+:educational_fidelity a :EducationalFidelity ;
+    rdfs:label "Tinkercad Educational Fidelity" ;
+    :hasOntologicalStatus "Ethical Design Principle" ;
+    :hasSemanticRole "Learning Outcome Assurance" ;
+    :hasSocialSignification "Responsibility to Learners" ;
+    :hasPhomenologicalAspect "Trust in educational tool effectiveness" ;
+    :requires :conceptual_accuracy,
+             :skill_transferability,
+             :reality_preparation .
+
+:SimulationTransparency a owl:Class ;
+    rdfs:subClassOf :SimulationEthics ;
+    rdfs:label "Simulation Transparency" ;
+    rdfs:comment "Ethical obligation to reveal simulation limitations" .
+
+:simulation_transparency a :SimulationTransparency ;
+    rdfs:label "Tinkercad Limitation Disclosure" ;
+    :hasOntologicalStatus "Ethical Disclosure Obligation" ;
+    :hasSemanticRole "Honest Educational Communication" ;
+    :hasSocialSignification "Intellectual Honesty in Education" ;
+    :hasPhomenologicalAspect "Awareness of tool limitations and boundaries" ;
+    :requires :limitation_acknowledgment,
+             :reality_difference_explanation,
+             :simulation_boundary_marking .
+
+# === ONTOLOGICAL IMPLICATIONS ===
+
+:SimulationOntologicalImplication a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Simulation Ontological Implication" ;
+    rdfs:comment "Ontological consequences of simulation-based learning" .
+
+:RealityPreparation a owl:Class ;
+    rdfs:subClassOf :SimulationOntologicalImplication ;
+    rdfs:label "Reality Preparation" ;
+    rdfs:comment "How simulation prepares for actual reality engagement" .
+
+:reality_preparation a :RealityPreparation ;
+    rdfs:label "Physical Electronics Preparation" ;
+    :hasOntologicalStatus "Virtual-to-Real Transfer Capability" ;
+    :hasSemanticRole "Simulation Learning Transfer" ;
+    :hasSocialSignification "Educational Investment Return" ;
+    :hasPhomenologicalAspect "Confidence building for real-world application" ;
+    :prepares_for :actual_arduino_programming,
+                 :physical_circuit_construction,
+                 :real_electronics_debugging,
+                 :embedded_systems_careers .
+
+:VirtualSkillDevelopment a owl:Class ;
+    rdfs:subClassOf :SimulationOntologicalImplication ;
+    rdfs:label "Virtual Skill Development" ;
+    rdfs:comment "Skills developed specifically within simulation environment" .
+
+:virtual_skill_development a :VirtualSkillDevelopment ;
+    rdfs:label "Tinkercad-Specific Skills" ;
+    :hasOntologicalStatus "Virtual-Native Capabilities" ;
+    :hasSemanticRole "Digital Tool Proficiency" ;
+    :hasSocialSignification "Digital Native Skill Development" ;
+    :hasPhomenologicalAspect "Natural facility with virtual tools" ;
+    :develops :virtual_circuit_visualization,
+             :simulation_debugging_skills,
+             :digital_design_intuition,
+             :virtual_collaboration_abilities .

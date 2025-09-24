@@ -1,0 +1,338 @@
+# System Components Ontological Specification
+# Ultra-Detailed Component Analysis
+# Document: system-components.n3
+# Version: 1.0
+# Purpose: Detailed ontological description of all system components
+
+@prefix : <http://example.org/traffic-light-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Include base ontology
+@include "base-ontology.n3" .
+
+# === ARDUINO UNO R3 ONTOLOGICAL SPECIFICATION ===
+
+:ArduinoUnoR3 a owl:Class ;
+    rdfs:subClassOf :Microcontroller ;
+    rdfs:label "Arduino Uno R3" ;
+    rdfs:comment "Specific microcontroller board with ATmega328P processor" .
+
+:arduino_instance a :ArduinoUnoR3 ;
+    rdfs:label "Traffic Light Arduino Instance" ;
+    :hasOntologicalStatus "Primary Material Substrate" ;
+    :hasClockFrequency "16000000"^^xsd:decimal ;
+    :hasSemanticRole "Central Processing Unit for Traffic Control Logic" ;
+    :hasSocialSignification "Educational Tool for Embedded Systems Learning" ;
+    :hasPhomenologicalAspect "Ready-to-hand equipment that withdraws during normal operation" ;
+    :embodies :traffic_control_algorithm ;
+    :actualizes :potential_state_space .
+
+# Arduino Pins as Ontological Entities
+:DigitalPin a owl:Class ;
+    rdfs:subClassOf :ElectronicComponent ;
+    rdfs:label "Digital Pin" ;
+    rdfs:comment "Input/output interface point on microcontroller" .
+
+:pin13 a :DigitalPin ;
+    rdfs:label "Pin 13 - Pedestrian Button Input" ;
+    :hasOntologicalStatus "Interface Between Human Agency and Computational Logic" ;
+    :hasSemanticRole "Pedestrian Intention Transduction" ;
+    :hasSocialSignification "Democratic Participation in Urban Infrastructure" ;
+    :hasPhomenologicalAspect "Extension of pedestrian bodily schema into computational realm" ;
+    :hasVoltage "5.0"^^xsd:decimal ;
+    :prehends :pedestrian_intentions .
+
+:pin12 a :DigitalPin ;
+    rdfs:label "Pin 12 - Red Traffic LED" ;
+    :hasOntologicalStatus "Material Signifier of Traffic Prohibition" ;
+    :hasSemanticRole "STOP Command Materialization" ;
+    :hasSocialSignification "Authority and Legal Constraint Embodiment" ;
+    :hasPhomenologicalAspect "Immediate perceptual imperative - pre-reflective halt response" ;
+    :embodies :prohibition_essence .
+
+:pin11 a :DigitalPin ;
+    rdfs:label "Pin 11 - Amber Traffic LED" ;
+    :hasOntologicalStatus "Material Signifier of Temporal Transition" ;
+    :hasSemanticRole "Prepare-to-Stop Command Materialization" ;
+    :hasSocialSignification "Temporal Grace Period - Ethical Consideration for In-Motion Traffic" ;
+    :hasPhomenologicalAspect "Anxiety-inducing ambiguity - decision point pressure" ;
+    :embodies :transition_essence .
+
+:pin10 a :DigitalPin ;
+    rdfs:label "Pin 10 - Green Traffic LED" ;
+    :hasOntologicalStatus "Material Signifier of Traffic Permission" ;
+    :hasSemanticRole "GO Command Materialization" ;
+    :hasSocialSignification "Freedom of Movement Authorization" ;
+    :hasPhomenologicalAspect "Relief and flow-state enabling - transparent operation" ;
+    :embodies :permission_essence .
+
+:pin9 a :DigitalPin ;
+    rdfs:label "Pin 9 - Pedestrian Red LED" ;
+    :hasOntologicalStatus "Material Signifier of Pedestrian Constraint" ;
+    :hasSemanticRole "Pedestrian STOP Command Materialization" ;
+    :hasSocialSignification "Pedestrian-Specific Authority Assertion" ;
+    :hasPhomenologicalAspect "Frustration and temporal suspension experience" ;
+    :embodies :pedestrian_prohibition_essence .
+
+:pin8 a :DigitalPin ;
+    rdfs:label "Pin 8 - Pedestrian Green LED" ;
+    :hasOntologicalStatus "Material Signifier of Pedestrian Permission" ;
+    :hasSemanticRole "Pedestrian GO Command Materialization" ;
+    :hasSocialSignification "Pedestrian Safety and Priority Recognition" ;
+    :hasPhomenologicalAspect "Relief and urgency - limited time window awareness" ;
+    :embodies :pedestrian_permission_essence .
+
+# === LED ONTOLOGICAL SPECIFICATIONS ===
+
+:RedTrafficLED a owl:Class ;
+    rdfs:subClassOf :LightEmittingDiode ;
+    rdfs:label "Red Traffic LED" ;
+    rdfs:comment "Red light emitting diode for traffic stop signal" .
+
+:red_traffic_led a :RedTrafficLED ;
+    rdfs:label "Red Traffic LED Instance" ;
+    :hasOntologicalStatus "Semiotic-Material Hybrid" ;
+    :hasColorProperty "Red (approximately 630-700nm wavelength)" ;
+    :hasElectricalCurrent "0.0136"^^xsd:decimal ;
+    :hasVoltage "2.0"^^xsd:decimal ;
+    :hasSemanticRole "Universal Stop Signifier" ;
+    :hasSocialSignification "Culturally Learned Prohibition Response" ;
+    :hasPhomenologicalAspect "Immediate visceral recognition - pre-cognitive response" ;
+    :assemblesWith :resistor_220ohm_red ;
+    :embodies :redness_as_prohibition .
+
+:AmberTrafficLED a owl:Class ;
+    rdfs:subClassOf :LightEmittingDiode ;
+    rdfs:label "Amber Traffic LED" ;
+    rdfs:comment "Amber/yellow light emitting diode for traffic caution signal" .
+
+:amber_traffic_led a :AmberTrafficLED ;
+    rdfs:label "Amber Traffic LED Instance" ;
+    :hasOntologicalStatus "Temporal-Transition Materializer" ;
+    :hasColorProperty "Amber/Yellow (approximately 570-590nm wavelength)" ;
+    :hasElectricalCurrent "0.0132"^^xsd:decimal ;
+    :hasVoltage "2.1"^^xsd:decimal ;
+    :hasSemanticRole "Temporal Warning and Transition Signifier" ;
+    :hasSocialSignification "Ethical Consideration for Driver Decision-Making" ;
+    :hasPhomenologicalAspect "Anxiety-inducing uncertainty - temporal pressure" ;
+    :assemblesWith :resistor_220ohm_amber ;
+    :embodies :yellowness_as_temporal_tension .
+
+:GreenTrafficLED a owl:Class ;
+    rdfs:subClassOf :LightEmittingDiode ;
+    rdfs:label "Green Traffic LED" ;
+    rdfs:comment "Green light emitting diode for traffic go signal" .
+
+:green_traffic_led a :GreenTrafficLED ;
+    rdfs:label "Green Traffic LED Instance" ;
+    :hasOntologicalStatus "Permission-Granting Material Entity" ;
+    :hasColorProperty "Green (approximately 495-570nm wavelength)" ;
+    :hasElectricalCurrent "0.0127"^^xsd:decimal ;
+    :hasVoltage "2.2"^^xsd:decimal ;
+    :hasSemanticRole "Movement Permission Signifier" ;
+    :hasSocialSignification "Social Coordination Through Synchronized Permission" ;
+    :hasPhomenologicalAspect "Relief and flow-enabling - background condition for smooth movement" ;
+    :assemblesWith :resistor_220ohm_green ;
+    :embodies :greenness_as_permission .
+
+:PedestrianRedLED a owl:Class ;
+    rdfs:subClassOf :LightEmittingDiode ;
+    rdfs:label "Pedestrian Red LED" ;
+    rdfs:comment "Red LED specifically for pedestrian stop signal" .
+
+:pedestrian_red_led a :PedestrianRedLED ;
+    rdfs:label "Pedestrian Red LED Instance" ;
+    :hasOntologicalStatus "Pedestrian-Specific Authority Materializer" ;
+    :hasColorProperty "Red (approximately 630-700nm wavelength)" ;
+    :hasElectricalCurrent "0.0136"^^xsd:decimal ;
+    :hasVoltage "2.0"^^xsd:decimal ;
+    :hasSemanticRole "Pedestrian-Specific Prohibition Signifier" ;
+    :hasSocialSignification "Recognition of Pedestrian as Distinct Traffic Category" ;
+    :hasPhomenologicalAspect "Frustration and enforced patience - temporal suspension" ;
+    :assemblesWith :resistor_220ohm_ped_red ;
+    :embodies :pedestrian_specific_constraint .
+
+:PedestrianGreenLED a owl:Class ;
+    rdfs:subClassOf :LightEmittingDiode ;
+    rdfs:label "Pedestrian Green LED" ;
+    rdfs:comment "Green/white LED for pedestrian walk signal" .
+
+:pedestrian_green_led a :PedestrianGreenLED ;
+    rdfs:label "Pedestrian Green LED Instance" ;
+    :hasOntologicalStatus "Pedestrian-Priority Materializer" ;
+    :hasColorProperty "White/Blue (approximately 450-495nm wavelength)" ;
+    :hasElectricalCurrent "0.0091"^^xsd:decimal ;
+    :hasVoltage "3.0"^^xsd:decimal ;
+    :hasSemanticRole "Pedestrian Permission and Priority Signifier" ;
+    :hasSocialSignification "Democratic Participation in Urban Infrastructure" ;
+    :hasPhomenologicalAspect "Relief mixed with urgency - limited time window awareness" ;
+    :assemblesWith :resistor_220ohm_ped_green ;
+    :embodies :pedestrian_empowerment .
+
+# === RESISTOR ONTOLOGICAL SPECIFICATIONS ===
+
+:Resistor220Ohm a owl:Class ;
+    rdfs:subClassOf :Resistor ;
+    rdfs:label "220 Ohm Resistor" ;
+    rdfs:comment "Current-limiting resistor for LED protection" .
+
+:resistor_220ohm_red a :Resistor220Ohm ;
+    rdfs:label "220Ω Resistor for Red Traffic LED" ;
+    :hasOntologicalStatus "Protective Material Mediator" ;
+    :hasResistance "220"^^xsd:decimal ;
+    :hasSemanticRole "Current Limitation and Component Protection" ;
+    :hasSocialSignification "Engineering Ethics - Harm Prevention Through Design" ;
+    :hasPhomenologicalAspect "Invisible infrastructure - withdrawn protective function" ;
+    :assemblesWith :red_traffic_led .
+
+:resistor_220ohm_amber a :Resistor220Ohm ;
+    rdfs:label "220Ω Resistor for Amber Traffic LED" ;
+    :hasOntologicalStatus "Protective Material Mediator" ;
+    :hasResistance "220"^^xsd:decimal ;
+    :hasSemanticRole "Current Limitation and Component Protection" ;
+    :hasSocialSignification "Engineering Ethics - Harm Prevention Through Design" ;
+    :hasPhomenologicalAspect "Invisible infrastructure - withdrawn protective function" ;
+    :assemblesWith :amber_traffic_led .
+
+:resistor_220ohm_green a :Resistor220Ohm ;
+    rdfs:label "220Ω Resistor for Green Traffic LED" ;
+    :hasOntologicalStatus "Protective Material Mediator" ;
+    :hasResistance "220"^^xsd:decimal ;
+    :hasSemanticRole "Current Limitation and Component Protection" ;
+    :hasSocialSignification "Engineering Ethics - Harm Prevention Through Design" ;
+    :hasPhomenologicalAspect "Invisible infrastructure - withdrawn protective function" ;
+    :assemblesWith :green_traffic_led .
+
+:resistor_220ohm_ped_red a :Resistor220Ohm ;
+    rdfs:label "220Ω Resistor for Pedestrian Red LED" ;
+    :hasOntologicalStatus "Protective Material Mediator" ;
+    :hasResistance "220"^^xsd:decimal ;
+    :hasSemanticRole "Current Limitation and Component Protection" ;
+    :hasSocialSignification "Engineering Ethics - Harm Prevention Through Design" ;
+    :hasPhomenologicalAspect "Invisible infrastructure - withdrawn protective function" ;
+    :assemblesWith :pedestrian_red_led .
+
+:resistor_220ohm_ped_green a :Resistor220Ohm ;
+    rdfs:label "220Ω Resistor for Pedestrian Green LED" ;
+    :hasOntologicalStatus "Protective Material Mediator" ;
+    :hasResistance "220"^^xsd:decimal ;
+    :hasSemanticRole "Current Limitation and Component Protection" ;
+    :hasSocialSignification "Engineering Ethics - Harm Prevention Through Design" ;
+    :hasPhomenologicalAspect "Invisible infrastructure - withdrawn protective function" ;
+    :assemblesWith :pedestrian_green_led .
+
+# === BUTTON ONTOLOGICAL SPECIFICATION ===
+
+:PedestrianButton a owl:Class ;
+    rdfs:subClassOf :PushButton ;
+    rdfs:label "Pedestrian Button" ;
+    rdfs:comment "Momentary switch for pedestrian crossing requests" .
+
+:pedestrian_button a :PedestrianButton ;
+    rdfs:label "Pedestrian Button Instance" ;
+    :hasOntologicalStatus "Human-Machine Interface Materializer" ;
+    :hasSemanticRole "Agency Translation - Human Intention to Computational Event" ;
+    :hasSocialSignification "Democratic Participation Interface - Citizen Voice in Infrastructure" ;
+    :hasPhomenologicalAspect "Extension of bodily agency into technological assemblage" ;
+    :prehends :human_walking_intentions ;
+    :actualizes :pedestrian_crossing_requests ;
+    :assemblesWith :pin13 .
+
+# === BREADBOARD AND WIRING ONTOLOGICAL SPECIFICATION ===
+
+:Breadboard a owl:Class ;
+    rdfs:subClassOf :ElectronicComponent ;
+    rdfs:label "Breadboard" ;
+    rdfs:comment "Temporary circuit construction platform" .
+
+:breadboard_instance a :Breadboard ;
+    rdfs:label "Prototyping Breadboard" ;
+    :hasOntologicalStatus "Experimental Infrastructure" ;
+    :hasSemanticRole "Temporary Material Organization Platform" ;
+    :hasSocialSignification "Educational and Experimental Space" ;
+    :hasPhomenologicalAspect "Workshop ready-to-hand equipment" ;
+    :assemblesWith :arduino_instance .
+
+:JumperWire a owl:Class ;
+    rdfs:subClassOf :ElectronicComponent ;
+    rdfs:label "Jumper Wire" ;
+    rdfs:comment "Connecting wire for breadboard circuits" .
+
+:ground_rail a :JumperWire ;
+    rdfs:label "Ground Rail Connection" ;
+    :hasOntologicalStatus "Electrical Reference Point Materializer" ;
+    :hasSemanticRole "Common Electrical Reference" ;
+    :hasSocialSignification "Shared Foundation - Democratic Electrical Equality" ;
+    :hasPhomenologicalAspect "Invisible background condition for electrical function" .
+
+:power_rail a :JumperWire ;
+    rdfs:label "Power Rail Connection" ;
+    :hasOntologicalStatus "Energy Distribution Infrastructure" ;
+    :hasSemanticRole "Electrical Energy Supply" ;
+    :hasSocialSignification "Life-giving Infrastructure - System Vitality" ;
+    :hasPhomenologicalAspect "Invisible energy flow - background condition for operation" .
+
+# === COMPONENT ASSEMBLAGES ===
+
+:TrafficLightAssemblage a owl:Class ;
+    rdfs:subClassOf :ComputationalSystem ;
+    rdfs:label "Traffic Light Assemblage" ;
+    rdfs:comment "Complete heterogeneous assemblage of all system components" .
+
+:traffic_light_assemblage a :TrafficLightAssemblage ;
+    rdfs:label "Complete Traffic Light System Assemblage" ;
+    :hasOntologicalStatus "Heterogeneous Machinic Assemblage" ;
+    :hasSemanticRole "Urban Traffic Coordination Infrastructure" ;
+    :hasSocialSignification "Socio-Technical Network for Urban Mobility" ;
+    :hasPhomenologicalAspect "Urban infrastructure - oscillates between transparent and thematic" ;
+    :assemblesWith :arduino_instance,
+                  :red_traffic_led,
+                  :amber_traffic_led,
+                  :green_traffic_led,
+                  :pedestrian_red_led,
+                  :pedestrian_green_led,
+                  :pedestrian_button,
+                  :breadboard_instance ;
+    :embodies :traffic_coordination_logic ;
+    :actualizes :urban_mobility_patterns .
+
+# === COMPONENT RELATIONSHIPS ===
+
+# Electrical Connections
+:pin13 :electricallyConnectedTo :pedestrian_button .
+:pin12 :electricallyConnectedTo :resistor_220ohm_red .
+:pin11 :electricallyConnectedTo :resistor_220ohm_amber .
+:pin10 :electricallyConnectedTo :resistor_220ohm_green .
+:pin9 :electricallyConnectedTo :resistor_220ohm_ped_red .
+:pin8 :electricallyConnectedTo :resistor_220ohm_ped_green .
+
+:resistor_220ohm_red :electricallyConnectedTo :red_traffic_led .
+:resistor_220ohm_amber :electricallyConnectedTo :amber_traffic_led .
+:resistor_220ohm_green :electricallyConnectedTo :green_traffic_led .
+:resistor_220ohm_ped_red :electricallyConnectedTo :pedestrian_red_led .
+:resistor_220ohm_ped_green :electricallyConnectedTo :pedestrian_green_led .
+
+# Ontological Relationships
+:arduino_instance :embodies :computational_logic .
+:red_traffic_led :materializes :prohibition_concept .
+:amber_traffic_led :materializes :transition_concept .
+:green_traffic_led :materializes :permission_concept .
+:pedestrian_red_led :materializes :pedestrian_constraint_concept .
+:pedestrian_green_led :materializes :pedestrian_empowerment_concept .
+:pedestrian_button :transduces :human_agency_into_computational_events .
+
+# === COMPONENT WITHDRAWAL RELATIONSHIPS ===
+
+# Harman's Object Withdrawal
+:arduino_instance :withdrawsFrom :complete_technical_description .
+:red_traffic_led :withdrawsFrom :complete_physical_analysis .
+:amber_traffic_led :withdrawsFrom :exhaustive_phenomenological_description .
+:green_traffic_led :withdrawsFrom :total_semiotic_reduction .
+:pedestrian_red_led :withdrawsFrom :complete_social_construction .
+:pedestrian_green_led :withdrawsFrom :full_ontological_disclosure .
+:pedestrian_button :withdrawsFrom :total_human-machine_interface_theory .
+
+# Each component maintains inexhaustible depth beyond all possible relations and descriptions

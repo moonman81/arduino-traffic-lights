@@ -1,0 +1,324 @@
+# Base Ontological Framework for Traffic Light System
+# Ultra-Detailed Ontological Requirements Analysis
+# Document: base-ontology.n3
+# Version: 1.0
+# Purpose: Foundational ontological categories and relationships
+
+@prefix : <http://example.org/traffic-light-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+# === FUNDAMENTAL ONTOLOGICAL CATEGORIES ===
+
+# Top-level Being Categories
+:Being a owl:Class ;
+    rdfs:label "Being" ;
+    rdfs:comment "The most fundamental ontological category - that which exists in any mode" .
+
+:ActualBeing a owl:Class ;
+    rdfs:subClassOf :Being ;
+    rdfs:label "Actual Being" ;
+    rdfs:comment "Beings that exist in concrete, material, spatiotemporal reality" .
+
+:PotentialBeing a owl:Class ;
+    rdfs:subClassOf :Being ;
+    rdfs:label "Potential Being" ;
+    rdfs:comment "Beings that exist as possibilities, not yet actualized" .
+
+:FormalBeing a owl:Class ;
+    rdfs:subClassOf :Being ;
+    rdfs:label "Formal Being" ;
+    rdfs:comment "Beings that exist as abstract structures, patterns, or mathematical forms" .
+
+:RelationalBeing a owl:Class ;
+    rdfs:subClassOf :Being ;
+    rdfs:label "Relational Being" ;
+    rdfs:comment "Beings that exist only in and through relationships with other beings" .
+
+:VirtualBeing a owl:Class ;
+    rdfs:subClassOf :Being ;
+    rdfs:label "Virtual Being" ;
+    rdfs:comment "Beings that exist in computational/simulated contexts" .
+
+# === TEMPORAL ONTOLOGICAL CATEGORIES ===
+
+:TemporalBeing a owl:Class ;
+    rdfs:subClassOf :Being ;
+    rdfs:label "Temporal Being" ;
+    rdfs:comment "Beings essentially characterized by temporality and becoming" .
+
+:MechanicalTime a owl:Class ;
+    rdfs:subClassOf :TemporalBeing ;
+    rdfs:label "Mechanical Time" ;
+    rdfs:comment "Spatialized, measurable, homogeneous temporal units" .
+
+:Duration a owl:Class ;
+    rdfs:subClassOf :TemporalBeing ;
+    rdfs:label "Duration" ;
+    rdfs:comment "Bergson's lived time - heterogeneous, qualitative temporal flow" .
+
+:Temporality a owl:Class ;
+    rdfs:subClassOf :TemporalBeing ;
+    rdfs:label "Temporality" ;
+    rdfs:comment "Heidegger's threefold structure: having-been, coming-toward, moment-of-vision" .
+
+# === SYSTEM ONTOLOGICAL CATEGORIES ===
+
+:ComputationalSystem a owl:Class ;
+    rdfs:subClassOf :ActualBeing, :VirtualBeing ;
+    rdfs:label "Computational System" ;
+    rdfs:comment "Systems that exist both materially and computationally" .
+
+:EmbeddedSystem a owl:Class ;
+    rdfs:subClassOf :ComputationalSystem ;
+    rdfs:label "Embedded System" ;
+    rdfs:comment "Computational systems embedded in physical environments" .
+
+:TrafficControlSystem a owl:Class ;
+    rdfs:subClassOf :EmbeddedSystem ;
+    rdfs:label "Traffic Control System" ;
+    rdfs:comment "Systems for coordinating vehicular and pedestrian traffic flow" .
+
+:HybridSystem a owl:Class ;
+    rdfs:subClassOf :ComputationalSystem ;
+    rdfs:label "Hybrid System" ;
+    rdfs:comment "Systems combining discrete logic with continuous dynamics" .
+
+# === SIMULATION ONTOLOGICAL CATEGORIES ===
+
+:SimulatedBeing a owl:Class ;
+    rdfs:subClassOf :VirtualBeing ;
+    rdfs:label "Simulated Being" ;
+    rdfs:comment "Beings that exist within computational simulation environments" .
+
+:Simulacrum a owl:Class ;
+    rdfs:subClassOf :SimulatedBeing ;
+    rdfs:label "Simulacrum" ;
+    rdfs:comment "Baudrillard's copy without original - pure simulation" .
+
+:EmulatedHardware a owl:Class ;
+    rdfs:subClassOf :SimulatedBeing ;
+    rdfs:label "Emulated Hardware" ;
+    rdfs:comment "Virtual representations of physical hardware components" .
+
+:TinkercadSimulation a owl:Class ;
+    rdfs:subClassOf :SimulatedBeing ;
+    rdfs:label "Tinkercad Simulation" ;
+    rdfs:comment "Specific simulation environment for electronics education" .
+
+# === MATERIAL ONTOLOGICAL CATEGORIES ===
+
+:MaterialBeing a owl:Class ;
+    rdfs:subClassOf :ActualBeing ;
+    rdfs:label "Material Being" ;
+    rdfs:comment "Beings with physical, material existence" .
+
+:ElectronicComponent a owl:Class ;
+    rdfs:subClassOf :MaterialBeing ;
+    rdfs:label "Electronic Component" ;
+    rdfs:comment "Physical electronic devices and components" .
+
+:Microcontroller a owl:Class ;
+    rdfs:subClassOf :ElectronicComponent ;
+    rdfs:label "Microcontroller" ;
+    rdfs:comment "Integrated circuit containing processor, memory, and I/O peripherals" .
+
+:LightEmittingDiode a owl:Class ;
+    rdfs:subClassOf :ElectronicComponent ;
+    rdfs:label "Light Emitting Diode" ;
+    rdfs:comment "Semiconductor device that emits light when current flows through it" .
+
+:Resistor a owl:Class ;
+    rdfs:subClassOf :ElectronicComponent ;
+    rdfs:label "Resistor" ;
+    rdfs:comment "Passive component that provides electrical resistance" .
+
+:PushButton a owl:Class ;
+    rdfs:subClassOf :ElectronicComponent ;
+    rdfs:label "Push Button" ;
+    rdfs:comment "Momentary switch activated by physical pressure" .
+
+# === STATE ONTOLOGICAL CATEGORIES ===
+
+:SystemState a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "System State" ;
+    rdfs:comment "Abstract configuration of system variables at a given moment" .
+
+:DiscreteState a owl:Class ;
+    rdfs:subClassOf :SystemState ;
+    rdfs:label "Discrete State" ;
+    rdfs:comment "Countable, enumerable system configurations" .
+
+:ContinuousState a owl:Class ;
+    rdfs:subClassOf :SystemState ;
+    rdfs:label "Continuous State" ;
+    rdfs:comment "Uncountable system configurations varying continuously" .
+
+:HybridState a owl:Class ;
+    rdfs:subClassOf :SystemState ;
+    rdfs:label "Hybrid State" ;
+    rdfs:comment "System configurations combining discrete and continuous aspects" .
+
+# === FUNDAMENTAL RELATIONSHIPS ===
+
+:hasOntologicalMode a owl:ObjectProperty ;
+    rdfs:label "has ontological mode" ;
+    rdfs:comment "Relates a being to its mode of existence" ;
+    rdfs:domain :Being ;
+    rdfs:range :Being .
+
+:actualizes a owl:ObjectProperty ;
+    rdfs:label "actualizes" ;
+    rdfs:comment "Process of potential becoming actual" ;
+    rdfs:domain :PotentialBeing ;
+    rdfs:range :ActualBeing .
+
+:virtualizes a owl:ObjectProperty ;
+    rdfs:label "virtualizes" ;
+    rdfs:comment "Process of actual becoming virtual/simulated" ;
+    rdfs:domain :ActualBeing ;
+    rdfs:range :VirtualBeing .
+
+:simulates a owl:ObjectProperty ;
+    rdfs:label "simulates" ;
+    rdfs:comment "Computational representation of another system" ;
+    rdfs:domain :SimulatedBeing ;
+    rdfs:range :Being .
+
+:embodies a owl:ObjectProperty ;
+    rdfs:label "embodies" ;
+    rdfs:comment "Material instantiation of abstract form" ;
+    rdfs:domain :MaterialBeing ;
+    rdfs:range :FormalBeing .
+
+:becomesTemporally a owl:ObjectProperty ;
+    rdfs:label "becomes temporally" ;
+    rdfs:comment "Temporal transition between states of being" ;
+    rdfs:domain :TemporalBeing ;
+    rdfs:range :TemporalBeing .
+
+:interpenetrates a owl:ObjectProperty ;
+    rdfs:label "interpenetrates" ;
+    rdfs:comment "Bergson's durational interpenetration of temporal moments" ;
+    rdfs:domain :Duration ;
+    rdfs:range :Duration .
+
+:assemblesWith a owl:ObjectProperty ;
+    rdfs:label "assembles with" ;
+    rdfs:comment "Deleuze-Guattari assemblage formation" ;
+    rdfs:domain :Being ;
+    rdfs:range :Being .
+
+:prehends a owl:ObjectProperty ;
+    rdfs:label "prehends" ;
+    rdfs:comment "Whitehead's process of grasping/feeling other occasions" ;
+    rdfs:domain :Being ;
+    rdfs:range :Being .
+
+:withdrawsFrom a owl:ObjectProperty ;
+    rdfs:label "withdraws from" ;
+    rdfs:comment "Harman's object withdrawal from all relations" ;
+    rdfs:domain :Being ;
+    rdfs:range :Being .
+
+# === TEMPORAL PROPERTIES ===
+
+:hasTemporalStructure a owl:ObjectProperty ;
+    rdfs:label "has temporal structure" ;
+    rdfs:comment "The temporal organization of a being" ;
+    rdfs:domain :TemporalBeing ;
+    rdfs:range :Temporality .
+
+:hasDuration a owl:DatatypeProperty ;
+    rdfs:label "has duration" ;
+    rdfs:comment "Temporal extent measured in clock time" ;
+    rdfs:domain :TemporalBeing ;
+    rdfs:range xsd:duration .
+
+:hasIntensiveDuration a owl:ObjectProperty ;
+    rdfs:label "has intensive duration" ;
+    rdfs:comment "Qualitative temporal experience" ;
+    rdfs:domain :TemporalBeing ;
+    rdfs:range :Duration .
+
+# === QUANTITATIVE PROPERTIES ===
+
+:hasElectricalCurrent a owl:DatatypeProperty ;
+    rdfs:label "has electrical current" ;
+    rdfs:comment "Current flow through component in amperes" ;
+    rdfs:domain :ElectronicComponent ;
+    rdfs:range xsd:decimal .
+
+:hasResistance a owl:DatatypeProperty ;
+    rdfs:label "has resistance" ;
+    rdfs:comment "Electrical resistance in ohms" ;
+    rdfs:domain :Resistor ;
+    rdfs:range xsd:decimal .
+
+:hasVoltage a owl:DatatypeProperty ;
+    rdfs:label "has voltage" ;
+    rdfs:comment "Electrical potential difference in volts" ;
+    rdfs:domain :ElectronicComponent ;
+    rdfs:range xsd:decimal .
+
+:hasClockFrequency a owl:DatatypeProperty ;
+    rdfs:label "has clock frequency" ;
+    rdfs:comment "Operating frequency in hertz" ;
+    rdfs:domain :Microcontroller ;
+    rdfs:range xsd:decimal .
+
+# === QUALITATIVE PROPERTIES ===
+
+:hasColorProperty a owl:DatatypeProperty ;
+    rdfs:label "has color property" ;
+    rdfs:comment "Color characteristics of LED emission" ;
+    rdfs:domain :LightEmittingDiode ;
+    rdfs:range xsd:string .
+
+:hasStateIdentifier a owl:DatatypeProperty ;
+    rdfs:label "has state identifier" ;
+    rdfs:comment "Symbolic identifier for system state" ;
+    rdfs:domain :SystemState ;
+    rdfs:range xsd:string .
+
+:hasOntologicalStatus a owl:DatatypeProperty ;
+    rdfs:label "has ontological status" ;
+    rdfs:comment "Categorical description of being's ontological mode" ;
+    rdfs:domain :Being ;
+    rdfs:range xsd:string .
+
+# === SEMANTIC PROPERTIES ===
+
+:hasSemanticRole a owl:DatatypeProperty ;
+    rdfs:label "has semantic role" ;
+    rdfs:comment "Meaning or function within larger system" ;
+    rdfs:domain :Being ;
+    rdfs:range xsd:string .
+
+:hasSocialSignification a owl:DatatypeProperty ;
+    rdfs:label "has social signification" ;
+    rdfs:comment "Cultural and social meanings attributed to system" ;
+    rdfs:domain :Being ;
+    rdfs:range xsd:string .
+
+:hasPhomenologicalAspect a owl:DatatypeProperty ;
+    rdfs:label "has phenomenological aspect" ;
+    rdfs:comment "How being appears to conscious experience" ;
+    rdfs:domain :Being ;
+    rdfs:range xsd:string .
+
+# === METADATA ===
+
+: a owl:Ontology ;
+    dc:title "Traffic Light System Ontological Framework" ;
+    dc:description "Comprehensive ontological analysis framework for embedded traffic control systems" ;
+    dc:creator "Ontological Requirements Engineering Process" ;
+    dc:date "2024" ;
+    owl:versionInfo "1.0" .

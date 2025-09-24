@@ -1,0 +1,460 @@
+# Temporal Ontology Specification
+# Ultra-Detailed Temporal Analysis
+# Document: temporal-ontology.n3
+# Version: 1.0
+# Purpose: Comprehensive temporal ontological requirements
+
+@prefix : <http://example.org/traffic-light-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+# Include base ontology
+@include "base-ontology.n3" .
+@include "system-components.n3" .
+
+# === TEMPORAL ONTOLOGICAL CATEGORIES ===
+
+:TemporalRegime a owl:Class ;
+    rdfs:subClassOf :TemporalBeing ;
+    rdfs:label "Temporal Regime" ;
+    rdfs:comment "Organized system of temporal relationships and rhythms" .
+
+:ChronosTime a owl:Class ;
+    rdfs:subClassOf :MechanicalTime ;
+    rdfs:label "Chronos Time" ;
+    rdfs:comment "Sequential, measurable, quantitative time - time of clocks and calendars" .
+
+:KairosTime a owl:Class ;
+    rdfs:subClassOf :Duration ;
+    rdfs:label "Kairos Time" ;
+    rdfs:comment "Qualitative, opportune time - time of significance and decision" .
+
+:AionTime a owl:Class ;
+    rdfs:subClassOf :TemporalBeing ;
+    rdfs:label "Aion Time" ;
+    rdfs:comment "Eternal time - time of pure becoming without measure" .
+
+# === SYSTEM TEMPORAL STRUCTURES ===
+
+:ClockCycle a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Clock Cycle" ;
+    rdfs:comment "Fundamental temporal unit of computational systems" .
+
+:arduino_clock_cycle a :ClockCycle ;
+    rdfs:label "Arduino 16MHz Clock Cycle" ;
+    :hasOntologicalStatus "Fundamental Computational Temporal Atom" ;
+    :hasDuration "PT0.0000000625S"^^xsd:duration ;
+    :hasSemanticRole "Basic Temporal Unit for All System Operations" ;
+    :hasSocialSignification "Hidden Infrastructure of Digital Temporality" ;
+    :hasPhomenologicalAspect "Sub-perceptual temporal foundation - below conscious awareness" ;
+    :embodies :digital_time_atom .
+
+:MillisecondTick a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Millisecond Tick" ;
+    rdfs:comment "Software temporal unit returned by millis() function" .
+
+:millis_tick a :MillisecondTick ;
+    rdfs:label "Arduino Millisecond Counter" ;
+    :hasOntologicalStatus "Quantized Temporal Representation" ;
+    :hasDuration "PT0.001S"^^xsd:duration ;
+    :hasSemanticRole "Software-Accessible Temporal Reference" ;
+    :hasSocialSignification "Bridge Between Human and Machine Temporal Scales" ;
+    :hasPhomenologicalAspect "Threshold of conscious temporal awareness" ;
+    :embodies :software_time_quantization .
+
+# === STATE DURATION SPECIFICATIONS ===
+
+:RedDuration a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Red Light Duration" ;
+    rdfs:comment "Temporal extent of red traffic light state" .
+
+:red_duration a :RedDuration ;
+    rdfs:label "Red Light 5-Second Duration" ;
+    :hasOntologicalStatus "Authority-Enforced Temporal Constraint" ;
+    :hasDuration "PT5S"^^xsd:duration ;
+    :hasSemanticRole "Mandatory Stop Period Enforcement" ;
+    :hasSocialSignification "Legal and Ethical Temporal Obligation" ;
+    :hasPhomenologicalAspect "Enforced waiting - temporal discipline and frustration" ;
+    :embodies :prohibition_temporality .
+
+:RedAmberDuration a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Red+Amber Duration" ;
+    rdfs:comment "Temporal extent of red+amber preparation phase" .
+
+:red_amber_duration a :RedAmberDuration ;
+    rdfs:label "Red+Amber 2-Second Duration" ;
+    :hasOntologicalStatus "Preparatory Temporal Transition" ;
+    :hasDuration "PT2S"^^xsd:duration ;
+    :hasSemanticRole "Preparation and Anticipation Period" ;
+    :hasSocialSignification "Courtesy Notice for Traffic Preparation" ;
+    :hasPhomenologicalAspect "Anticipation and readiness - heightened attention" ;
+    :embodies :preparation_temporality .
+
+:GreenDuration a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Green Light Duration" ;
+    rdfs:comment "Temporal extent of green traffic light state" .
+
+:green_duration a :GreenDuration ;
+    rdfs:label "Green Light 6-Second Duration" ;
+    :hasOntologicalStatus "Permission-Granting Temporal Window" ;
+    :hasDuration "PT6S"^^xsd:duration ;
+    :hasSemanticRole "Authorized Movement Period" ;
+    :hasSocialSignification "Freedom and Flow Enablement" ;
+    :hasPhomenologicalAspect "Relief and flow state - transparent temporal experience" ;
+    :embodies :permission_temporality .
+
+:GreenMinimumDuration a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Green Minimum Duration" ;
+    rdfs:comment "Minimum guaranteed green time before pedestrian interruption" .
+
+:green_minimum_duration a :GreenMinimumDuration ;
+    rdfs:label "Green Minimum 3-Second Duration" ;
+    :hasOntologicalStatus "Ethical Temporal Guarantee" ;
+    :hasDuration "PT3S"^^xsd:duration ;
+    :hasSemanticRole "Fair Traffic Opportunity Provision" ;
+    :hasSocialSignification "Ethical Consideration for Traffic in Motion" ;
+    :hasPhomenologicalAspect "Security of temporal expectation - trust in system fairness" ;
+    :embodies :ethical_temporality .
+
+:AmberDuration a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Amber Light Duration" ;
+    rdfs:comment "Temporal extent of amber warning phase" .
+
+:amber_duration a :AmberDuration ;
+    rdfs:label "Amber Light 3-Second Duration" ;
+    :hasOntologicalStatus "Decision-Critical Temporal Pressure" ;
+    :hasDuration "PT3S"^^xsd:duration ;
+    :hasSemanticRole "Warning and Decision Period" ;
+    :hasSocialSignification "Ethical Responsibility for Safe Decision-Making" ;
+    :hasPhomenologicalAspect "Anxiety and decision pressure - temporal urgency" ;
+    :embodies :decision_temporality .
+
+:PedestrianCrossingDuration a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Pedestrian Crossing Duration" ;
+    rdfs:comment "Temporal extent of pedestrian crossing phase" .
+
+:pedestrian_crossing_duration a :PedestrianCrossingDuration ;
+    rdfs:label "Pedestrian Crossing 8-Second Duration" ;
+    :hasOntologicalStatus "Pedestrian-Prioritized Temporal Allocation" ;
+    :hasDuration "PT8S"^^xsd:duration ;
+    :hasSemanticRole "Safe Pedestrian Crossing Time Provision" ;
+    :hasSocialSignification "Democratic Recognition of Pedestrian Rights" ;
+    :hasPhomenologicalAspect "Urgency mixed with relief - limited time window anxiety" ;
+    :embodies :pedestrian_priority_temporality .
+
+# === DEBOUNCE TEMPORAL STRUCTURE ===
+
+:DebounceDuration a owl:Class ;
+    rdfs:subClassOf :ChronosTime ;
+    rdfs:label "Debounce Duration" ;
+    rdfs:comment "Temporal filter for button contact bounce elimination" .
+
+:debounce_duration a :DebounceDuration ;
+    rdfs:label "Button Debounce 200ms Duration" ;
+    :hasOntologicalStatus "Technical Temporal Mediation" ;
+    :hasDuration "PT0.2S"^^xsd:duration ;
+    :hasSemanticRole "Hardware-Software Interface Stabilization" ;
+    :hasSocialSignification "Technical Reliability Assurance" ;
+    :hasPhomenologicalAspect "Sub-conscious temporal filtering - invisible to user experience" ;
+    :embodies :technical_temporal_mediation .
+
+# === BERGSON'S DURATIONAL ANALYSIS ===
+
+:SystemDuration a owl:Class ;
+    rdfs:subClassOf :Duration ;
+    rdfs:label "System Duration" ;
+    rdfs:comment "The lived, qualitative temporal experience of the system itself" .
+
+:system_duration a :SystemDuration ;
+    rdfs:label "Traffic Light System Duration" ;
+    :hasOntologicalStatus "Intensive Temporal Multiplicity" ;
+    :hasSemanticRole "Qualitative Temporal Interpenetration of All System Moments" ;
+    :hasSocialSignification "Cumulative Memory and Learning Potential" ;
+    :hasPhomenologicalAspect "Continuous becoming - each moment contains all others" ;
+    :interpenetrates :arduino_clock_cycle,
+                    :millis_tick,
+                    :red_duration,
+                    :green_duration,
+                    :amber_duration ;
+    :embodies :pure_temporal_becoming .
+
+:UserDuration a owl:Class ;
+    rdfs:subClassOf :Duration ;
+    rdfs:label "User Duration" ;
+    rdfs:comment "The lived temporal experience of system users" .
+
+:pedestrian_duration a :UserDuration ;
+    rdfs:label "Pedestrian Temporal Experience" ;
+    :hasOntologicalStatus "Embodied Temporal Perspective" ;
+    :hasSemanticRole "Human-Scale Temporal Meaning Construction" ;
+    :hasSocialSignification "Pedestrian Temporal Rights and Expectations" ;
+    :hasPhomenologicalAspect "Impatience, anticipation, relief - qualitative temporal flow" ;
+    :interpenetrates :button_press_moment,
+                    :waiting_duration,
+                    :crossing_urgency ;
+    :embodies :human_temporal_experience .
+
+:driver_duration a :UserDuration ;
+    rdfs:label "Driver Temporal Experience" ;
+    :hasOntologicalStatus "Vehicular Temporal Perspective" ;
+    :hasSemanticRole "Traffic Flow Temporal Coordination" ;
+    :hasSocialSignification "Automotive Temporal Culture and Expectations" ;
+    :hasPhomenologicalAspect "Flow states and interruptions - speed and stopping tensions" ;
+    :interpenetrates :acceleration_moments,
+                    :deceleration_decisions,
+                    :stop_line_anxiety ;
+    :embodies :automotive_temporal_experience .
+
+# === HEIDEGGER'S TEMPORALITY ANALYSIS ===
+
+:SystemTemporality a owl:Class ;
+    rdfs:subClassOf :Temporality ;
+    rdfs:label "System Temporality" ;
+    rdfs:comment "Heidegger's threefold temporal structure applied to system being" .
+
+:system_temporality a :SystemTemporality ;
+    rdfs:label "Traffic Light System Temporality" ;
+    :hasOntologicalStatus "Existential Temporal Structure" ;
+    :hasSemanticRole "Unified Temporal Meaning Structure" ;
+    :hasSocialSignification "Historical Inheritance and Future Projection Integration" ;
+    :hasPhomenologicalAspect "Past-Present-Future unified structure" ;
+    :hasTemporalStructure :system_having_been,
+                         :system_coming_toward,
+                         :system_moment_of_vision .
+
+:SystemHavingBeen a owl:Class ;
+    rdfs:subClassOf :Temporality ;
+    rdfs:label "System Having-Been" ;
+    rdfs:comment "Inherited historical determinations of system meaning" .
+
+:system_having_been a :SystemHavingBeen ;
+    rdfs:label "Traffic Light Historical Inheritance" ;
+    :hasOntologicalStatus "Historical Temporal Determination" ;
+    :hasSemanticRole "Cultural and Technical Heritage Integration" ;
+    :hasSocialSignification "Evolution of Traffic Control Technology and Social Norms" ;
+    :hasPhomenologicalAspect "Background understanding from past experience" ;
+    :embodies :traffic_control_history,
+             :color_symbolism_tradition,
+             :urban_planning_heritage,
+             :automotive_culture_inheritance .
+
+:SystemComingToward a owl:Class ;
+    rdfs:subClassOf :Temporality ;
+    rdfs:label "System Coming-Toward" ;
+    rdfs:comment "Future possibilities and projections of system meaning" .
+
+:system_coming_toward a :SystemComingToward ;
+    rdfs:label "Traffic Light Future Projection" ;
+    :hasOntologicalStatus "Future Temporal Projection" ;
+    :hasSemanticRole "Anticipated System Development and Evolution" ;
+    :hasSocialSignification "Smart City Integration and Autonomous Vehicle Preparation" ;
+    :hasPhomenologicalAspect "Anticipation of technological and social evolution" ;
+    :embodies :smart_traffic_possibilities,
+             :autonomous_vehicle_integration,
+             :iot_connectivity_potential,
+             :urban_mobility_evolution .
+
+:SystemMomentOfVision a owl:Class ;
+    rdfs:subClassOf :Temporality ;
+    rdfs:label "System Moment of Vision" ;
+    rdfs:comment "Present decisive moments of system operation" .
+
+:system_moment_of_vision a :SystemMomentOfVision ;
+    rdfs:label "Traffic Light Decisive Moments" ;
+    :hasOntologicalStatus "Present Temporal Decision Points" ;
+    :hasSemanticRole "Real-Time System Response and Adaptation" ;
+    :hasSocialSignification "Immediate Safety and Coordination Decisions" ;
+    :hasPhomenologicalAspect "Decisive present moments - kairos within chronos" ;
+    :embodies :button_press_response,
+             :state_transition_decisions,
+             :safety_priority_determinations,
+             :emergency_override_possibilities .
+
+# === DELEUZE'S TEMPORAL MULTIPLICITIES ===
+
+:TemporalAssemblage a owl:Class ;
+    rdfs:subClassOf :TemporalBeing ;
+    rdfs:label "Temporal Assemblage" ;
+    rdfs:comment "Deleuze-Guattari assemblage of heterogeneous temporal rhythms" .
+
+:traffic_temporal_assemblage a :TemporalAssemblage ;
+    rdfs:label "Traffic System Temporal Assemblage" ;
+    :hasOntologicalStatus "Heterogeneous Temporal Machine" ;
+    :hasSemanticRole "Multiple Temporal Rhythm Coordination" ;
+    :hasSocialSignification "Urban Temporal Synchronization Infrastructure" ;
+    :hasPhomenologicalAspect "Polyrhythmic temporal experience - multiple time streams" ;
+    :assemblesWith :arduino_clock_rhythm,
+                  :traffic_flow_rhythm,
+                  :pedestrian_walking_rhythm,
+                  :urban_activity_rhythm,
+                  :circadian_rhythm_influences ;
+    :embodies :temporal_multiplicity .
+
+:TemporalRhythm a owl:Class ;
+    rdfs:subClassOf :TemporalBeing ;
+    rdfs:label "Temporal Rhythm" ;
+    rdfs:comment "Specific temporal pattern or cycle within assemblage" .
+
+:arduino_clock_rhythm a :TemporalRhythm ;
+    rdfs:label "Arduino Clock Rhythm" ;
+    :hasOntologicalStatus "Digital Temporal Infrastructure" ;
+    :hasSemanticRole "Fundamental System Temporal Synchronization" ;
+    :hasSocialSignification "Hidden Digital Temporal Foundation" ;
+    :hasPhomenologicalAspect "Sub-perceptual temporal regularity" ;
+    :hasTemporalFrequency "16000000"^^xsd:decimal .
+
+:traffic_flow_rhythm a :TemporalRhythm ;
+    rdfs:label "Traffic Flow Rhythm" ;
+    :hasOntologicalStatus "Automotive Temporal Pattern" ;
+    :hasSemanticRole "Vehicular Movement Coordination" ;
+    :hasSocialSignification "Urban Mobility Temporal Culture" ;
+    :hasPhomenologicalAspect "Flow and interruption rhythm - stop-start patterns" ;
+    :hasTemporalFrequency "Variable"^^xsd:string .
+
+:pedestrian_walking_rhythm a :TemporalRhythm ;
+    rdfs:label "Pedestrian Walking Rhythm" ;
+    :hasOntologicalStatus "Embodied Temporal Pattern" ;
+    :hasSemanticRole "Human Locomotion Coordination" ;
+    :hasSocialSignification "Pedestrian Temporal Rights and Expectations" ;
+    :hasPhomenologicalAspect "Natural walking cadence and urgency variations" ;
+    :hasTemporalFrequency "1.2"^^xsd:decimal .
+
+# === WHITEHEAD'S TEMPORAL OCCASIONS ===
+
+:ActualTemporalOccasion a owl:Class ;
+    rdfs:subClassOf :TemporalBeing ;
+    rdfs:label "Actual Temporal Occasion" ;
+    rdfs:comment "Whitehead's atomic temporal events - fundamental units of temporal becoming" .
+
+:ButtonPressOccasion a owl:Class ;
+    rdfs:subClassOf :ActualTemporalOccasion ;
+    rdfs:label "Button Press Occasion" ;
+    rdfs:comment "Atomic temporal event of pedestrian button activation" .
+
+:button_press_occasion a :ButtonPressOccasion ;
+    rdfs:label "Pedestrian Button Press Event" ;
+    :hasOntologicalStatus "Actual Temporal Occasion of Human-Machine Interface" ;
+    :hasSemanticRole "Agency Translation Event - Human to Computational" ;
+    :hasSocialSignification "Democratic Participation Actualization" ;
+    :hasPhomenologicalAspect "Intentional action moment - decision actualization" ;
+    :prehends :pedestrian_intention,
+             :button_material_resistance,
+             :system_current_state ;
+    :becomesTemporally :system_state_transition_occasion .
+
+:StateTransitionOccasion a owl:Class ;
+    rdfs:subClassOf :ActualTemporalOccasion ;
+    rdfs:label "State Transition Occasion" ;
+    rdfs:comment "Atomic temporal event of system state change" .
+
+:red_to_red_amber_occasion a :StateTransitionOccasion ;
+    rdfs:label "Red to Red+Amber Transition Event" ;
+    :hasOntologicalStatus "Actual Temporal Occasion of State Becoming" ;
+    :hasSemanticRole "Prohibition to Preparation Transformation" ;
+    :hasSocialSignification "Authority Pattern Shift Actualization" ;
+    :hasPhomenologicalAspect "Anticipation emergence - temporal preparation" ;
+    :prehends :red_duration_completion,
+             :timer_interrupt_occasion,
+             :traffic_preparation_potential ;
+    :becomesTemporally :red_amber_state_occasion .
+
+# === TEMPORAL REQUIREMENTS SPECIFICATIONS ===
+
+:TemporalRequirement a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Temporal Requirement" ;
+    rdfs:comment "Specification for temporal behavior and constraints" .
+
+:MinimumGreenTimeRequirement a owl:Class ;
+    rdfs:subClassOf :TemporalRequirement ;
+    rdfs:label "Minimum Green Time Requirement" ;
+    rdfs:comment "Requirement for minimum green duration before interruption" .
+
+:minimum_green_requirement a :MinimumGreenTimeRequirement ;
+    rdfs:label "3-Second Minimum Green Requirement" ;
+    :hasOntologicalStatus "Ethical Temporal Constraint" ;
+    :hasSemanticRole "Fair Traffic Opportunity Guarantee" ;
+    :hasSocialSignification "Ethics of Temporal Justice in Urban Infrastructure" ;
+    :hasPhomenologicalAspect "Trust foundation - predictable temporal behavior" ;
+    :specifies :green_minimum_duration ;
+    :embodies :temporal_fairness_principle .
+
+:ButtonDebounceRequirement a owl:Class ;
+    rdfs:subClassOf :TemporalRequirement ;
+    rdfs:label "Button Debounce Requirement" ;
+    rdfs:comment "Requirement for temporal filtering of button signals" .
+
+:debounce_requirement a :ButtonDebounceRequirement ;
+    rdfs:label "200ms Debounce Requirement" ;
+    :hasOntologicalStatus "Technical Temporal Mediation Specification" ;
+    :hasSemanticRole "Signal Integrity Assurance" ;
+    :hasSocialSignification "Reliability Through Technical Temporal Design" ;
+    :hasPhomenologicalAspect "Invisible quality assurance - smooth user experience" ;
+    :specifies :debounce_duration ;
+    :embodies :technical_reliability_principle .
+
+# === TEMPORAL PARADOX ANALYSIS ===
+
+:TemporalParadox a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Temporal Paradox" ;
+    rdfs:comment "Contradictory or problematic temporal relationships" .
+
+:DiscreteContinuityParadox a owl:Class ;
+    rdfs:subClassOf :TemporalParadox ;
+    rdfs:label "Discrete Continuity Paradox" ;
+    rdfs:comment "Paradox of representing continuous time through discrete computational states" .
+
+:discrete_continuity_paradox a :DiscreteContinuityParadox ;
+    rdfs:label "System Discrete-Continuous Temporal Paradox" ;
+    :hasOntologicalStatus "Fundamental Computational Temporal Contradiction" ;
+    :hasSemanticRole "Limitation of Digital Temporal Representation" ;
+    :hasSocialSignification "Philosophy of Technology - Digital vs Analog Temporality" ;
+    :hasPhomenologicalAspect "Uncanny valley of temporal experience - almost but not quite natural" ;
+    :embodies :digital_temporal_limitation .
+
+:InfiniteFiniteTemporalityParadox a owl:Class ;
+    rdfs:subClassOf :TemporalParadox ;
+    rdfs:label "Infinite-Finite Temporality Paradox" ;
+    rdfs:comment "Paradox of infinite possible temporal moments within finite system duration" .
+
+:infinite_finite_paradox a :InfiniteFiniteTemporalityParadox ;
+    rdfs:label "System Infinite-Finite Temporal Paradox" ;
+    :hasOntologicalStatus "Mathematical-Physical Temporal Contradiction" ;
+    :hasSemanticRole "Boundary Between Mathematical and Physical Temporality" ;
+    :hasSocialSignification "Limits of Computational Temporal Modeling" ;
+    :hasPhomenologicalAspect "Vertigo of infinite possibility within finite constraints" ;
+    :embodies :temporal_infinity_limitation .
+
+# === TEMPORAL ONTOLOGICAL RELATIONSHIPS ===
+
+# Duration Interpenetration (Bergson)
+:red_duration :interpenetrates :amber_duration,
+                               :green_duration,
+                               :pedestrian_crossing_duration .
+
+# Temporal Prehension (Whitehead)
+:button_press_occasion :prehends :red_duration,
+                                 :green_duration,
+                                 :system_temporal_history .
+
+# Temporal Assemblage Formation (Deleuze-Guattari)
+:traffic_temporal_assemblage :assemblesWith :arduino_clock_rhythm,
+                                           :traffic_flow_rhythm,
+                                           :pedestrian_walking_rhythm .
+
+# Temporal Withdrawal (Harman)
+:system_duration :withdrawsFrom :complete_temporal_analysis,
+                               :exhaustive_chronometric_measurement,
+                               :total_phenomenological_description .

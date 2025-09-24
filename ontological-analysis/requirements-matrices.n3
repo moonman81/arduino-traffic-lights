@@ -1,0 +1,454 @@
+# Ontological Requirements Matrices
+# Ultra-Detailed Requirements Traceability and Analysis
+# Document: requirements-matrices.n3
+# Version: 1.0
+# Purpose: Comprehensive requirements matrices and traceability
+
+@prefix : <http://example.org/traffic-light-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Include all previous ontologies
+@include "base-ontology.n3" .
+@include "system-components.n3" .
+@include "temporal-ontology.n3" .
+@include "simulation-ontology.n3" .
+
+# === ONTOLOGICAL REQUIREMENTS FRAMEWORK ===
+
+:OntologicalRequirement a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Ontological Requirement" ;
+    rdfs:comment "Requirement that specifies ontological constraints and properties" .
+
+:FunctionalRequirement a owl:Class ;
+    rdfs:subClassOf :OntologicalRequirement ;
+    rdfs:label "Functional Requirement" ;
+    rdfs:comment "Requirements specifying what the system must do" .
+
+:NonFunctionalRequirement a owl:Class ;
+    rdfs:subClassOf :OntologicalRequirement ;
+    rdfs:label "Non-Functional Requirement" ;
+    rdfs:comment "Requirements specifying how the system must perform" .
+
+:OntologicalConstraint a owl:Class ;
+    rdfs:subClassOf :OntologicalRequirement ;
+    rdfs:label "Ontological Constraint" ;
+    rdfs:comment "Constraints on the being and behavior of system entities" .
+
+:SafetyRequirement a owl:Class ;
+    rdfs:subClassOf :OntologicalRequirement ;
+    rdfs:label "Safety Requirement" ;
+    rdfs:comment "Requirements ensuring system safety properties" .
+
+:TemporalRequirement a owl:Class ;
+    rdfs:subClassOf :OntologicalRequirement ;
+    rdfs:label "Temporal Requirement" ;
+    rdfs:comment "Requirements specifying temporal constraints and behaviors" .
+
+:SimulationRequirement a owl:Class ;
+    rdfs:subClassOf :OntologicalRequirement ;
+    rdfs:label "Simulation Requirement" ;
+    rdfs:comment "Requirements specific to simulation environment" .
+
+# === FUNCTIONAL REQUIREMENTS MATRIX ===
+
+:FR001 a :FunctionalRequirement ;
+    rdfs:label "FR001 - Traffic Light State Management" ;
+    :hasOntologicalStatus "Essential System Function" ;
+    :hasSemanticRole "Primary Traffic Control Logic" ;
+    :hasSocialSignification "Legal Traffic Coordination Obligation" ;
+    :hasPhomenologicalAspect "Visible traffic coordination - user expectation fulfillment" ;
+    :requiresImplementation :traffic_state_machine ;
+    :tracesTo :arduino_instance,
+             :red_traffic_led,
+             :amber_traffic_led,
+             :green_traffic_led ;
+    :satisfiedBy :traffic_light_assemblage ;
+    :verifiedBy :state_transition_testing .
+
+:FR002 a :FunctionalRequirement ;
+    rdfs:label "FR002 - Pedestrian Request Processing" ;
+    :hasOntologicalStatus "Democratic Participation Function" ;
+    :hasSemanticRole "Human Agency Translation" ;
+    :hasSocialSignification "Citizen Voice in Infrastructure" ;
+    :hasPhomenologicalAspect "Responsive human-machine interface" ;
+    :requiresImplementation :button_debounce_logic,
+                           :pedestrian_request_queuing ;
+    :tracesTo :pedestrian_button,
+             :pin13 ;
+    :satisfiedBy :checkPedestrianButton_function ;
+    :verifiedBy :button_response_testing .
+
+:FR003 a :FunctionalRequirement ;
+    rdfs:label "FR003 - Pedestrian Signal Control" ;
+    :hasOntologicalStatus "Pedestrian Safety Function" ;
+    :hasSemanticRole "Pedestrian-Specific Coordination" ;
+    :hasSocialSignification "Pedestrian Rights Recognition" ;
+    :hasPhomenologicalAspect "Clear pedestrian guidance and safety" ;
+    :requiresImplementation :pedestrian_signal_logic ;
+    :tracesTo :pedestrian_red_led,
+             :pedestrian_green_led,
+             :pin9,
+             :pin8 ;
+    :satisfiedBy :setPedestrianLights_function ;
+    :verifiedBy :pedestrian_signal_testing .
+
+:FR004 a :FunctionalRequirement ;
+    rdfs:label "FR004 - Timing Control System" ;
+    :hasOntologicalStatus "Temporal Coordination Function" ;
+    :hasSemanticRole "Synchronized Traffic Management" ;
+    :hasSocialSignification "Predictable Urban Temporal Infrastructure" ;
+    :hasPhomenologicalAspect "Reliable temporal expectations" ;
+    :requiresImplementation :timing_constants,
+                           :state_duration_tracking ;
+    :tracesTo :arduino_clock_cycle,
+             :millis_tick ;
+    :satisfiedBy :temporal_state_machine ;
+    :verifiedBy :timing_accuracy_testing .
+
+:FR005 a :FunctionalRequirement ;
+    rdfs:label "FR005 - Serial Communication" ;
+    :hasOntologicalStatus "Debugging and Monitoring Function" ;
+    :hasSemanticRole "System State Visibility" ;
+    :hasSocialSignification "Transparency and Accountability" ;
+    :hasPhomenologicalAspect "Developer insight into system operation" ;
+    :requiresImplementation :serial_debugging_output ;
+    :tracesTo :arduino_instance ;
+    :satisfiedBy :Serial_println_calls ;
+    :verifiedBy :debug_output_verification .
+
+# === NON-FUNCTIONAL REQUIREMENTS MATRIX ===
+
+:NFR001 a :NonFunctionalRequirement ;
+    rdfs:label "NFR001 - Response Time Performance" ;
+    :hasOntologicalStatus "Temporal Performance Constraint" ;
+    :hasSemanticRole "Real-Time System Responsiveness" ;
+    :hasSocialSignification "User Experience Quality Assurance" ;
+    :hasPhomenologicalAspect "Immediate system response expectation" ;
+    :specifiesConstraint "Button response within 200ms" ;
+    :tracesTo :debounce_duration,
+             :button_press_occasion ;
+    :satisfiedBy :non_blocking_loop_design ;
+    :verifiedBy :response_time_measurement .
+
+:NFR002 a :NonFunctionalRequirement ;
+    rdfs:label "NFR002 - Current Consumption Limits" ;
+    :hasOntologicalStatus "Electrical Performance Constraint" ;
+    :hasSemanticRole "Hardware Protection and Efficiency" ;
+    :hasSocialSignification "Engineering Ethics - Component Protection" ;
+    :hasPhomenologicalAspect "Invisible hardware protection" ;
+    :specifiesConstraint "Maximum 40mA per pin, 200mA total" ;
+    :tracesTo :resistor_220ohm_red,
+             :resistor_220ohm_amber,
+             :resistor_220ohm_green,
+             :resistor_220ohm_ped_red,
+             :resistor_220ohm_ped_green ;
+    :satisfiedBy :current_limiting_resistors ;
+    :verifiedBy :current_measurement_testing .
+
+:NFR003 a :NonFunctionalRequirement ;
+    rdfs:label "NFR003 - Educational Simulation Fidelity" ;
+    :hasOntologicalStatus "Pedagogical Performance Constraint" ;
+    :hasSemanticRole "Learning Effectiveness Assurance" ;
+    :hasSocialSignification "Educational Quality Responsibility" ;
+    :hasPhomenologicalAspect "Trust in educational tool accuracy" ;
+    :specifiesConstraint "Simulation behavior must match real hardware within educational tolerances" ;
+    :tracesTo :tinkercad_simulation,
+             :educational_reality ;
+    :satisfiedBy :physics_simulation_engine ;
+    :verifiedBy :simulation_validation_testing .
+
+:NFR004 a :NonFunctionalRequirement ;
+    rdfs:label "NFR004 - Code Maintainability" ;
+    :hasOntologicalStatus "Software Quality Constraint" ;
+    :hasSemanticRole "Long-term System Evolution Support" ;
+    :hasSocialSignification "Professional Software Development Standards" ;
+    :hasPhomenologicalAspect "Developer confidence in code quality" ;
+    :specifiesConstraint "Code must be readable, modular, and well-documented" ;
+    :tracesTo :software_abstraction_layer ;
+    :satisfiedBy :structured_programming_approach ;
+    :verifiedBy :code_review_process .
+
+# === SAFETY REQUIREMENTS MATRIX ===
+
+:SR001 a :SafetyRequirement ;
+    rdfs:label "SR001 - Mutual Exclusion of Conflicting Signals" ;
+    :hasOntologicalStatus "Critical Safety Invariant" ;
+    :hasSemanticRole "Traffic Conflict Prevention" ;
+    :hasSocialSignification "Legal and Ethical Safety Obligation" ;
+    :hasPhomenologicalAspect "Trust in system safety - freedom from conflict anxiety" ;
+    :specifiesInvariant "Never allow both traffic and pedestrian green simultaneously" ;
+    :tracesTo :green_traffic_led,
+             :pedestrian_green_led ;
+    :satisfiedBy :mutually_exclusive_state_logic ;
+    :verifiedBy :safety_property_verification .
+
+:SR002 a :SafetyRequirement ;
+    rdfs:label "SR002 - Guaranteed Traffic Warning" ;
+    :hasOntologicalStatus "Ethical Safety Requirement" ;
+    :hasSemanticRole "Fair Warning Provision" ;
+    :hasSocialSignification "Driver Rights and Safety Consideration" ;
+    :hasPhomenologicalAspect "Predictable transition - no sudden changes" ;
+    :specifiesInvariant "Always provide amber warning before red" ;
+    :tracesTo :amber_traffic_led,
+             :red_traffic_led ;
+    :satisfiedBy :amber_transition_logic ;
+    :verifiedBy :transition_sequence_verification .
+
+:SR003 a :SafetyRequirement ;
+    rdfs:label "SR003 - Minimum Green Time Guarantee" ;
+    :hasOntologicalStatus "Fairness Safety Requirement" ;
+    :hasSemanticRole "Traffic Flow Predictability" ;
+    :hasSocialSignification "Ethical Treatment of Traffic in Motion" ;
+    :hasPhomenologicalAspect "Security of green time expectation" ;
+    :specifiesInvariant "Minimum 3-second green before pedestrian interruption" ;
+    :tracesTo :green_minimum_duration ;
+    :satisfiedBy :minimum_green_enforcement_logic ;
+    :verifiedBy :minimum_time_verification .
+
+:SR004 a :SafetyRequirement ;
+    rdfs:label "SR004 - Pedestrian Crossing Time Adequacy" ;
+    :hasOntologicalStatus "Pedestrian Safety Requirement" ;
+    :hasSemanticRole "Safe Crossing Time Provision" ;
+    :hasSocialSignification "Accessibility and Inclusion" ;
+    :hasPhomenologicalAspect "Confidence in crossing time adequacy" ;
+    :specifiesInvariant "Minimum 8-second pedestrian crossing time" ;
+    :tracesTo :pedestrian_crossing_duration ;
+    :satisfiedBy :adequate_crossing_time_allocation ;
+    :verifiedBy :crossing_time_verification .
+
+# === TEMPORAL REQUIREMENTS MATRIX ===
+
+:TR001 a :TemporalRequirement ;
+    rdfs:label "TR001 - State Duration Specifications" ;
+    :hasOntologicalStatus "Temporal Behavioral Specification" ;
+    :hasSemanticRole "Predictable Timing Coordination" ;
+    :hasSocialSignification "Urban Temporal Infrastructure Reliability" ;
+    :hasPhomenologicalAspect "Rhythmic temporal expectations" ;
+    :specifiesTemporalBehavior "Red: 5s, Red+Amber: 2s, Green: 6s, Amber: 3s, Pedestrian: 8s" ;
+    :tracesTo :red_duration,
+             :red_amber_duration,
+             :green_duration,
+             :amber_duration,
+             :pedestrian_crossing_duration ;
+    :satisfiedBy :timing_constant_definitions ;
+    :verifiedBy :duration_measurement_testing .
+
+:TR002 a :TemporalRequirement ;
+    rdfs:label "TR002 - Button Debounce Timing" ;
+    :hasOntologicalStatus "Technical Temporal Specification" ;
+    :hasSemanticRole "Signal Integrity Assurance" ;
+    :hasSocialSignification "Reliable Human-Machine Interface" ;
+    :hasPhomenologicalAspect "Smooth button response - no false triggers" ;
+    :specifiesTemporalBehavior "200ms debounce filter for button input" ;
+    :tracesTo :debounce_duration ;
+    :satisfiedBy :debounce_logic_implementation ;
+    :verifiedBy :debounce_effectiveness_testing .
+
+:TR003 a :TemporalRequirement ;
+    rdfs:label "TR003 - System Clock Accuracy" ;
+    :hasOntologicalStatus "Fundamental Temporal Specification" ;
+    :hasSemanticRole "Temporal Reference Foundation" ;
+    :hasSocialSignification "System Reliability Foundation" ;
+    :hasPhomenologicalAspect "Invisible temporal accuracy - background reliability" ;
+    :specifiesTemporalBehavior "16MHz clock with millis() accuracy" ;
+    :tracesTo :arduino_clock_cycle,
+             :millis_tick ;
+    :satisfiedBy :arduino_clock_system ;
+    :verifiedBy :clock_accuracy_verification .
+
+# === SIMULATION REQUIREMENTS MATRIX ===
+
+:SIM001 a :SimulationRequirement ;
+    rdfs:label "SIM001 - Circuit Simulation Accuracy" ;
+    :hasOntologicalStatus "Educational Simulation Specification" ;
+    :hasSemanticRole "Physics Learning Support" ;
+    :hasSocialSignification "Educational Tool Reliability" ;
+    :hasPhomenologicalAspect "Trust in simulation physics" ;
+    :specifiesSimulationBehavior "Ohm's law compliance in circuit calculations" ;
+    :tracesTo :tinkercad_virtual_resistor,
+             :tinkercad_virtual_led ;
+    :satisfiedBy :physics_simulation_engine ;
+    :verifiedBy :ohms_law_verification ;
+    :hasKnownLimitation :tinkercad_current_bug .
+
+:SIM002 a :SimulationRequirement ;
+    rdfs:label "SIM002 - Visual Simulation Fidelity" ;
+    :hasOntologicalStatus "Phenomenological Simulation Specification" ;
+    :hasSemanticRole "Visual Learning Support" ;
+    :hasSocialSignification "Convincing Educational Experience" ;
+    :hasPhomenologicalAspect "Believable visual representation" ;
+    :specifiesSimulationBehavior "LED brightness and color accuracy" ;
+    :tracesTo :tinkercad_virtual_led ;
+    :satisfiedBy :visual_rendering_engine ;
+    :verifiedBy :visual_fidelity_assessment .
+
+:SIM003 a :SimulationRequirement ;
+    rdfs:label "SIM003 - Real-Time Simulation Performance" ;
+    :hasOntologicalStatus "Performance Simulation Specification" ;
+    :hasSemanticRole "Interactive Learning Support" ;
+    :hasSocialSignification "Responsive Educational Tool" ;
+    :hasPhomenologicalAspect "Real-time interaction capability" ;
+    :specifiesSimulationBehavior "Simulation updates at interactive frame rates" ;
+    :tracesTo :browser_simulation_layer ;
+    :satisfiedBy :optimized_simulation_engine ;
+    :verifiedBy :performance_measurement .
+
+# === REQUIREMENTS TRACEABILITY MATRIX ===
+
+:RequirementsTrace a owl:Class ;
+    rdfs:subClassOf :RelationalBeing ;
+    rdfs:label "Requirements Trace" ;
+    rdfs:comment "Traceability relationship between requirements and implementation" .
+
+# Functional Requirements Traces
+:FR001 :tracesTo :RED, :RED_AMBER, :GREEN, :AMBER, :PED_CROSSING .
+:FR002 :tracesTo :button_press_occasion, :pedestrian_request_queuing .
+:FR003 :tracesTo :pedestrian_red_led, :pedestrian_green_led .
+:FR004 :tracesTo :system_temporality, :timing_control_logic .
+:FR005 :tracesTo :serial_debug_output .
+
+# Safety Requirements Traces
+:SR001 :tracesTo :mutual_exclusion_logic .
+:SR002 :tracesTo :amber_warning_logic .
+:SR003 :tracesTo :minimum_green_enforcement .
+:SR004 :tracesTo :pedestrian_crossing_time_allocation .
+
+# Implementation Traces
+:traffic_state_machine :implements :FR001 .
+:button_debounce_logic :implements :FR002 .
+:pedestrian_signal_logic :implements :FR003 .
+:timing_constants :implements :FR004, :TR001 .
+:serial_debugging_output :implements :FR005 .
+
+# Verification Traces
+:state_transition_testing :verifies :FR001, :SR001, :SR002 .
+:button_response_testing :verifies :FR002, :NFR001 .
+:timing_accuracy_testing :verifies :FR004, :TR001, :TR003 .
+:safety_property_verification :verifies :SR001, :SR002, :SR003, :SR004 .
+
+# === REQUIREMENTS VALIDATION MATRIX ===
+
+:RequirementsValidation a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Requirements Validation" ;
+    rdfs:comment "Process of ensuring requirements correctly specify intended system" .
+
+:StakeholderValidation a owl:Class ;
+    rdfs:subClassOf :RequirementsValidation ;
+    rdfs:label "Stakeholder Validation" ;
+    rdfs:comment "Validation by system stakeholders" .
+
+:pedestrian_validation a :StakeholderValidation ;
+    rdfs:label "Pedestrian Stakeholder Validation" ;
+    :hasOntologicalStatus "User Experience Validation" ;
+    :hasSemanticRole "End-User Requirement Verification" ;
+    :hasSocialSignification "Democratic Participation in System Design" ;
+    :hasPhomenologicalAspect "User satisfaction and safety confidence" ;
+    :validates :FR002, :FR003, :SR004 ;
+    :through :user_experience_testing .
+
+:driver_validation a :StakeholderValidation ;
+    rdfs:label "Driver Stakeholder Validation" ;
+    :hasOntologicalStatus "Traffic User Validation" ;
+    :hasSemanticRole "Primary User Requirement Verification" ;
+    :hasSocialSignification "Automotive User Rights Recognition" ;
+    :hasPhomenologicalAspect "Driver safety and flow expectations" ;
+    :validates :FR001, :SR001, :SR002, :SR003 ;
+    :through :driver_experience_testing .
+
+:educator_validation a :StakeholderValidation ;
+    rdfs:label "Educator Stakeholder Validation" ;
+    :hasOntologicalStatus "Educational Quality Validation" ;
+    :hasSemanticRole "Learning Effectiveness Verification" ;
+    :hasSocialSignification "Educational Standards Compliance" ;
+    :hasPhomenologicalAspect "Teaching effectiveness and student learning" ;
+    :validates :SIM001, :SIM002, :SIM003, :NFR003 ;
+    :through :educational_effectiveness_assessment .
+
+# === ONTOLOGICAL REQUIREMENTS PROPERTIES ===
+
+:requiresImplementation a owl:ObjectProperty ;
+    rdfs:label "requires implementation" ;
+    rdfs:comment "Requirement specifies need for specific implementation" ;
+    rdfs:domain :OntologicalRequirement ;
+    rdfs:range :Being .
+
+:tracesTo a owl:ObjectProperty ;
+    rdfs:label "traces to" ;
+    rdfs:comment "Requirement traces to system component or implementation" ;
+    rdfs:domain :OntologicalRequirement ;
+    rdfs:range :Being .
+
+:satisfiedBy a owl:ObjectProperty ;
+    rdfs:label "satisfied by" ;
+    rdfs:comment "Requirement is satisfied by implementation" ;
+    rdfs:domain :OntologicalRequirement ;
+    rdfs:range :Being .
+
+:verifiedBy a owl:ObjectProperty ;
+    rdfs:label "verified by" ;
+    rdfs:comment "Requirement is verified by testing or analysis" ;
+    rdfs:domain :OntologicalRequirement ;
+    rdfs:range :Being .
+
+:validates a owl:ObjectProperty ;
+    rdfs:label "validates" ;
+    rdfs:comment "Validation process confirms requirement correctness" ;
+    rdfs:domain :RequirementsValidation ;
+    rdfs:range :OntologicalRequirement .
+
+:specifiesConstraint a owl:DatatypeProperty ;
+    rdfs:label "specifies constraint" ;
+    rdfs:comment "Textual specification of requirement constraint" ;
+    rdfs:domain :OntologicalRequirement ;
+    rdfs:range xsd:string .
+
+:specifiesInvariant a owl:DatatypeProperty ;
+    rdfs:label "specifies invariant" ;
+    rdfs:comment "Safety invariant specification" ;
+    rdfs:domain :SafetyRequirement ;
+    rdfs:range xsd:string .
+
+:specifiesTemporalBehavior a owl:DatatypeProperty ;
+    rdfs:label "specifies temporal behavior" ;
+    rdfs:comment "Temporal behavior specification" ;
+    rdfs:domain :TemporalRequirement ;
+    rdfs:range xsd:string .
+
+:specifiesSimulationBehavior a owl:DatatypeProperty ;
+    rdfs:label "specifies simulation behavior" ;
+    rdfs:comment "Simulation behavior specification" ;
+    rdfs:domain :SimulationRequirement ;
+    rdfs:range xsd:string .
+
+:hasKnownLimitation a owl:ObjectProperty ;
+    rdfs:label "has known limitation" ;
+    rdfs:comment "Requirement has known limitation or exception" ;
+    rdfs:domain :OntologicalRequirement ;
+    rdfs:range :Being .
+
+# === REQUIREMENTS COMPLETENESS ANALYSIS ===
+
+:RequirementsCompleteness a owl:Class ;
+    rdfs:subClassOf :FormalBeing ;
+    rdfs:label "Requirements Completeness" ;
+    rdfs:comment "Analysis of requirements coverage and completeness" .
+
+:requirements_completeness_analysis a :RequirementsCompleteness ;
+    rdfs:label "Traffic Light System Requirements Completeness" ;
+    :hasOntologicalStatus "Systematic Completeness Assessment" ;
+    :hasSemanticRole "Requirements Quality Assurance" ;
+    :hasSocialSignification "Professional Requirements Engineering Standards" ;
+    :hasPhomenologicalAspect "Confidence in requirement coverage" ;
+    :covers :functional_behavior_requirements,
+           :non_functional_performance_requirements,
+           :safety_and_security_requirements,
+           :temporal_behavior_requirements,
+           :simulation_fidelity_requirements ;
+    :identifies :potential_requirement_gaps,
+              :stakeholder_coverage_analysis,
+              :ontological_category_coverage .
