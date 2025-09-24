@@ -24,12 +24,8 @@ This repository contains a comprehensive Arduino-based traffic light control sys
 
 ```
 arduino-traffic-lights/
-├── arduino-code/                    # Arduino implementations
-│   ├── traffic-lights-arduino-clean.c                 # ⭐ RECOMMENDED - Clean, error-free version
-│   ├── traffic-lights-arduino-optimized-final.c      # Full-featured with comprehensive safety
-│   ├── traffic-lights-arduino-uno-r3-optimized.c     # Intermediate optimization
-│   ├── traffic-lights-arduino-uno-r3-uk.c            # UK standard implementation
-│   └── traffic-lights-arduino-uno-r3.c               # Original version
+├── arduino-code/                    # Arduino implementation
+│   └── traffic-lights-arduino-clean.c                 # Final optimized implementation
 ├── ontological-analysis/            # Comprehensive philosophical analysis
 │   ├── base-ontology.n3            # Fundamental ontological framework
 │   ├── system-components.n3        # Hardware component analysis
@@ -138,26 +134,16 @@ Perfect for learning:
 - **Electronics**: Circuit design and current optimization
 - **State Machines**: Finite state automaton implementation
 
-## 📚 Code Versions Guide
+## 📚 Implementation Details
 
-### **Recommended for Different Use Cases:**
+The single Arduino implementation (`traffic-lights-arduino-clean.c`) provides:
 
-1. **`traffic-lights-arduino-clean.c`** - **⭐ RECOMMENDED**
-   - Clean compilation, no type conflicts
-   - All safety features implemented
-   - Perfect for Tinkercad and physical Arduino
-   - Professional documentation
-
-2. **`traffic-lights-arduino-optimized-final.c`**
-   - Most comprehensive feature set
-   - Extensive ontological documentation
-   - Advanced safety verification
-   - Use if you need maximum features
-
-3. **`traffic-lights-arduino-uno-r3-uk.c`**
-   - Focused UK standard implementation
-   - Good balance of features and simplicity
-   - Clear, educational code structure
+- **Clean compilation** with no type conflicts
+- **All safety features** implemented with formal verification
+- **Perfect compatibility** with both Tinkercad simulation and physical Arduino
+- **Professional documentation** with comprehensive ontological analysis
+- **UK traffic light standard** compliance with pedestrian crossing
+- **Formally proven safety** with mathematical verification
 
 ## 🔍 Safety Verification Results
 
