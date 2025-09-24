@@ -3,7 +3,7 @@
 ## Components Required
 - Arduino Uno R3
 - 5x LEDs (Red, Amber/Yellow, Green, Red for pedestrian, Green for pedestrian)
-- 5x 220Ω resistors (for LEDs)
+- 5x 330Ω resistors (for LEDs)
 - 1x Push button (momentary)
 - Breadboard
 - Jumper wires (male-to-male)
@@ -33,35 +33,35 @@
 1. Insert Red LED into breadboard
    - **Long leg (anode)** goes to a numbered row
    - **Short leg (cathode)** goes to the negative rail
-2. Connect a **220Ω resistor** between the anode row and another row
+2. Connect a **330Ω resistor** between the anode row and another row
 3. Connect a **red jumper wire** from Pin 12 to the resistor's free end
 
 #### Amber Traffic LED (Pin 11)
 1. Insert Amber/Yellow LED into breadboard
    - **Long leg (anode)** goes to a numbered row
    - **Short leg (cathode)** goes to the negative rail
-2. Connect a **220Ω resistor** between the anode row and another row
+2. Connect a **330Ω resistor** between the anode row and another row
 3. Connect an **orange/yellow jumper wire** from Pin 11 to the resistor's free end
 
 #### Green Traffic LED (Pin 10)
 1. Insert Green LED into breadboard
    - **Long leg (anode)** goes to a numbered row
    - **Short leg (cathode)** goes to the negative rail
-2. Connect a **220Ω resistor** between the anode row and another row
+2. Connect a **330Ω resistor** between the anode row and another row
 3. Connect a **green jumper wire** from Pin 10 to the resistor's free end
 
 #### Pedestrian Red LED (Pin 9)
 1. Insert Red LED into breadboard
    - **Long leg (anode)** goes to a numbered row
    - **Short leg (cathode)** goes to the negative rail
-2. Connect a **220Ω resistor** between the anode row and another row
+2. Connect a **330Ω resistor** between the anode row and another row
 3. Connect a **pink/red jumper wire** from Pin 9 to the resistor's free end
 
 #### Pedestrian Green LED (Pin 8)
 1. Insert White/Blue LED into breadboard
    - **Long leg (anode)** goes to a numbered row
    - **Short leg (cathode)** goes to the negative rail
-2. Connect a **220Ω resistor** between the anode row and another row
+2. Connect a **330Ω resistor** between the anode row and another row
 3. Connect a **white/blue jumper wire** from Pin 8 to the resistor's free end
 
 ### Step 3: Wire the Pedestrian Button
@@ -81,15 +81,15 @@ Arduino Uno R3
                      Breadboard
 Pin 13 ---- Button ---- GND Rail
 
-Pin 12 ----[220Ω]---- LED(Red) ----+
+Pin 12 ----[330Ω]---- LED(Red) ----+
                                    |
-Pin 11 ----[220Ω]---- LED(Amber) --+
+Pin 11 ----[330Ω]---- LED(Amber) --+
                                    |
-Pin 10 ----[220Ω]---- LED(Green) --+---- GND Rail
+Pin 10 ----[330Ω]---- LED(Green) --+---- GND Rail
                                    |
-Pin 9  ----[220Ω]---- LED(Ped Red) +
+Pin 9  ----[330Ω]---- LED(Ped Red) +
                                    |
-Pin 8  ----[220Ω]---- LED(Ped Grn) +
+Pin 8  ----[330Ω]---- LED(Ped Grn) +
 
 GND ---- GND Rail
 5V  ---- +5V Rail (not used in this circuit)
@@ -98,8 +98,8 @@ GND ---- GND Rail
 ## Safety Checks Before Powering On
 
 1. ✅ **LED Polarity**: Verify all LEDs have long legs (anodes) connected through resistors to Arduino pins
-2. ✅ **Resistor Values**: Confirm all LED resistors are 220Ω (Red-Red-Brown-Gold bands)
-3. ✅ **Button Wiring**: One side to GND, other side to Pin 9
+2. ✅ **Resistor Values**: Confirm all LED resistors are 330Ω (Orange-Orange-Brown-Gold bands)
+3. ✅ **Button Wiring**: One side to GND, other side to Pin 13
 4. ✅ **No Short Circuits**: Ensure no wires are touching that shouldn't be
 5. ✅ **Secure Connections**: All wires firmly inserted into breadboard and Arduino
 
