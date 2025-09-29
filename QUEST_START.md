@@ -48,6 +48,8 @@ Look carefully at these paths. Which describes you best?
 **Status:** You want to understand state machines, formal verification, and professional code.
 **Estimated Time:** Several sessions of deep study
 
+⚠️ **WARNING:** Theory-first approach works best for students with prior programming experience. Complete beginners may find it challenging without hands-on Arduino basics first. Consider starting with Level 1 or 2 to build foundational skills, then return to advanced theory.
+
 👉 **[Enter The Advanced Temple](QUEST_ADVANCED.md)**
 
 ---

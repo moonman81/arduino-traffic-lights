@@ -82,25 +82,30 @@ Every quest level is broken into **independent tasks**. You can complete tasks i
 
 ### Level 3 Tasks (Integration)
 
-| Task ID | Task Name | Skills Required | Unlocks | Can Start From |
-|---------|-----------|----------------|---------|----------------|
-| **L3.1** | Add Button Circuit | L1.3 | L3.2 | L1.3 |
-| **L3.2** | Read Button Input | L3.1, L1.6 | L3.3 | L3.1 |
-| **L3.3** | Add Pedestrian LEDs | L2.2 | L3.4 | L2.1 |
-| **L3.4** | Implement Button Logic | L3.2, L2.4 | L3.5 | L3.2 |
-| **L3.5** | Use millis() for Timing | L2.6 | ADV.1 | L2.3 |
-| **L3.6** | Add Serial Debug | L1.2 | ADV.4 | L1.2 |
-| **L3.7** | Implement Request Queue | L3.4, L3.5 | ADV.5 | L3.4 |
+| Task ID | Task Name | Skills Required | Unlocks | Can Start From | Code Example |
+|---------|-----------|----------------|---------|----------------|--------------|
+| **L3.1** | Add Button Circuit | L1.3 | L3.2 | L1.3 | L3-1_button_test.ino |
+| **L3.2** | Read Button Input | L3.1, L1.6 | L3.4a | L3.1 | L3-2_button_read.ino |
+| **L3.3** | Add Pedestrian LEDs | L2.2 | L3.4 | L2.1 | L3-3_pedestrian_leds.ino |
+| **L3.4a** | Button Request Queuing ⭐ NEW | L3.2 | L3.4 | L3.2 | L3-4a_button_basics.ino |
+| **L3.4** | Implement Button Logic | L3.4a, L2.4 | L3.5a | L3.4a | L3-4_button_integration.ino |
+| **L3.5a** | Introduction to millis() ⭐ NEW | L2.6 | L3.5 | L2.3 | L3-5a_millis_intro.ino |
+| **L3.5** | Use millis() for Timing | L3.5a | L3.7a | L3.5a | L3-5_millis_timing.ino |
+| **L3.6** | Add Serial Debug | L1.2 | ADV.4 | L1.2 | L3-6_serial_debug.ino |
+| **L3.7a** | Basic Pedestrian Integration ⭐ NEW | L3.4a, L3.5a | L3.7b | L3.5a | L3-7a_basic_integration.ino |
+| **L3.7b** | Complete Pedestrian System ⭐ NEW | L3.7a, L3.3 | ADV.1 | L3.7a | L3-7b_full_features.ino |
+| **L3.7** | Full System (Original) | L3.4, L3.5 | ADV.5 | L3.4 | L3-7_complete_pedestrian.ino |
 
 ### Advanced Tasks (Professional)
 
-| Task ID | Task Name | Skills Required | Unlocks | Can Start From |
-|---------|-----------|----------------|---------|----------------|
-| **ADV.1** | Understand State Machines | L3.4 | ADV.2 | L2.4 |
-| **ADV.2** | Refactor with Functions | L2.5 | ADV.3 | L2.3 |
-| **ADV.3** | Implement Safety Checks | L3.7 | ADV.4 | L3.4 |
-| **ADV.4** | Add Verification Functions | L3.6, ADV.3 | EXP.1 | L3.6 |
-| **ADV.5** | Professional Documentation | ADV.2 | EXP.2 | L3.6 |
+| Task ID | Task Name | Skills Required | Unlocks | Can Start From | Code Example |
+|---------|-----------|----------------|---------|----------------|--------------|
+| **ADV.1** | State Machines (Theory) | L3.7b | ADV.2 | L2.4 | ADV-1_state_machine.ino |
+| **ADV.1-P** | State Machines (Practical) ⭐ NEW | L3.7b | ADV.2 | L2.4 | ADV-1-practical_state_machine.ino |
+| **ADV.2** | Refactor with Functions | L2.5 | ADV.3 | L2.3 | ADV-2_interrupts.ino |
+| **ADV.3** | Implement Safety Checks | L3.7b | ADV.4 | L3.4 | ADV-3_safety_verification.ino |
+| **ADV.4** | Add Verification Functions | L3.6, ADV.3 | EXP.1 | L3.6 | (See QUEST_ADVANCED.md) |
+| **ADV.5** | Professional Documentation | ADV.2 | EXP.2 | L3.6 | (See QUEST_ADVANCED.md) |
 
 ### Expert Tasks (Mastery)
 
@@ -115,7 +120,7 @@ Every quest level is broken into **independent tasks**. You can complete tasks i
 
 ## 🛤️ Example Learning Paths
 
-### Path A: Complete Beginner → Advanced
+### Path A: Complete Beginner → Advanced (RECOMMENDED)
 **"I've never done this before but want to master it"**
 
 ```
@@ -123,14 +128,17 @@ L1.1 → L1.2 → L1.3 → L1.4 → L1.5 → L1.6
   ↓
 L2.1 → L2.2 → L2.3 → L2.4 → L2.5 → L2.6
   ↓
-L3.1 → L3.2 → L3.3 → L3.4 → L3.5 → L3.6 → L3.7
+L3.1 → L3.2 → L3.4a → L3.5a → L3.3 → L3.7a → L3.7b
   ↓
-ADV.1 → ADV.2 → ADV.3 → ADV.4 → ADV.5
+ADV.1-P → ADV.2 → ADV.3 → ADV.4 → ADV.5
   ↓
 EXP.1 → EXP.2 → EXP.3 → EXP.4
 ```
 **Estimated Time:** 10-15 hours total
+**Path Structure:** Introduces intermediate stepping stones at challenging transitions
 **Achievement:** Complete Mastery 🏆
+
+**Why This Path:** Intermediate tasks (L3.4a, L3.5a) ease the learning curve for button integration and millis() timing. Splitting L3.7 into basic (L3.7a) and full (L3.7b) versions allows building confidence before tackling the complete system.
 
 ---
 

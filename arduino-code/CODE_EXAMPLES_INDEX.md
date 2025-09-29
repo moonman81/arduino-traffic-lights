@@ -2,7 +2,9 @@
 
 ## Purpose
 
-This directory contains 22 independent code examples, each demonstrating specific concepts or tasks. All examples are standalone - copy any file and it will work independently.
+This directory contains 27 independent code examples, each demonstrating specific concepts or tasks. All examples are standalone - copy any file and it will work independently.
+
+**UPDATED:** 5 additional examples added to provide intermediate stepping stones at challenging transitions (L3.4a, L3.5a, L3.7a, L3.7b, ADV.1-practical).
 
 **Navigation:** Use the tables below to find code by:
 - Task ID (from quest system)
@@ -38,22 +40,27 @@ This directory contains 22 independent code examples, each demonstrating specifi
 
 ### Level 3: Integration Tasks
 
-| File | Task ID | Description | Hardware Needed | Difficulty |
-|------|---------|-------------|-----------------|------------|
-| `L3-1_button_test.ino` | L3.1 | Button basics | Button, 1 LED | ⭐⭐☆☆☆ |
-| `L3-2_button_toggle.ino` | L3.2 | Toggle logic | Same as L3.1 | ⭐⭐⭐☆☆ |
-| `L3-3_five_leds.ino` | L3.3 | Add ped LEDs | 5 LEDs | ⭐⭐⭐☆☆ |
-| `L3-5_millis_timing.ino` | L3.5 | Non-blocking | 3 LEDs | ⭐⭐⭐☆☆ |
-| `L3-6_button_counter.ino` | L3.6 | Serial + button | Button only | ⭐⭐⭐☆☆ |
-| `L3-7_complete_pedestrian.ino` | L3.7 | Full system | 5 LEDs + button | ⭐⭐⭐☆☆ |
+| File | Task ID | Description | Hardware Needed | Difficulty | Notes |
+|------|---------|-------------|-----------------|------------|-------|
+| `L3-1_button_test.ino` | L3.1 | Button basics | Button, 1 LED | ⭐⭐☆☆☆ | |
+| `L3-2_button_toggle.ino` | L3.2 | Toggle logic | Same as L3.1 | ⭐⭐⭐☆☆ | |
+| `L3-3_five_leds.ino` | L3.3 | Add ped LEDs | 5 LEDs | ⭐⭐⭐☆☆ | |
+| `L3-4a_button_basics.ino` | L3.4a | Request queuing | Button, 1 LED | ⭐⭐☆☆☆ | ⭐ NEW stepping stone |
+| `L3-5a_millis_intro.ino` | L3.5a | millis() intro | 1 LED | ⭐⭐⭐☆☆ | ⭐ NEW stepping stone |
+| `L3-5_millis_timing.ino` | L3.5 | Non-blocking | 3 LEDs | ⭐⭐⭐☆☆ | |
+| `L3-6_button_counter.ino` | L3.6 | Serial + button | Button only | ⭐⭐⭐☆☆ | |
+| `L3-7a_basic_integration.ino` | L3.7a | Basic integration | 3 LEDs + button | ⭐⭐⭐☆☆ | ⭐ NEW simplified |
+| `L3-7b_full_features.ino` | L3.7b | Complete system | 5 LEDs + button | ⭐⭐⭐⭐☆ | ⭐ NEW full version |
+| `L3-7_complete_pedestrian.ino` | L3.7 | Full system (original) | 5 LEDs + button | ⭐⭐⭐☆☆ | Alternative to 7a/7b |
 
 ### Advanced Tasks
 
-| File | Task ID | Description | Hardware Needed | Difficulty |
-|------|---------|-------------|-----------------|------------|
-| `ADV-1_state_machine.ino` | ADV.1 | Professional FSM | 5 LEDs + button | ⭐⭐⭐⭐☆ |
-| `ADV-2_with_functions.ino` | ADV.2 | Code organization | 3 LEDs | ⭐⭐⭐⭐☆ |
-| `ADV-3_safety_checks.ino` | ADV.3 | Runtime verification | 5 LEDs | ⭐⭐⭐⭐☆ |
+| File | Task ID | Description | Hardware Needed | Difficulty | Notes |
+|------|---------|-------------|-----------------|------------|-------|
+| `ADV-1_state_machine.ino` | ADV.1 | FSM (Theory focus) | 5 LEDs + button | ⭐⭐⭐⭐☆ | Mathematical notation |
+| `ADV-1-practical_state_machine.ino` | ADV.1-P | FSM (Practical focus) | 5 LEDs + button | ⭐⭐⭐⭐☆ | ⭐ NEW for practical learners |
+| `ADV-2_with_functions.ino` | ADV.2 | Code organization | 3 LEDs | ⭐⭐⭐⭐☆ | |
+| `ADV-3_safety_checks.ino` | ADV.3 | Runtime verification | 5 LEDs | ⭐⭐⭐⭐☆ | |
 
 ---
 
