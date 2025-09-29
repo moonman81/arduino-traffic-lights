@@ -1,12 +1,14 @@
 # 🎮 Arduino Traffic Light Quest
 
-## Welcome, Brave Builder!
+## Welcome
 
-You stand at the entrance to the **Arduino Dungeon**. Before you lie multiple paths, each leading to mastery of electronic circuits and embedded systems. But beware! Choose your path wisely based on your current skills.
+This is an interactive learning system for building an Arduino traffic light. You choose your path based on your experience and goals. All paths lead to the same destination - a working project and real understanding.
 
-**Your Quest:** Build a fully functional UK traffic light system with pedestrian crossing.
+**What you'll build:** UK-standard traffic light with pedestrian crossing
 
-**Your Reward:** Knowledge, skills, and a working project for your portfolio!
+**What you'll learn:** Electronics, programming, state machines, and embedded systems
+
+**Who this is for:** GCSE students through university level, complete beginners to advanced programmers
 
 ---
 

@@ -1,22 +1,19 @@
-# 🎮 Level 1: The First Light
+# Level 1: Single LED Blink
 
-## Quest Overview
+## Overview
 
-**Difficulty:** ⭐☆☆☆☆
+**Difficulty:** Beginner
 **Time:** 10-15 minutes
-**Prerequisites:** None! Total beginners welcome.
+**Prerequisites:** None
 
-**Your Mission:** Make a single LED blink on and off. This will prove you can control the Arduino and prepare you for greater challenges ahead.
+**Goal:** Make a single LED blink on and off every second
 
----
+**What you'll learn:**
+- How to connect an LED to Arduino
+- Basic Arduino programming (pinMode, digitalWrite, delay)
+- The concept of HIGH/LOW voltage states
 
-## 📜 Quest Briefing
-
-The Arduino Wizard has given you your first task: *"Light must shine in the darkness. Make the red crystal pulse with life, and you shall pass to the next chamber."*
-
-**Translation:** Make one red LED blink on and off every second.
-
-**Why this matters:** This is the "Hello World" of Arduino. Once you can make one LED blink, you can control ANYTHING. Traffic lights, robots, displays, motors... it all starts here.
+This is the foundation for all Arduino projects. Every complex system starts with controlling a single output.
 
 ---
 

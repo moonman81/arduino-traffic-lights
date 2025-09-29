@@ -1,6 +1,12 @@
-# Code Versions - Which One Should You Use?
+# Code Version Guide
 
-This project has **multiple code versions** for different needs. Here's how to choose:
+## Purpose
+
+This project includes multiple code files, each serving different learning goals and skill levels. This guide helps you choose which file to use.
+
+**Quick answer for most students:** Use `traffic-light-level3-pedestrian-simple.ino` - it has all features and is designed for learning.
+
+**For detailed comparison**, see tables below.
 
 ---
 

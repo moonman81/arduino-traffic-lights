@@ -1,27 +1,27 @@
-# 🎮 Level 2: The Traffic Light Challenge
+# Level 2: Traffic Light
 
-## Quest Overview
+## Overview
 
-**Difficulty:** ⭐⭐☆☆☆
+**Difficulty:** Intermediate
 **Time:** 45 minutes - 1 hour
-**Prerequisites:** Level 1 complete (or equivalent Arduino experience)
+**Prerequisites:** Level 1 complete, or basic Arduino experience
 
-**Your Mission:** Build a working 3-LED UK traffic light that cycles through proper sequences.
+**Goal:** Build a three-LED traffic light following UK standards
 
----
+**What you'll learn:**
+- Controlling multiple LEDs
+- Creating timed sequences
+- Using #define for clean code
+- UK traffic light regulations (RED+AMBER phase)
 
-## 📜 Quest Briefing
+**UK Traffic Light Sequence:**
+1. RED (5 seconds) - stop
+2. RED + AMBER together (2 seconds) - prepare to proceed
+3. GREEN (6 seconds) - go
+4. AMBER (3 seconds) - prepare to stop
+5. Repeat
 
-The Town Council has a problem. Their traffic light is broken! They need someone who can build a replacement. You've proven yourself with the First Light. Now it's time for a real challenge.
-
-**Your Task:** Create a traffic light that follows UK standards:
-- RED (stop) → 5 seconds
-- RED + AMBER (get ready) → 2 seconds
-- GREEN (go) → 6 seconds
-- AMBER (slow down) → 3 seconds
-- Repeat forever
-
-**Why UK Standard?** Unlike US lights, UK lights show RED+AMBER together before GREEN. This warns drivers to prepare. It's better engineering!
+The RED+AMBER phase is unique to UK standards and provides better driver preparation than systems without it.
 
 ---
 

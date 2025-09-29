@@ -1,8 +1,14 @@
-# UK Curriculum Mapping Guide
+# UK Curriculum Mapping
 
-## Arduino Traffic Light Project - Suitable for UK Qualifications
+## Purpose
 
-This project is **specifically designed** to meet requirements for GCSE, BTEC, A-Level, and T-Level qualifications in the UK.
+This document provides explicit mapping between this Arduino project and UK qualification requirements. It helps teachers and students understand:
+- Which qualification units are covered
+- What assessment evidence can be generated
+- Which code version suits which qualification level
+- Learning outcomes aligned to specifications
+
+Teachers can use this to justify the project for coursework or portfolio assessment.
 
 ---
 
