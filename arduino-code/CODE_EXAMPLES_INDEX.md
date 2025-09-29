@@ -1,8 +1,16 @@
 # Code Examples Index
 
-## 📁 Complete Code Example Library
+## Purpose
 
-Every quest task and learning track has corresponding code examples. **Each file is independent** - copy and use any example without affecting others!
+This directory contains 22 independent code examples, each demonstrating specific concepts or tasks. All examples are standalone - copy any file and it will work independently.
+
+**Navigation:** Use the tables below to find code by:
+- Task ID (from quest system)
+- Hardware you have available
+- Concept you want to learn
+- Your skill level
+
+**All examples include:** Hardware requirements, what you'll learn, expected behavior, and troubleshooting hints.
 
 ---
 

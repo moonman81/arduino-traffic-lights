@@ -1,29 +1,32 @@
-# Arduino Traffic Light - Beginner's Build Guide
+# Arduino Traffic Light - Complete Tutorial
 
-## Welcome!
+## About This Guide
 
-This guide will help you build a traffic light system with your Arduino, **step by step**. No prior experience needed! We'll start super simple and build up gradually.
+This is a comprehensive step-by-step tutorial for building an Arduino traffic light system. You'll start with a single blinking LED and progress to a complete UK-standard traffic light with pedestrian crossing.
 
-**What you'll learn:**
-- How to connect LEDs to an Arduino
-- How to make LEDs blink in patterns
-- How to add a button for pedestrian crossings
-- How to build a real UK-style traffic light
+**Prerequisites:** None. This guide assumes no prior Arduino or electronics experience.
 
-**Time needed:** 2-3 hours (including building and testing)
+**Time required:** Can be completed in stages:
+- Level 1 (first LED): 10-15 minutes
+- Level 2 (traffic light): 45 minutes
+- Level 3 (full system): 2-3 hours total
+
+**What you'll build:** Three progressive projects, each working independently:
+1. Single blinking LED
+2. Three-LED traffic light
+3. Complete system with pedestrian button
 
 ---
 
-## ✅ Suitable for UK Qualifications
+## UK Qualification Suitability
 
-This project is designed for:
-- **GCSE Computer Science** (programming & algorithms)
-- **GCSE Design & Technology** (electronics & product design)
-- **BTEC Level 2/3 Engineering** (electronic systems)
-- **A-Level Computer Science** (finite state machines + NEA coursework)
-- **T-Level Digital Production & Engineering** (industry practices)
+This project meets requirements for:
+- GCSE Computer Science and Design & Technology
+- BTEC Level 2/3 Engineering (Units 1,2,3,4,5,6,8,17)
+- A-Level Computer Science (FSM theory and NEA coursework)
+- T-Level Digital Production and Engineering
 
-**Teachers:** See `UK_CURRICULUM_MAPPING.md` for detailed curriculum alignment and assessment guidance.
+Teachers: See `UK_CURRICULUM_MAPPING.md` for assessment evidence guidance.
 
 ---
 

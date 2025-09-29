@@ -1,27 +1,37 @@
 # Arduino Traffic Light Controller
 
-## 🚦 Educational Traffic Light System - From Beginner to Expert
+## Overview
 
-This repository contains a complete Arduino-based traffic light control system designed for **students at all levels**. Start with a single blinking LED or dive into formal safety verification and philosophical foundations. **You choose your own path!**
+Arduino-based traffic light control system implementing UK standards with pedestrian crossing. Designed for education from GCSE level through university, with content suitable for complete beginners to advanced research.
 
-**Perfect for:** Electronics students, Arduino beginners, embedded systems classes, and advanced computer science research.
+**What it teaches:** Electronics, programming, state machines, embedded systems, and formal verification
 
----
+**What you'll build:** Working UK-standard traffic light with button-controlled pedestrian crossing
 
-## 🎮 NEW: Quest-Based Learning Mode!
-
-**Learn by doing in an interactive adventure!** Choose your path, complete challenges, earn achievements, and level up your skills.
-
-**→ [START YOUR QUEST HERE](QUEST_START.md)** ⚔️
-
-- 🎯 Choose your difficulty
-- 📊 Track your progress
-- 🏆 Unlock achievements
-- 🗺️ Multiple paths to mastery
+**Suitable for:** GCSE Computer Science, BTEC Engineering, A-Level CS, T-Level, and university embedded systems courses
 
 ---
 
-## 🎯 Quick Start - Choose Your Level
+## Getting Started
+
+### Choose Your Learning Mode
+
+**Interactive Quest Mode** - Gamified learning with achievements and multiple paths
+- **→ [Start Quest System](QUEST_START.md)** - Choose your own adventure
+
+**Traditional Tutorial** - Linear step-by-step instruction
+- **→ [Complete Tutorial](BEGINNER_BUILD_GUIDE.md)** - Beginner to advanced
+
+**Quick Reference** - Fast navigation to what you need
+- **→ [Quick Start Guide](QUICK_START_GUIDE.md)** - Find your level fast
+- **→ [Code Examples](arduino-code/CODE_EXAMPLES_INDEX.md)** - 22 working examples
+
+**For Teachers** - Curriculum mapping and assessment
+- **→ [UK Curriculum Mapping](UK_CURRICULUM_MAPPING.md)** - GCSE/BTEC/A-Level alignment
+
+---
+
+## Project Levels
 
 | Level | Time | What You'll Build | Start Here |
 |-------|------|-------------------|------------|

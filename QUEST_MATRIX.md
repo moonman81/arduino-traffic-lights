@@ -1,16 +1,15 @@
-# 🗺️ Quest Matrix - All Possible Paths
+# Quest Matrix - Learning Paths
 
-## Overview
+## Purpose
 
-This is the **complete quest map** showing ALL possible paths through the Arduino Traffic Light learning journey. You can:
+This document maps all possible learning routes through the project. Use it to:
+- Plan a custom learning path
+- Find prerequisites for specific tasks
+- Understand task dependencies
+- Skip around based on your interests
+- Backtrack when you need to fill knowledge gaps
 
-- ✅ Start at ANY level
-- ✅ Jump between levels freely
-- ✅ Take side paths for specific skills
-- ✅ Backtrack to fill knowledge gaps
-- ✅ Combine tasks from different levels
-
-**There is no "wrong" path - only YOUR path!**
+**You don't need to follow a linear path.** Tasks are designed to be independent where possible, allowing you to learn in the order that makes sense for you.
 
 ---
 

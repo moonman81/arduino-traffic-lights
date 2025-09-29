@@ -1,14 +1,18 @@
-# Quick Start Guide - Traffic Light Project
+# Quick Start Guide
 
-## ✅ Suitable for GCSE, BTEC, A-Level, and T-Level
+## Purpose
 
-This project meets requirements for UK qualifications at KS4 and Post-16. See `UK_CURRICULUM_MAPPING.md` for full details.
+This guide helps you quickly find the right starting point based on your experience and available time.
+
+**If you're unsure where to start**, use the decision tree at the bottom of this page.
+
+**If you know your level**, jump directly to the appropriate section below.
 
 ---
 
-## Choose Your Level
+## Three Main Levels
 
-This project has **three difficulty levels**. Pick the one that matches your experience:
+Each level is a complete working project. You can start at any level based on your experience.
 
 ---
 
