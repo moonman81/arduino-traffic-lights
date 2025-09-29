@@ -239,6 +239,7 @@ See `CODE_COMPARISON.md` for detailed comparison. Here's the quick guide:
 
 **Confused?** Read `CODE_COMPARISON.md` or just start with Level 3 Simple!
 
+
 ## 🔍 Safety Verification Results
 
 ```
