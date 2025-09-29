@@ -67,7 +67,7 @@ Look carefully at these paths. Which describes you best?
 
 Do you have the **physical hardware**?
 - ✅ **YES** → Follow the path as written
-- ❌ **NO** → Visit **[The Virtual Simulator](QUEST_TINKERCAD.md)** first (free, no equipment needed!)
+- ❌ **NO** → Use **Tinkercad Circuits** (tinkercad.com/circuits) - free online simulator, no equipment needed!
 
 ### Quick Inventory Check:
 ```
@@ -80,7 +80,7 @@ Do you have the **physical hardware**?
 [ ] Computer with Arduino IDE
 ```
 
-**Missing items?** → **[Visit The Merchant's Guide](shopping_list.md)** for purchasing help
+**Missing items?** → See component list in BEGINNER_BUILD_GUIDE.md Part 1
 
 **Have everything?** → Choose your path above and begin!
 
@@ -289,7 +289,7 @@ Each path has:
 - **[Level 3: Pedestrian Crossing Quest](QUEST_LEVEL_3.md)** - Full project (2-3 hours)
 - **[Advanced Temple](QUEST_ADVANCED.md)** - Theory and professional code
 - **[Expert Realm](QUEST_EXPERT.md)** - Philosophy and formal verification
-- **[Virtual Simulator Path](QUEST_TINKERCAD.md)** - No hardware needed!
+- **Tinkercad Simulator** (tinkercad.com/circuits) - No hardware needed!
 
 ---
 

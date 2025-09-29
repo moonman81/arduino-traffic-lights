@@ -31,7 +31,7 @@ This is the foundation for all Arduino projects. Every complex system starts wit
 ### Minimum (Software):
 - [ ] Arduino IDE installed (free from arduino.cc)
 
-**Don't have hardware?** → Try **[The Virtual Simulator Quest](QUEST_TINKERCAD.md)** instead!
+**Don't have hardware?** → Try **Tinkercad Circuits** (tinkercad.com/circuits) instead - free online simulator!
 
 ---
 
