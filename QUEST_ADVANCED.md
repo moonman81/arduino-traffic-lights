@@ -159,6 +159,6 @@ See `UK_CURRICULUM_MAPPING.md` for detailed alignment.
 
 **→ [Study Formal Verification](documentation/ONTOLOGICAL_ANALYSIS_TRAFFIC_SYSTEM.md)** - Deep dive into proofs
 
-**→ [Return to Quest Hub](QUEST_START.md)** - Choose another path
+**→ [Return to Quest Hub](START_HERE.md)** - Choose another path
 
 **→ [View All Examples](arduino-code/CODE_EXAMPLES_INDEX.md)** - Find specific code

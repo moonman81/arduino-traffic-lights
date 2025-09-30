@@ -30,7 +30,7 @@
 - Pin 10 → Green traffic
 - Pin 9 → Red pedestrian
 - Pin 8 → Green pedestrian
-- Pin 2 → Button
+- Pin 13 → Button
 
 ---
 
@@ -115,7 +115,7 @@ void loop() {
 
 **Just starting:**
 - README.md (start here)
-- QUEST_START.md (pick your level)
+- START_HERE.md (pick your level)
 
 **Building it:**
 - QUEST_LEVEL_1.md (one LED)

@@ -525,7 +525,7 @@ Your Completion: _____ / 32 tasks
 
 Now that you see ALL possible routes, choose your adventure:
 
-**→ [Return to Quest Start](QUEST_START.md)** - Choose a level
+**→ [Return to Quest Start](START_HERE.md)** - Choose a level
 **→ [Level 1](QUEST_LEVEL_1.md)** - Start with basics
 **→ [Level 2](QUEST_LEVEL_2.md)** - Jump to traffic light
 **→ [Level 3](QUEST_LEVEL_3.md)** - Start with full system

@@ -73,7 +73,7 @@ Same wiring: Long leg → resistor → pin, Short leg → GND
 ### Step 2: Add the button
 
 **Button wiring:**
-- One side → Pin 2
+- One side → Pin 13
 - Other side → GND
 
 **That's it.** Buttons are simple.
@@ -147,7 +147,7 @@ This shows what's happening.
 ## Something wrong?
 
 ### Button does nothing:
-- Check button wired to Pin 2 and GND
+- Check button wired to Pin 13 and GND
 - Check Serial Monitor shows button press
 - Try a different button
 
@@ -162,6 +162,19 @@ This shows what's happening.
 ### LEDs in wrong pattern:
 - Check pin numbers in wiring match code
 - Pin 12=Red traffic, 11=Yellow, 10=Green, 9=Red ped, 8=Green ped
+
+### Still not working?
+
+**If you tried everything and it still doesn't work:**
+
+Your hardware might be faulty.
+
+**Options:**
+- Ask someone who knows Arduino for help
+- Try different components
+- Check the code file is correct version
+
+Not your fault. Sometimes things break.
 
 ---
 
@@ -273,7 +286,7 @@ Complete wiring and setup instructions are in:
 ## Common Issues
 
 ### Button doesn't work
-- Check wiring: one side to pin 13, other to GND
+- Check wiring: one side to Pin 13, other to GND
 - Check code uses INPUT_PULLUP
 - Try printing button state to Serial
 
@@ -367,7 +380,7 @@ This is the foundation for any embedded systems work - robots, home automation, 
 
 ---
 
-**→ [Return to Quest Hub](QUEST_START.md)**
+**→ [Return to START_HERE](START_HERE.md)**
 
 **→ [View All Code Examples](arduino-code/CODE_EXAMPLES_INDEX.md)**
 

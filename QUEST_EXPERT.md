@@ -192,7 +192,7 @@ Most users should focus on Levels 1-3 and Advanced topics. This section exists f
 
 ---
 
-**→ [Return to Quest Hub](QUEST_START.md)**
+**→ [Return to Quest Hub](START_HERE.md)**
 
 **→ [View FSA Analysis](documentation/TRAFFIC_LIGHT_FSA_ANALYSIS.md)**
 

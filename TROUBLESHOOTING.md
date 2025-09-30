@@ -283,6 +283,6 @@ If one LED works, the Arduino and basic circuit are fine.
 
 ---
 
-**→ [Return to Quest Hub](QUEST_START.md)**
+**→ [Return to Quest Hub](START_HERE.md)**
 
 **→ [Back to Tutorial](BEGINNER_BUILD_GUIDE.md)**

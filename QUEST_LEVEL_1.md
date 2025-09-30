@@ -245,50 +245,6 @@ You now know:
 
 **This is real programming.** You're controlling hardware with code you wrote.
 
----
-
-## 🎮 Side Quests (Optional Challenges)
-
-Try these modifications to earn bonus experience:
-
-### Side Quest 1: Speed Control ⚡
-**Challenge:** Make it blink faster
-**Hint:** Change `delay(1000)` to `delay(500)` (half second)
-**Reward:** Understanding of timing
-
-### Side Quest 2: Morse Code 📡
-**Challenge:** Blink "SOS" in Morse code (···−−−···)
-**Hint:** Short blink = 200ms, long blink = 600ms
-**Reward:** Pattern recognition skill
-
-### Side Quest 3: Different Pin 🔌
-**Challenge:** Make it work on Pin 12 instead of Pin 13
-**Hint:** Change all `13` to `12` in code (and move wire!)
-**Reward:** Understanding pin flexibility
-
-### Side Quest 4: Heartbeat 💓
-**Challenge:** Make it "pulse" like a heartbeat (two quick blinks, pause)
-**Hint:** ON-OFF-ON-OFF-long pause
-**Reward:** Creative thinking skill
-
----
-
-## 📊 Progress Report
-
-**Level 1 Status:** COMPLETE ✅
-
-**Skills Acquired:**
-- Basic circuit building
-- LED control
-- Arduino programming fundamentals
-- Upload process
-
-**Ready for Next Level?** Check your skills:
-- [ ] Can you change the blink speed?
-- [ ] Do you understand why the resistor is needed?
-- [ ] Could you add a second LED on a different pin?
-
-**If you answered YES to 2 or more → You're ready for Level 2!**
 
 ---
 
@@ -326,36 +282,17 @@ Many people never get this far. You did it.
 
 ---
 
-## 🆘 Got Stuck? Respawn Points:
+## Still not working?
 
-**Problem:** LED doesn't light at all
-**→ [Troubleshooting Guide](BEGINNER_BUILD_GUIDE.md#troubleshooting)**
+**If you tried all 5 fixes and LED still doesn't work:**
 
-**Problem:** Upload error
-**→ Check board and port settings in Tools menu**
+Your hardware might be faulty. This happens sometimes.
 
-**Problem:** LED very dim
-**→ That's okay! Still working. Resistor might be higher value.**
+**Options:**
+- Ask someone who knows Arduino for help
+- Try a different Arduino board
+- Try a different LED and resistor
 
-**Problem:** Code won't compile
-**→ Check for typos, missing semicolons, matching brackets**
-
-**Need more help?**
-**→ [Return to Quest Hub](QUEST_START.md)**
-**→ [Full Tutorial](BEGINNER_BUILD_GUIDE.md)**
+Not your fault. Sometimes components are broken.
 
 ---
-
-## 🎯 Level 1 Complete!
-
-**Congratulations, brave builder!** You've taken your first step into the world of Arduino. The LED blinks because YOU made it happen. That's real magic.
-
-**Ready to level up?**
-
-**→ [Continue to Level 2: The Traffic Light Challenge](QUEST_LEVEL_2.md)**
-
-Or return to **[Quest Hub](QUEST_START.md)** to choose a different path.
-
----
-
-*Quest Progress: ■□□□□ Level 1 Complete!*
