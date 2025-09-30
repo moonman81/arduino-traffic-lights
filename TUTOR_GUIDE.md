@@ -31,7 +31,7 @@ A working traffic light system with pedestrian crossing.
 ## The code they should explain
 
 ### For GCSE/BTEC Level 2:
-**File:** `L3-7b_full_features.ino`
+**File:** `arduino-code/examples/L3-7b_full_features.ino`
 
 This is the complete working system. All features, well-commented.
 
