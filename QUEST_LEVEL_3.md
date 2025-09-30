@@ -178,26 +178,6 @@ Not your fault. Sometimes things break.
 
 ---
 
-## What you learned
-
-You now know:
-- How to read a button
-- How `millis()` works (timing without blocking)
-- What a state machine is (RED, GREEN, PED_CROSSING states)
-- How to queue a request (button press remembered)
-- Safety timing (minimum green before interruption)
-
-**This is professional embedded systems work.**
-
----
-
-## What next?
-
-### Show your tutor:
-Read [TUTOR_GUIDE.md](TUTOR_GUIDE.md) first - it tells them what to look for.
-
----
-
 ## You did it
 
 You built a complete traffic light system with button.
@@ -205,3 +185,7 @@ You built a complete traffic light system with button.
 This is real embedded systems work.
 
 **Many people never get this far. You did it.**
+
+**What next:**
+- Show your tutor (read [TUTOR_GUIDE.md](TUTOR_GUIDE.md) first)
+- **[Level 4](QUEST_LEVEL_4.md)** - Add safety checks (advanced)
