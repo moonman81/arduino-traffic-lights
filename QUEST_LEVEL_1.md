@@ -17,37 +17,9 @@ That's it. Just one light blinking.
 
 ---
 
-## Why start here?
-
-This is the easiest Arduino project.
-
-If you can make one LED blink, you can control anything - traffic lights, robots, displays, everything.
-
-Every Arduino project starts here.
-
----
-
 ## The steps
 
 Follow these in order. Don't skip any.
-
----
-
-## 🎒 Required Inventory
-
-### Minimum (Hardware):
-- [ ] 1× Arduino Uno R3
-- [ ] 1× LED (any color, but red is traditional)
-- [ ] 1× Resistor (220Ω or 330Ω)
-- [ ] 2× Jumper wires
-- [ ] 1× Breadboard (optional but recommended)
-- [ ] 1× USB cable
-- [ ] 1× Computer
-
-### Minimum (Software):
-- [ ] Arduino IDE installed (free from arduino.cc)
-
-**Don't have hardware?** → Try **Tinkercad Circuits** (tinkercad.com/circuits) instead - free online simulator!
 
 ---
 
@@ -127,17 +99,6 @@ Copy it (Ctrl+C or Cmd+C).
 Paste it into Arduino IDE (Ctrl+V or Cmd+V).
 
 **That's it.** Don't type it. Just copy and paste.
-
----
-
-**What it does:**
-- Makes LED turn on
-- Waits 1 second
-- Makes LED turn off
-- Waits 1 second
-- Repeats forever
-
-You don't need to understand it yet. It just works.
 
 ---
 
@@ -235,50 +196,13 @@ That's fine. It's working. Some resistors make LEDs dimmer. No problem.
 
 ---
 
-## What you learned
+## Done
 
-You now know:
-- How to connect wires to Arduino
-- How to upload code
-- How `pinMode` and `digitalWrite` work
-- How to make something turn on and off
+LED blinking? You did it.
 
-**This is real programming.** You're controlling hardware with code you wrote.
-
-
----
-
-## What next?
-
-### Ready for Level 2?
-**→ [Level 2: Traffic Light](QUEST_LEVEL_2.md)**
-
-You'll make 3 LEDs work like real traffic lights.
-
----
-
-### Want to skip to the full project?
-**→ [Level 3: Complete System](QUEST_LEVEL_3.md)**
-
-This is the full traffic light with button.
-
----
-
-### Want a break?
-That's fine! You did something real today.
-
-Take a photo of your circuit so you can rebuild it later.
-
----
-
-## You should feel good about this
-
-**You just:**
-- Built a circuit
-- Wrote code
-- Made hardware respond to your commands
-
-Many people never get this far. You did it.
+**What next:**
+- **[Level 2](QUEST_LEVEL_2.md)** - Traffic lights
+- **[Level 3](QUEST_LEVEL_3.md)** - Full system with button
 
 ---
 
