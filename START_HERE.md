@@ -11,6 +11,9 @@
 ### Want full project?
 **→ [Level 3](QUEST_LEVEL_3.md)** - Complete system (2 hours)
 
+### Want advanced safety? (Optional)
+**→ [Level 4](QUEST_LEVEL_4.md)** - Add safety checks (45 minutes)
+
 ---
 
 ## Need help?
