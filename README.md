@@ -65,19 +65,20 @@ The complete project. Press button, pedestrian gets green light.
 
 ---
 
-## Files to read
+## Quick links
 
-### If you're building it:
-- **[BEGINNER_BUILD_GUIDE.md](BEGINNER_BUILD_GUIDE.md)** - Follow this step by step
-- **[CODE_COMPARISON.md](CODE_COMPARISON.md)** - Which code should I use?
-- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Something not working? Look here
+### 🔧 Building it:
+- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** ⭐ Print this! Pin numbers, wiring, common fixes
+- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Something broken? Look here
+- **[CODE_COMPARISON.md](CODE_COMPARISON.md)** - Which file should I use?
 
-### If your tutor asks about qualifications:
-- **[UK_CURRICULUM_MAPPING.md](UK_CURRICULUM_MAPPING.md)** - Shows GCSE, BTEC, A-Level coverage
+### 👨‍🏫 For your tutor:
+- **[TUTOR_GUIDE.md](TUTOR_GUIDE.md)** ⭐ Give them this! Explains what you learned
+- **[UK_CURRICULUM_MAPPING.md](UK_CURRICULUM_MAPPING.md)** - Shows GCSE/BTEC/A-Level
 
-### If you want to understand the theory:
-- **[QUEST_ADVANCED.md](QUEST_ADVANCED.md)** - How state machines work
-- **[QUEST_EXPERT.md](QUEST_EXPERT.md)** - Academic/university level stuff
+### 📚 Want more theory:
+- **[QUEST_ADVANCED.md](QUEST_ADVANCED.md)** - State machines explained
+- **[QUEST_EXPERT.md](QUEST_EXPERT.md)** - University level
 
 ---
 
