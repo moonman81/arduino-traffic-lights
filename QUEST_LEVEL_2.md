@@ -22,17 +22,21 @@ Red → Red+Yellow → Green → Yellow → repeat
 
 ## Step 1: Wire the LEDs
 
-**Do each LED the same way:**
+**First, do ONE LED completely:**
 
-1. Long leg → Resistor → Arduino pin
-2. Short leg → GND
+1. Put RED LED in breadboard
+2. Long leg in one hole
+3. Short leg in hole next to it
+4. Put resistor: One end same row as LED long leg
+5. Put resistor: Other end in different row
+6. Wire from Arduino Pin 12 → goes to resistor
+7. Wire from Arduino GND → goes to LED short leg
 
-**Which pins:**
-- Red LED → Pin 12
-- Yellow LED → Pin 11
-- Green LED → Pin 10
+**Check:** Red LED in. Not lit yet. That's correct.
 
-All short legs → Arduino GND
+**Now do the same for the other 2:**
+- Yellow LED → Pin 11 (same wiring method)
+- Green LED → Pin 10 (same wiring method)
 
 **Check:** 3 LEDs in breadboard. None lit. That's right.
 
@@ -143,6 +147,19 @@ In the code:
 - 3000 = 3 seconds
 
 Count them. Make sure they're right.
+
+### Still not working?
+
+**If you tried everything and it still doesn't work:**
+
+Your hardware might be faulty.
+
+**Options:**
+- Ask someone who knows Arduino for help
+- Try different LEDs
+- Try a different Arduino board
+
+Not your fault. Sometimes components break.
 
 ---
 
