@@ -1,101 +1,116 @@
 # Arduino Traffic Light Controller
 
-## Overview
+## What is this?
 
-Arduino-based traffic light control system implementing UK standards with pedestrian crossing. Designed for education from GCSE level through university, with content suitable for complete beginners to advanced research.
+**You will build a working traffic light.**
 
-**What it teaches:** Electronics, programming, state machines, embedded systems, and formal verification
+It works just like real UK traffic lights. You press a button and the pedestrian crossing light turns green.
 
-**What you'll build:** Working UK-standard traffic light with button-controlled pedestrian crossing
+**No experience needed.** Everything is explained step-by-step.
 
-**Suitable for:** GCSE Computer Science, BTEC Engineering, A-Level CS, T-Level, and university embedded systems courses
+**You will learn:**
+- How to connect wires to Arduino
+- How to make LEDs light up
+- How to make a button work
+- How to write code that controls it all
 
----
-
-## Getting Started
-
-### Choose Your Learning Mode
-
-**Interactive Quest Mode** - Gamified learning with achievements and multiple paths
-- **→ [Start Quest System](QUEST_START.md)** - Choose your own adventure
-
-**Traditional Tutorial** - Linear step-by-step instruction
-- **→ [Complete Tutorial](BEGINNER_BUILD_GUIDE.md)** - Beginner to advanced
-
-**Quick Reference** - Fast navigation to what you need
-- **→ [Quick Start Guide](QUICK_START_GUIDE.md)** - Find your level fast
-- **→ [Code Examples](arduino-code/CODE_EXAMPLES_INDEX.md)** - 22 working examples
-
-**For Teachers** - Curriculum mapping and assessment
-- **→ [UK Curriculum Mapping](UK_CURRICULUM_MAPPING.md)** - GCSE/BTEC/A-Level alignment
+**Good for:** GCSE projects, BTEC coursework, A-Level work, college, or just learning for fun
 
 ---
 
-## Project Levels
+## How to start
 
-| Level | Time | What You'll Build | Start Here |
-|-------|------|-------------------|------------|
-| 🟢 **Beginner** | 10 min | One blinking LED | `BEGINNER_BUILD_GUIDE.md` Part 1 |
-| 🟡 **Intermediate** | 45 min | 3-LED traffic light | `BEGINNER_BUILD_GUIDE.md` Level 2 |
-| 🔴 **Advanced** | 2 hours | Full pedestrian crossing | `BEGINNER_BUILD_GUIDE.md` Level 3 |
-| 🎓 **Expert** | Study | Formal verification & theory | See documentation below |
+### Pick ONE of these:
 
-**New to Arduino?** Start with `QUICK_START_GUIDE.md`
+**Option 1: Quest Mode** (more fun, like a game)
+- **→ [Start Here](QUEST_START.md)** - Pick your own path
 
-**Not sure which code to use?** See `CODE_COMPARISON.md`
+**Option 2: Step-by-Step Guide** (straight instructions)
+- **→ [Start Here](BEGINNER_BUILD_GUIDE.md)** - Follow from start to finish
 
-**UK Teacher?** See `UK_CURRICULUM_MAPPING.md` for GCSE/BTEC/A-Level/T-Level suitability
+**Option 3: Just need code?**
+- **→ [Code Examples](arduino-code/CODE_EXAMPLES_INDEX.md)** - 27 working examples ready to use
 
----
-
-## 📚 Documentation for Every Level
-
-### For Students & Beginners:
-- **`BEGINNER_BUILD_GUIDE.md`** - Step-by-step instructions, no experience needed
-- **`QUICK_START_GUIDE.md`** - Quick overview and level selection
-- **`CODE_COMPARISON.md`** - Which code version should you use?
-- **`WIRING_INSTRUCTIONS.md`** - Hardware setup and circuit diagrams
-
-### For Teachers & Educators:
-- **`UK_CURRICULUM_MAPPING.md`** ⭐ **Curriculum compliance for GCSE, BTEC, A-Level, T-Level**
-  - Explicit learning outcomes mapped to specifications
-  - Assessment evidence guidance
-  - Unit-by-unit mapping for all major UK qualifications
-
-### For Advanced Study:
-- **`TRAFFIC_LIGHT_FSA_ANALYSIS.md`** - Finite state automaton theory (perfect for A-Level CS)
-- **`ONTOLOGICAL_ANALYSIS_TRAFFIC_SYSTEM.md`** - Philosophical foundations
-- **Ontological analysis files** - Formal verification and safety proofs
+**For your tutor/teacher:**
+- **→ [Curriculum Info](UK_CURRICULUM_MAPPING.md)** - Shows what qualifications this covers
 
 ---
 
-## 📦 What's Included
+## What you can build
 
-### Arduino Code (Progressive Difficulty):
+### 🟢 Level 1: One blinking LED (10 minutes)
+Just one light turning on and off. Easy first step.
 
-1. **`traffic-light-level1-single-led.ino`** - One blinking LED (30 lines)
-2. **`traffic-light-level2-basic.ino`** - Basic traffic light sequence (60 lines)
-3. **`traffic-light-level3-pedestrian-simple.ino`** - Full system, student-friendly (200 lines) ⭐ **RECOMMENDED**
-4. **`traffic-lights-arduino-clean.c`** - Professional structure with safety checks (460 lines)
-5. **`traffic-lights-arduino-optimized-final.c`** - Complete with academic documentation (600+ lines)
+**Start:** [QUEST_LEVEL_1.md](QUEST_LEVEL_1.md)
 
-**Most students should start with Level 3 Simple!** It has all features and is designed for learning.
+---
 
-## 📋 Project Overview
+### 🟡 Level 2: Traffic light (45 minutes)
+Red, yellow, green lights in the right pattern.
 
-### **System Features**
-- ✅ **UK Traffic Light Standard**: Proper RED+AMBER preparation phase
-- ✅ **Pedestrian Crossing**: Separate red/green pedestrian signals with democratic request processing
-- ✅ **Formal Safety Verification**: Mathematically proven safe with 4 safety invariants
-- ✅ **Ontological Analysis**: Comprehensive philosophical and requirements engineering
-- ✅ **Educational Platform**: Suitable for Tinkercad simulation and electronics learning
-- ✅ **Professional Code**: Clean, documented, maintainable implementation
+**Start:** [QUEST_LEVEL_2.md](QUEST_LEVEL_2.md)
 
-### **Safety Properties (Formally Proven)**
-1. **Mutual Exclusion**: Traffic and pedestrian greens never simultaneous
-2. **Progressive Warning**: All green→red transitions pass through amber
-3. **Minimum Time Guarantee**: 3-second minimum green before interruption
-4. **Deadlock Freedom**: System always progresses, never gets stuck
+---
+
+### 🔴 Level 3: Full system with button (2 hours)
+The complete project. Press button, pedestrian gets green light.
+
+**Start:** [QUEST_LEVEL_3.md](QUEST_LEVEL_3.md)
+
+---
+
+**Never used Arduino before?** → Start at Level 1
+
+**Just want to see working code?** → [Code Examples](arduino-code/CODE_EXAMPLES_INDEX.md)
+
+---
+
+## Files to read
+
+### If you're building it:
+- **[BEGINNER_BUILD_GUIDE.md](BEGINNER_BUILD_GUIDE.md)** - Follow this step by step
+- **[CODE_COMPARISON.md](CODE_COMPARISON.md)** - Which code should I use?
+- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Something not working? Look here
+
+### If your tutor asks about qualifications:
+- **[UK_CURRICULUM_MAPPING.md](UK_CURRICULUM_MAPPING.md)** - Shows GCSE, BTEC, A-Level coverage
+
+### If you want to understand the theory:
+- **[QUEST_ADVANCED.md](QUEST_ADVANCED.md)** - How state machines work
+- **[QUEST_EXPERT.md](QUEST_EXPERT.md)** - Academic/university level stuff
+
+---
+
+## What this project includes
+
+### Code files (pick the right one for your level):
+
+**Beginners:**
+- `L1-4_single_led_blink.ino` - Just one LED (easy start)
+- `L2-4_uk_traffic_light.ino` - Three lights working
+- `L3-7b_full_features.ino` - Complete system ⭐ **Use this one for coursework**
+
+**Advanced:**
+- `ADV-1-practical_state_machine.ino` - Professional code structure
+- `traffic-lights-arduino-clean.c` - University level with safety proofs
+
+**All 27 code examples:** See [CODE_EXAMPLES_INDEX.md](arduino-code/CODE_EXAMPLES_INDEX.md)
+
+---
+
+## What makes this good
+
+### It follows real UK traffic light rules:
+- ✅ Red + Yellow before green (like real traffic lights)
+- ✅ Button for pedestrians works properly
+- ✅ Pedestrian gets green light, cars get red (safe!)
+- ✅ Works on Tinkercad (online) or real Arduino
+
+### It's good for education:
+- ✅ Suitable for GCSE, BTEC, A-Level coursework
+- ✅ All code explained with comments
+- ✅ Has troubleshooting help
+- ✅ Step-by-step building guide
 
 ---
 

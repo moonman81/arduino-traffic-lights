@@ -1,90 +1,117 @@
-# 🎮 Arduino Traffic Light Quest
+# Arduino Traffic Light - Start Here
 
-## Welcome
+## What you're going to build
 
-This is an interactive learning system for building an Arduino traffic light. You choose your path based on your experience and goals. All paths lead to the same destination - a working project and real understanding.
+**A working traffic light.**
 
-**What you'll build:** UK-standard traffic light with pedestrian crossing
+Press a button → pedestrian light turns green → cars stop
 
-**What you'll learn:** Electronics, programming, state machines, and embedded systems
-
-**Who this is for:** GCSE students through university level, complete beginners to advanced programmers
+Just like real UK traffic lights.
 
 ---
 
-## 🗺️ Choose Your Starting Point
+## No experience needed
 
-Look carefully at these paths. Which describes you best?
+You don't need to know anything about Arduino or coding.
 
-### Path A: "What's an Arduino?" 🌱
-**Difficulty:** ⭐☆☆☆☆
-**Status:** You've never touched an Arduino before. You might not even know what an LED is.
-**Estimated Time:** 10 minutes to first victory
+Everything is explained step by step.
 
-👉 **[Start Level 1: The First Light](QUEST_LEVEL_1.md)**
+If something doesn't work, there's a troubleshooting guide.
 
 ---
 
-### Path B: "I've Done Something Before" 🌿
-**Difficulty:** ⭐⭐☆☆☆
-**Status:** You've made an LED blink or done a simple Arduino tutorial.
-**Estimated Time:** 45 minutes to glory
+## Pick your starting point
 
-👉 **[Start Level 2: The Traffic Light Challenge](QUEST_LEVEL_2.md)**
+Read the options below and pick the one that sounds like you.
 
 ---
 
-### Path C: "I Want The Full Experience" 🌲
-**Difficulty:** ⭐⭐⭐☆☆
-**Status:** You're comfortable with Arduino basics and want a complete project.
-**Estimated Time:** 2-3 hours of epic adventure
+### Level 1: Never used Arduino before
 
-👉 **[Start Level 3: The Pedestrian Crossing Quest](QUEST_LEVEL_3.md)**
+**You will:** Make one LED blink
 
----
+**Time:** 10 minutes
 
-### Path D: "I'm Here For The Theory" 🏛️
-**Difficulty:** ⭐⭐⭐⭐☆
-**Status:** You want to understand state machines, formal verification, and professional code.
-**Estimated Time:** Several sessions of deep study
+**→ [Start Level 1](QUEST_LEVEL_1.md)**
 
-⚠️ **WARNING:** Theory-first approach works best for students with prior programming experience. Complete beginners may find it challenging without hands-on Arduino basics first. Consider starting with Level 1 or 2 to build foundational skills, then return to advanced theory.
-
-👉 **[Enter The Advanced Temple](QUEST_ADVANCED.md)**
+This is the easiest starting point. If you're not sure, start here.
 
 ---
 
-### Path E: "Show Me The Philosophy" 🔮
-**Difficulty:** ⭐⭐⭐⭐⭐
-**Status:** You seek ontological truth and formal mathematical proofs.
-**Estimated Time:** Academic exploration
+### Level 2: Done Arduino once or twice
 
-👉 **[Ascend To The Ontological Realm](QUEST_EXPERT.md)**
+**You will:** Make 3 LEDs work like traffic lights (red, yellow, green)
+
+**Time:** 45 minutes
+
+**→ [Start Level 2](QUEST_LEVEL_2.md)**
+
+Pick this if you've made an LED blink before.
 
 ---
 
-## 🎒 Before You Begin
+### Level 3: Ready for the full project
 
-### Check Your Inventory:
+**You will:** Build the complete system with button
 
-Do you have the **physical hardware**?
-- ✅ **YES** → Follow the path as written
-- ❌ **NO** → Use **Tinkercad Circuits** (tinkercad.com/circuits) - free online simulator, no equipment needed!
+**Time:** 2-3 hours
 
-### Quick Inventory Check:
-```
-[ ] Arduino Uno R3
-[ ] Breadboard
-[ ] LEDs (at least 1 to start, up to 5 for full quest)
-[ ] Resistors (220Ω or 330Ω)
-[ ] Jumper wires
-[ ] USB cable
-[ ] Computer with Arduino IDE
-```
+**→ [Start Level 3](QUEST_LEVEL_3.md)**
 
-**Missing items?** → See component list in BEGINNER_BUILD_GUIDE.md Part 1
+Pick this if you're comfortable with Arduino and want the whole thing.
 
-**Have everything?** → Choose your path above and begin!
+---
+
+### Advanced: Want to understand how it works
+
+**You will:** Learn about state machines and professional code
+
+**Time:** Several hours
+
+**→ [Advanced Guide](QUEST_ADVANCED.md)**
+
+**Note:** This is harder. Better to do Level 1 or 2 first if you're new to programming.
+
+---
+
+### Expert: University/research level
+
+**You will:** Study formal verification and theory
+
+**Time:** Academic study
+
+**→ [Expert Guide](QUEST_EXPERT.md)**
+
+Only pick this if you're doing A-Level/university and need the deep theory.
+
+---
+
+## Do you have the equipment?
+
+### ✅ Yes, I have Arduino and LEDs
+Great! Pick your level above and start.
+
+### ❌ No, I don't have equipment yet
+No problem. You have two options:
+
+**Option 1:** Use the online simulator (free, no equipment needed)
+- Go to tinkercad.com/circuits
+- Make a free account
+- You can build everything virtually
+
+**Option 2:** Get the equipment
+See the shopping list in [BEGINNER_BUILD_GUIDE.md](BEGINNER_BUILD_GUIDE.md) Part 1
+
+---
+
+### What you need (if buying):
+- Arduino Uno R3
+- Breadboard
+- 5× LEDs (any colours)
+- 5× Resistors (220Ω or 330Ω)
+- Jumper wires
+- USB cable
+- Computer with Arduino IDE (free download)
 
 ---
 
