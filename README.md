@@ -1,38 +1,28 @@
-# Arduino Traffic Light Controller
+# Arduino Traffic Light
 
-## What is this?
+## You will build a working traffic light
 
-**You will build a working traffic light.**
+Press button → Pedestrian gets green light → Cars stop
 
-It works just like real UK traffic lights. You press a button and the pedestrian crossing light turns green.
+Just like real UK traffic lights.
 
-**No experience needed.** Everything is explained step-by-step.
-
-**You will learn:**
-- How to connect wires to Arduino
-- How to make LEDs light up
-- How to make a button work
-- How to write code that controls it all
-
-**Good for:** GCSE projects, BTEC coursework, A-Level work, college, or just learning for fun
+**No experience needed.**
 
 ---
 
-## How to start
+## Start here
 
-### Pick ONE of these:
+**→ [START_HERE.md](START_HERE.md)** ← Click this
 
-**Option 1: Quest Mode** (more fun, like a game)
-- **→ [Start Here](QUEST_START.md)** - Pick your own path
+Pick Level 1, 2, or 3. That's it.
 
-**Option 2: Step-by-Step Guide** (straight instructions)
-- **→ [Start Here](BEGINNER_BUILD_GUIDE.md)** - Follow from start to finish
+---
 
-**Option 3: Just need code?**
-- **→ [Code Examples](arduino-code/CODE_EXAMPLES_INDEX.md)** - 27 working examples ready to use
+## For your tutor
 
-**For your tutor/teacher:**
-- **→ [Curriculum Info](UK_CURRICULUM_MAPPING.md)** - Shows what qualifications this covers
+**→ [TUTOR_GUIDE.md](TUTOR_GUIDE.md)** - Give them this. Explains everything.
+
+**→ [UK_CURRICULUM_MAPPING.md](UK_CURRICULUM_MAPPING.md)** - Shows GCSE/BTEC/A-Level coverage
 
 ---
 

@@ -100,9 +100,13 @@ See [BEGINNER_BUILD_GUIDE.md](BEGINNER_BUILD_GUIDE.md) for pictures and detailed
 
 ---
 
-## Step 3: Write the code
+## Step 3: Get the code
 
-Open Arduino IDE and copy this code:
+Open Arduino IDE.
+
+Click **File** → **New**.
+
+Now select ALL this code (click it, press Ctrl+A or Cmd+A):
 
 ```cpp
 void setup() {
@@ -118,37 +122,58 @@ void loop() {
 }
 ```
 
-**What this does:**
-- `pinMode(13, OUTPUT)` = Pin 13 will control the LED
-- `digitalWrite(13, HIGH)` = Turn LED ON
-- `delay(1000)` = Wait 1 second
-- `digitalWrite(13, LOW)` = Turn LED OFF
-- Then it repeats forever
+Copy it (Ctrl+C or Cmd+C).
 
-**Don't understand it?** That's okay. Just copy it exactly and it will work.
+Paste it into Arduino IDE (Ctrl+V or Cmd+V).
+
+**That's it.** Don't type it. Just copy and paste.
+
+---
+
+**What it does:**
+- Makes LED turn on
+- Waits 1 second
+- Makes LED turn off
+- Waits 1 second
+- Repeats forever
+
+You don't need to understand it yet. It just works.
 
 ---
 
 ## Step 4: Upload to Arduino
 
-**Do this:**
+**Do exactly this:**
 
-1. Click **Tools** → **Board** → **Arduino Uno**
+**□ Step 4a:** Click **Tools** at the top
 
-2. Click **Tools** → **Port** → Pick the one with your Arduino
+**□ Step 4b:** Click **Board** → **Arduino Uno**
 
-3. Click the **Upload button** (→ arrow at top)
+**□ Step 4c:** Click **Tools** again
 
-4. Wait for "Done uploading"
+**□ Step 4d:** Click **Port** → Pick the one that says "Arduino" or "USB" or "COM"
+
+**□ Step 4e:** Look for the → arrow button (top left)
+
+**□ Step 4f:** Click the → arrow button
+
+**□ Step 4g:** Watch the bottom. Wait until it says "Done uploading"
 
 ---
 
-### Error: "Port not found"?
+### If it says "Port not found":
 
-**Try these:**
-- Check USB cable is plugged in properly
-- Try a different USB cable (some only charge, they don't send data)
-- Try a different USB port on your computer
+Do these in order until it works:
+
+**□ Try 1:** Unplug USB cable. Plug it back in. Try upload again.
+
+**□ Try 2:** Use a different USB cable.
+
+**□ Try 3:** Plug into different USB port on computer.
+
+**□ Try 4:** Close Arduino IDE completely. Unplug Arduino. Plug Arduino back in. Open Arduino IDE. Try again.
+
+One of these WILL work.
 
 ---
 
@@ -171,20 +196,42 @@ This is the foundation of everything in Arduino.
 
 ---
 
-## Something not working?
+## If LED not working
 
-### LED doesn't light at all:
-1. Check the long leg goes to Pin 13 side
-2. Push wires in firmly
-3. Press the reset button on Arduino
+**Try these in order. Stop when it works:**
 
-### LED stays on forever:
-1. Check your code matches exactly
-2. Look for missing semicolons (;)
-3. Upload the code again
+### Try 1: Check the legs
+- Long LED leg goes to Pin 13 side? ✓
+- Short LED leg goes to GND side? ✓
+- Fix it if wrong. Upload code again (press → arrow).
 
-### LED is very dim:
-That's fine! It still counts as working.
+### Try 2: Push wires
+- Push every wire firmly into Arduino
+- Push every wire firmly into breadboard
+- Upload code again (press → arrow).
+
+### Try 3: Reset button
+- Find the small button on Arduino board
+- Press it once
+- LED should start blinking
+
+### Try 4: Different LED
+- Take out the LED
+- Put in a different LED (any colour)
+- Upload code again (press → arrow).
+
+### Try 5: Check code
+- Look at your code
+- Does every line have a semicolon (;) at the end?
+- Delete everything and paste the code again (from Step 3)
+- Upload (press → arrow).
+
+**One of these fixes it. Guaranteed.**
+
+---
+
+### LED very dim?
+That's fine. It's working. Some resistors make LEDs dimmer. No problem.
 
 ---
 
