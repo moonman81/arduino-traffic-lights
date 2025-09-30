@@ -1,229 +1,198 @@
-# Level 2: Traffic Light
+# Level 2: Make Traffic Lights Work
 
-## Overview
+## What you'll build
 
-**Difficulty:** Intermediate
-**Time:** 45 minutes - 1 hour
-**Prerequisites:** Level 1 complete, or basic Arduino experience
+3 LEDs working like real UK traffic lights.
 
-**Goal:** Build a three-LED traffic light following UK standards
+**Time:** 45 minutes to 1 hour
 
-**What you'll learn:**
-- Controlling multiple LEDs
-- Creating timed sequences
-- Using #define for clean code
-- UK traffic light regulations (RED+AMBER phase)
-
-**UK Traffic Light Sequence:**
-1. RED (5 seconds) - stop
-2. RED + AMBER together (2 seconds) - prepare to proceed
-3. GREEN (6 seconds) - go
-4. AMBER (3 seconds) - prepare to stop
-5. Repeat
-
-The RED+AMBER phase is unique to UK standards and provides better driver preparation than systems without it.
+**You need:**
+- Did Level 1? You're ready.
+- Never did Level 1? That's okay, start here anyway.
 
 ---
 
-## 🎒 Required Inventory
+## UK traffic lights pattern
 
-### Hardware Checklist:
-- [ ] Arduino Uno R3
-- [ ] 1× Red LED
-- [ ] 1× Yellow/Amber LED
-- [ ] 1× Green LED
-- [ ] 3× Resistors (220Ω or 330Ω)
-- [ ] Breadboard
-- [ ] 8-10 jumper wires
-- [ ] USB cable
+Real UK traffic lights do this:
 
-### Software:
-- [ ] Arduino IDE installed and working
-- [ ] Confidence from completing Level 1 ✅
+1. **RED** (5 seconds) - Stop
+2. **RED + YELLOW** together (2 seconds) - Get ready
+3. **GREEN** (6 seconds) - Go
+4. **YELLOW** (3 seconds) - Stop coming
+5. Back to step 1
 
-**Don't have 3 LEDs yet?** You can practice with what you have and buy more later!
+**The red + yellow together is special to UK.** Other countries don't do this.
+
+Total time for one cycle: 16 seconds
 
 ---
 
-## 🗺️ Quest Map
+## What you need
 
-```
-START
-  ↓
-Build Circuit (3 LEDs)
-  ↓
-Write Code (UK sequence)
-  ↓
-Upload and Test
-  ↓
-Verify Timing
-  ↓
-VICTORY! 🏆
-```
+**Check you have these:**
+
+□ Arduino Uno
+□ 3× LEDs (red, yellow, green)
+□ 3× Resistors
+□ Wires
+□ Breadboard
+□ USB cable
+
+**Don't have 3 LEDs?** You can use 3 of any colour to practice. The pattern matters more than the colours.
 
 ---
 
-## 📝 Step 1: Understand The Sequence
+## The steps
 
-Before building, understand what you're creating:
+### Step 1: Connect the wires
 
-### UK Traffic Light Sequence:
+You're connecting 3 LEDs this time instead of 1.
 
-```
-PHASE 1: RED only          [●  ○  ○]  5 seconds  - STOP
-PHASE 2: RED + AMBER       [●  ●  ○]  2 seconds  - GET READY
-PHASE 3: GREEN only        [○  ○  ●]  6 seconds  - GO
-PHASE 4: AMBER only        [○  ●  ○]  3 seconds  - SLOW DOWN
-         (back to PHASE 1)
-```
+**For each LED:**
+1. Long leg → resistor → Arduino pin
+2. Short leg → Arduino GND
 
-**Total cycle time:** 5 + 2 + 6 + 3 = **16 seconds**
+**Which pins:**
+- Red LED → Pin 12
+- Yellow LED → Pin 11
+- Green LED → Pin 10
 
-**Checkpoint:** Do you understand the sequence? Can you draw it on paper?
-
----
-
-## 🔧 Step 2: Build The Circuit
-
-### Pin Assignments:
-```
-Pin 12 → Red LED
-Pin 11 → Amber LED
-Pin 10 → Green LED
-GND → All LED cathodes (short legs)
-```
-
-### Building Instructions:
-
-#### Part A: Setup Power Rails
-1. Connect Arduino GND to breadboard negative rail (blue/black stripe)
-2. Use a black wire for this
-
-#### Part B: Red LED (Pin 12)
-1. Insert RED LED into breadboard
-   - Long leg in hole E5
-   - Short leg in hole E6
-2. Add resistor
-   - One end in hole F5 (same row as long leg)
-   - Other end in hole F8
-3. Wire from Pin 12 to hole J8
-4. Wire from hole J6 to GND rail
-
-#### Part C: Amber LED (Pin 11)
-1. Insert AMBER/YELLOW LED
-   - Long leg in hole E10
-   - Short leg in hole E11
-2. Add resistor
-   - One end in hole F10
-   - Other end in hole F13
-3. Wire from Pin 11 to hole J13
-4. Wire from hole J11 to GND rail
-
-#### Part D: Green LED (Pin 10)
-1. Insert GREEN LED
-   - Long leg in hole E15
-   - Short leg in hole E16
-2. Add resistor
-   - One end in hole F15
-   - Other end in hole F18
-3. Wire from Pin 10 to hole J18
-4. Wire from hole J16 to GND rail
-
-### Circuit Diagram (ASCII Art):
-```
-Arduino Uno                    Breadboard
-
-Pin 12 ────────[220Ω]────[Red LED]────┐
-Pin 11 ────────[220Ω]────[Amber LED]──┼──→ GND Rail → Arduino GND
-Pin 10 ────────[220Ω]────[Green LED]──┘
-```
-
-**Checkpoint:** All three LEDs in breadboard, resistors connected, wires from Arduino to each LED? ✅
+**Check:** All 3 LEDs in breadboard, all connected, none lit yet (that's right!)
 
 ---
 
-## ⌨️ Step 3: Write The Code
-
-**Action:** Create a new Arduino sketch and type this:
+### Step 2: Copy this code
 
 ```cpp
-/*
- * Level 2: The Traffic Light Challenge
- * UK-Standard Traffic Light Sequence
- */
-
-// Pin definitions (makes code easier to read)
-#define RED_LED    12
-#define AMBER_LED  11
-#define GREEN_LED  10
+#define RED    12
+#define YELLOW 11
+#define GREEN  10
 
 void setup() {
-  // Tell Arduino these pins control LEDs
-  pinMode(RED_LED, OUTPUT);
-  pinMode(AMBER_LED, OUTPUT);
-  pinMode(GREEN_LED, OUTPUT);
-
-  // Turn all LEDs off to start
-  digitalWrite(RED_LED, LOW);
-  digitalWrite(AMBER_LED, LOW);
-  digitalWrite(GREEN_LED, LOW);
+  pinMode(RED, OUTPUT);
+  pinMode(YELLOW, OUTPUT);
+  pinMode(GREEN, OUTPUT);
 }
 
 void loop() {
-  // PHASE 1: RED light (STOP!)
-  digitalWrite(RED_LED, HIGH);      // Red ON
-  digitalWrite(AMBER_LED, LOW);     // Amber OFF
-  digitalWrite(GREEN_LED, LOW);     // Green OFF
-  delay(5000);                      // Wait 5 seconds
+  // RED
+  digitalWrite(RED, HIGH);
+  digitalWrite(YELLOW, LOW);
+  digitalWrite(GREEN, LOW);
+  delay(5000);
 
-  // PHASE 2: RED + AMBER (Get ready!)
-  digitalWrite(RED_LED, HIGH);      // Red stays ON
-  digitalWrite(AMBER_LED, HIGH);    // Amber ON
-  digitalWrite(GREEN_LED, LOW);     // Green OFF
-  delay(2000);                      // Wait 2 seconds
+  // RED + YELLOW
+  digitalWrite(RED, HIGH);
+  digitalWrite(YELLOW, HIGH);
+  digitalWrite(GREEN, LOW);
+  delay(2000);
 
-  // PHASE 3: GREEN light (GO!)
-  digitalWrite(RED_LED, LOW);       // Red OFF
-  digitalWrite(AMBER_LED, LOW);     // Amber OFF
-  digitalWrite(GREEN_LED, HIGH);    // Green ON
-  delay(6000);                      // Wait 6 seconds
+  // GREEN
+  digitalWrite(RED, LOW);
+  digitalWrite(YELLOW, LOW);
+  digitalWrite(GREEN, HIGH);
+  delay(6000);
 
-  // PHASE 4: AMBER light (Slow down!)
-  digitalWrite(RED_LED, LOW);       // Red OFF
-  digitalWrite(AMBER_LED, HIGH);    // Amber ON
-  digitalWrite(GREEN_LED, LOW);     // Green OFF
-  delay(3000);                      // Wait 3 seconds
-
-  // Loop automatically repeats - back to RED
+  // YELLOW
+  digitalWrite(RED, LOW);
+  digitalWrite(YELLOW, HIGH);
+  digitalWrite(GREEN, LOW);
+  delay(3000);
 }
 ```
 
-### Code Explanation (Level Up Your Knowledge):
-
-**`#define RED_LED 12`** - Creates a nickname. Now you can say "RED_LED" instead of "12". Much easier to read!
-
-**Four phases** - Each phase:
-1. Sets the right LEDs on/off
-2. Waits the right amount of time
-3. Automatically moves to next phase
-
-**The magic:** When `loop()` finishes, it automatically starts again at the top. RED → RED+AMBER → GREEN → AMBER → RED forever!
+**What #define does:** Lets you write `RED` instead of `12`. Makes code easier to read.
 
 ---
 
-## 📤 Step 4: Upload The Code
+### Step 3: Upload it
 
-1. **File** → **Save** (give it a name like "TrafficLight")
-2. **Tools** → **Board** → **Arduino Uno** (should already be set)
-3. **Tools** → **Port** → Select your Arduino
-4. Click **Upload** button (→)
-5. Wait for "Done uploading"
+1. Click **Tools** → **Board** → **Arduino Uno**
+2. Click **Tools** → **Port** → Pick your Arduino
+3. Click **Upload** (→ arrow)
+4. Wait for "Done uploading"
 
 ---
 
-## ✨ Step 5: Witness The Traffic Light!
+### Step 4: Watch it work
 
-**What Should Happen:**
+**What should happen:**
+
+1. **RED** lights up (5 seconds)
+2. **RED + YELLOW** both on (2 seconds)
+3. **GREEN** lights up (6 seconds)
+4. **YELLOW** lights up (3 seconds)
+5. Back to step 1, repeats forever
+
+**Use a timer** (your phone) to check the timing is right.
+
+---
+
+## ✅ Success!
+
+**Your traffic lights working?** You did it!
+
+**This is the real UK pattern.** Same as actual traffic lights on roads.
+
+---
+
+## Something wrong?
+
+### Only one LED works:
+- Check the other LEDs are wired to the right pins
+- Check each LED's long leg goes toward the pin
+- Check each LED's short leg goes to GND
+
+### Wrong pattern:
+- Check your code matches the example exactly
+- Count the commas and semicolons
+- Upload the code again
+
+### Timing wrong:
+- Check the `delay()` numbers
+- 5000 = 5 seconds, 2000 = 2 seconds, etc
+
+---
+
+## What you learned
+
+You now know:
+- How to control multiple LEDs
+- How to make patterns with timing
+- What `#define` does (makes code readable)
+- UK traffic light sequence
+
+**This is real embedded systems programming.**
+
+---
+
+## What next?
+
+### Ready for the full project?
+**→ [Level 3: Add Button](QUEST_LEVEL_3.md)**
+
+This adds the pedestrian crossing button.
+
+---
+
+### Want more practice first?
+**Try these:**
+- Make the green time longer (change 6000 to 8000)
+- Make it cycle faster (half all the numbers)
+- Add a 4th LED that blinks during green
+- Use different coloured LEDs
+
+---
+
+## You should feel good
+
+**You just:**
+- Controlled 3 LEDs at once
+- Created a timed sequence
+- Made real UK traffic light pattern
+
+This is the same logic that real traffic lights use.
 
 ```
 [5 seconds]  RED only             [●  ○  ○]
